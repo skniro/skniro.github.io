@@ -1,0 +1,107 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="zh">
+<head runat="server">
+    <link rel="stylesheet" href="Content/bootstrap.css">
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/Site.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>- skniro teah team</title>
+
+    <PlaceHolder runat="server">
+    </PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 168px;
+            height: 60px;
+        }
+    </style>
+
+</head>
+<body style="background-image: url(https://api.dujin.org/bing/1920.php);background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+    <form runat="server">
+        <ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <script src="./Scripts/WebForms/WebForms.js"></script>
+                <script src="./Scripts/WebForms/WebUIValidation.js"></script>
+                <script src="./Scripts/WebForms/MenuStandards.js"></script>
+                <script src="./Scripts/WebForms/GridView.js"></script>
+                <script src="./Scripts/WebForms/DetailsView.js"></script>
+                <script src="./Scripts/WebForms/TreeView.js"></script>
+                <script src=".Scripts/WebForms/WebParts.js"></script>
+                <script src="./Scripts/WebForms/Focus.js"></script>
+                <script src="WebFormsBundle"></script>
+            </Scripts>
+            <ScriptManager>
+
+                <div class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <img alt="" class="auto-style1" src="STG.png" />
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a runat="server" href="/index.html">主页</a></li>
+                                <li><a runat="server" href="/project.html">项目</a></li>
+                                <li><a runat="server" href="/project/index.html">技术文档</a></li>
+                                <li><a runat="server" href="/About.html">关于</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                        <div class="row align-items-center">
+                            <div class="jumbotron">
+                                <h1>Project A.L.I.C.E</h1>
+                                <p></p>
+                                <p class="lead"> </p>
+                                <p>Project A.L.I.C.E</p>
+                                <img><iframe src="img/Project A.L.I.C.E项目企划web1.pdf" width="100%" height="1200"></iframe>
+                                <p>游戏部分</p>
+                                <img><iframe src="img/Project A.L.I.C.E项目企划web2.pdf" width="100%" height="1200"></iframe>
+                                <p>宣传视频</p>
+                                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=70431113&aid=40102302&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                                <p>开发软件官方网站</p>
+                                <a class="btn btn-primary btn-lg" href="http://visualnovelmaker.com/">访问 &raquo;</a>
+                                <p>官方文档(英文)</p>
+                                <a class="btn btn-primary btn-lg" href="/help/index.htm">访问 &raquo;</a>
+                                <p>官方文档(日文)</p>
+                                <a class="btn btn-primary btn-lg" href="/help_jp/index.htm">访问 &raquo;</a>
+                                <p>Vtuber部分（虚拟主播)</p>
+                                <img><iframe src="img/STG_Project ALVTUP.pdf" width="100%" height="1200"></iframe>
+                                <p>动画部分</p>
+                                <img><iframe src="img/Project A.L.I.C.E项目企划web3.pdf" width="100%" height="1200"></iframe>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>                                                   
+                    <div class="container body-content">                       
+                        <ContentPlaceHolder ID="MainContent" runat="server">
+                            <ContentPlaceHolder>
+                                <hr />
+
+                                <footer>
+                                    <p class="text-right"><strong><em>&copy; 2020- skniro teah team</em></strong></p>
+                                </footer>
+                    </div>
+                
+
+</form>
+</body>
+</html>

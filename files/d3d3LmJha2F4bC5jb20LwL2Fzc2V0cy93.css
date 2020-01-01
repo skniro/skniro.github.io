@@ -1,0 +1,16 @@
+﻿/* core	================================================	*/
+.seasonColor { color: #088eff; }
+
+.floatBg { background: url("d3d3LmJha2F4bC5jb20.jpg") repeat 0 0; }
+.modalBg { background: url("d3d3LmJha2F4bC5jb20.jpg") repeat 0 0; }
+
+.charaWrap { background: url("https://static.x-speed.cc/?url=d3d3LmJha2F4bC5jb20=:Lw==:L2Fzc2V0cy9pbWcvM3JkL2NoYXJhL2JnX2NoYXJhLnBuZw==") no-repeat 0 75px; }
+
+#wrapper #contWrap.onair table th { background: #088eff; }
+#wrapper #contWrap.onair table td.cell1 { background: #a6d8ff; }
+
+#wrapper #contWrap.dvd .bdWrap article h3 p.title { background: #088eff; }
+
+#wrapper #contWrap.dvd .bdWrap article .inner { background: url("https://static.x-speed.cc/?url=d3d3LmJha2F4bC5jb20=:Lw==:L2Fzc2V0cy9pbWcvY29tbW9uL2JnX21haW4ucG5n") repeat-y 0 0; }
+
+#wrapper #contWrap.dvd .bdWrap article .inner .moreWrap .moreDetail .inner { background: #c9eeff; }
