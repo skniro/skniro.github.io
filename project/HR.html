@@ -39,9 +39,10 @@
                 <script src="./Scripts/WebForms/GridView.js"></script>
                 <script src="./Scripts/WebForms/DetailsView.js"></script>
                 <script src="./Scripts/WebForms/TreeView.js"></script>
-                <script src=".Scripts/WebForms/WebParts.js"></script>
+                <script src="./Scripts/WebForms/WebParts.js"></script>
                 <script src="./Scripts/WebForms/Focus.js"></script>
-                <script src="WebFormsBundle"></script>
+                <script src="./Scripts/WebForms/Menu.js"></script>
+                <script src="./"></script>
             </Scripts>
             <ScriptManager>
 
@@ -66,25 +67,28 @@
                     </div>
                 </div>
                 <div class="container">
-                        <div class="row align-items-center">
-                            <div class="jumbotron">
-                                <h2>STT&GCBT 2019-2020 ProjectAlice招募计划</h2>
-                                <img><iframe src="/project/img/STT&GCBT 2019 ProjectAlice招募计划.pdf" width="100%" height="1200"></iframe>
-                                <a class="btn btn-default" href="/project/img/STT&GCBT 2019 ProjectAlice招募计划.pdf "download="STT&GCBT 2019 ProjectAlice招募计划.pdf">下载文档 &raquo;</a>
-                            </div>
+                    <div class="row align-items-center">
+                        <div class="jumbotron">
+                            <h2>STT&GCBT 2019-2020 ProjectAlice招募计划</h2>
+                            <img><iframe src="/project/img/STT&GCBT 2019 ProjectAlice招募计划.pdf" width="100%" height="1200"></iframe>
+                            <a class="btn btn-default" href="/project/img/STT&GCBT 2019 ProjectAlice招募计划.pdf " download="STT&GCBT 2019 ProjectAlice招募计划.pdf">下载文档 &raquo;</a>
                         </div>
-                    </div>                                                   
-                    <div class="container body-content">                       
-                        <ContentPlaceHolder ID="MainContent" runat="server">
-                            <ContentPlaceHolder>
-                                <hr />
-
-                                <footer>
-                                    <p class="text-right"><strong><em>&copy; 2020- skniro teah team</em></strong></p>
-                                </footer>
                     </div>
-                
+                </div>
+                <div class="container body-content">
+                    <ContentPlaceHolder ID="MainContent" runat="server">
+                        <ContentPlaceHolder>
+                            <hr />
 
-</form>
+                            <footer>
+                                <p class="text-right"><strong><em>&copy; 2020- skniro teah team</em></strong></p>
+                            </footer>
+                </div>
+
+
+    </form>
+    <script src="/assets/jquery.min.js?v=3.3.1"></script>
+    <script src="/assets/jquery-ui.min.js?v=1.12.1"></script>
+    <script src="/assets/autoload.js?v=1.4.2"></script>
 </body>
 </html>

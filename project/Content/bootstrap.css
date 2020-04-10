@@ -72,10 +72,6 @@ a:hover {
   outline: 0;
 }
 
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
 
 abbr[title] {
   border-bottom: 1px dotted;
@@ -513,7 +509,7 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 h2,
@@ -4943,11 +4939,6 @@ a.list-group-item.active > .badge,
   background-color: #eeeeee;
 }
 
-.jumbotron h1 {
-  line-height: 1;
-  color: inherit;
-}
-
 .jumbotron p {
   line-height: 1.4;
 }
@@ -4966,9 +4957,6 @@ a.list-group-item.active > .badge,
   .container .jumbotron {
     padding-right: 60px;
     padding-left: 60px;
-  }
-  .jumbotron h1 {
-    font-size: 63px;
   }
 }
 

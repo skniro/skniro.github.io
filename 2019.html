@@ -1,91 +1,734 @@
 ﻿<!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html lang="zh-CN">
 <head>
-    <style>
-        p.indent {
-            padding-left: 1.8em
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>skniro teah team</title>
+    <PlaceHolder runat="server">
+    </PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="project/Content/bootstrap.css">
+    <link rel="stylesheet" href="project/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="project/Content/Site.css">
+    <link href="./css/app.f5996197c07c5b24b6ad04f440d720f0.css" rel="stylesheet">
+    <style type="text/css">
+        .nav-link .nav-link-ul {
+            height: 36px;
+            display: flex;
+            align-items: center;
+        }
+
+            .nav-link .nav-link-ul.mini .bili-icon_dingdao_xiazaiapp {
+                color: #00a1d6;
+            }
+
+            .nav-link .nav-link-ul .nav-link-item {
+                margin-right: 12px;
+            }
+
+                .nav-link .nav-link-ul .nav-link-item .link {
+                    font-size: 14px;
+                    color: #fff;
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+                    display: inline-block;
+                    white-space: nowrap;
+                    display: flex;
+                }
+
+                    .nav-link .nav-link-ul .nav-link-item .link .bili-Navbar_logo {
+                        font-size: 32px;
+                        color: #00a1d6;
+                        vertical-align: middle;
+                        margin-right: 16px;
+                    }
+
+                    .nav-link .nav-link-ul .nav-link-item .link .bili-general_pullup_s {
+                        vertical-align: middle;
+                        color: #999;
+                        display: inline-block;
+                        transform: rotate(180deg);
+                        transition: transform 0.3s;
+                    }
+
+        .nav-link .bili-icon_dingdao_zhuzhan {
+            margin-right: 6px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+
+        .nav-link .bili-icon_dingdao_xiazaiapp {
+            margin-right: 2px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+
+        .popover-channe {
+            padding: 0;
+            width: 670px;
+            height: 372px;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .popover-game {
+            padding: 0;
+            width: 680px;
+            height: 260px;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .popover-live {
+            padding: 0;
+            width: 528px;
+            height: 266px;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .popover-manga {
+            padding: 0;
+            width: 720px;
+            height: 266px;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .popover-app-download {
+            padding: 0;
+            width: 280px;
+            height: 212px;
+            border: none;
+            box-shadow: none;
+            background-size: cover;
+            background-position-y: -3px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+            .popover-app-download .txt {
+                font-size: 14px;
+                color: #212121;
+                width: 100%;
+                text-align: center;
+                padding-bottom: 24px;
+            }
+
+        .van-popover.van-popper.popover-channe,
+        .van-popover.van-popper.popover-game,
+        .van-popover.van-popper.popover-live,
+        .van-popover.van-popper.popover-app-download {
+            padding: 0;
+            top: 45px !important;
         }
     </style>
-    <link rel="stylesheet" href="css/linearicons.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <div class="main-wrapper-first">
-        <header>
-            <div class="container">
-                <div class="header-wrap">
-                    <div class="header-top d-flex justify-content-between align-items-center">
-                        <div class="logo">
-                            <img src="img/logo.png" alt="">
-                        </div>
-                        <div class="main-menubar d-flex align-items-center">
-                            <nav>
-                                <a href="index.html">主页</a>
-                                <a href="project.html">项目</a>
-                                <a href="/project/index.html">技术文档</a>
-                                <a href="About.html">关于</a>
-                            </nav>
-                            <div class="menu-bar"></div>
+    <style type="text/css">
+        li[data-v-7adc35f6] {
+            list-style: none;
+            color: #222;
+        }
 
+        ul[data-v-7adc35f6] {
+            padding: 0;
+            margin: 0;
+        }
+
+        a[data-v-7adc35f6] {
+            text-decoration: none;
+            -webkit-transition: color 0.2s;
+            transition: color 0.2s;
+        }
+
+        .nav-item[data-v-7adc35f6] {
+            float: left;
+            text-align: center;
+            /*line-height: 42px;*/
+            /*height: 42px;*/
+            position: relative;
+            background-color: rgba(255, 255, 255, 0);
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .nav-item *[data-v-7adc35f6] {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .t[data-v-7adc35f6] {
+            color: inherit;
+            height: 100%;
+            display: block;
+            /*padding: 0 11px;*/
+        }
+
+        .num[data-v-7adc35f6] {
+            min-width: 16px;
+            height: 16px;
+            padding: 0 3px;
+            border-radius: 8px;
+            line-height: 16px;
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            top: -7px;
+            right: -10px;
+            /*left: 20px;*/
+            z-index: 30;
+            background-color: #FA5A57;
+        }
+
+        .red_point[data-v-7adc35f6] {
+            height: 6px;
+            width: 6px;
+            border-radius: 100%;
+            position: absolute;
+            top: -2px;
+            right: -5px;
+            /*left: 20px;*/
+            background-color: #FA5A57;
+        }
+
+        .notify-float[data-v-7adc35f6] {
+            position: absolute;
+            width: 260px;
+            top: 100% !important;
+            left: 0 !important;
+            left: calc(50% - 130px) !important;
+            padding-top: 7px;
+            white-space: nowrap;
+            text-align: left;
+            font-size: 14px;
+            color: #212121;
+        }
+
+            .notify-float[data-v-7adc35f6]::before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                display: block;
+                position: absolute;
+                top: 2px;
+                left: calc(50% - 5px) !important;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                background-color: white;
+                -webkit-box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.05);
+                box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.05);
+                z-index: 1;
+            }
+
+        .notify-float .float_msg[data-v-7adc35f6] {
+            background: #FFFFFF;
+            -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 2px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 30px;
+        }
+
+        .notify-float .float_msg > div[data-v-7adc35f6] {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .notify-float .float_msg > div span[data-v-7adc35f6] {
+            cursor: pointer;
+            color: #00A1D6;
+        }
+
+        .notify-float .float_msg > i[data-v-7adc35f6] {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: middle;
+            width: 16px;
+            height: 100%;
+        }
+
+            .notify-float .float_msg > i[data-v-7adc35f6]:hover {
+            }
+
+        .slide-fade-enter-active[data-v-7adc35f6] {
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        .slide-fade-leave-active[data-v-7adc35f6] {
+            -webkit-transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+            transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+        }
+
+        .slide-fade-enter[data-v-7adc35f6],
+        .slide-fade-leave-to[data-v-7adc35f6] {
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+            opacity: 0;
+        }
+
+        .i-frame[data-v-7adc35f6] {
+            position: absolute;
+            width: 172px;
+            height: 205px;
+            top: 100% !important;
+            left: 0 !important;
+            left: calc(50% - 86px) !important;
+            padding-top: 12px;
+        }
+
+        .bp-im-header-icon[data-v-7adc35f6] {
+            display: inline-block;
+            width: 28px;
+            height: 100%;
+        }
+    </style>
+    <style type="text/css">
+
+        .international-header .nav-search-box {
+            margin: 0 10px;
+            width: 500px;
+            transition: 0.3s width;
+        }
+
+        .international-header .nav-search {
+            position: relative;
+        }
+
+            .international-header .nav-search #nav_searchform {
+                display: block;
+                padding: 0 38px 0 16px;
+                border: 1px solid rgba(255, 255, 255, 0);
+                border-radius: 2px;
+                background-color: #fff;
+            }
+
+            .international-header .nav-search .nav-search-keyword {
+                overflow: hidden;
+                width: 100%;
+                height: 34px;
+                border: none;
+                background-color: transparent;
+                box-shadow: none;
+                color: #999;
+                font-size: 14px;
+                line-height: 34px;
+                transition: all 0.2s;
+            }
+
+                .international-header .nav-search .nav-search-keyword::-ms-clear {
+                    display: none;
+                }
+                
+            .bili-header-m .nav-search .nav-search-btn,
+            .international-header .nav-search .nav-search-btn {
+                position: absolute;
+                top: 0px;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                width: 48px;
+                height: 36px;
+                border: none;
+                border-radius: 2px;
+                background: #E7E7E7;
+                line-height: 26px;
+                cursor: pointer;
+            }
+
+                .bili-header-m .nav-search .nav-search-btn:hover .nav-search-submit,
+                .international-header .nav-search .nav-search-btn:hover .nav-search-submit {
+                    color: #00a1d6;
+                }
+
+            .bili-header-m .nav-search .nav-search-submit,
+            .international-header .nav-search .nav-search-submit {
+                position: absolute;
+                top: 8px;
+                right: 16px;
+                margin: 0;
+                padding: 0;
+                border: none;
+                background: none;
+                color: #505050;
+                font-size: 16px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+        .bili-header-m .bilibili-suggest,
+        .international-header .bilibili-suggest {
+            position: relative;
+            z-index: 10000;
+            margin-top: 2px;
+            padding-bottom: 5px;
+            border: 1px solid #e5e9ef;
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
+            font-size: 12px;
+        }
+    </style>
+    <style type="text/css">
+        .mini-header {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 56px;
+        }
+
+        .mini-header__content {
+            box-sizing: border-box;
+            padding: 10px 24px;
+            line-height: 30px;
+            position: relative;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    </style>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .international-header,
+        .van-popover {
+            -webkit-font-smoothing: antialiased;
+            font: 14px -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+            position: relative;
+            z-index: 1000;
+            margin: 0;
+            padding: 0;
+        }
+
+            .international-header ol,
+            .van-popover ol,
+            .international-header ul,
+            .van-popover ul {
+                list-style: none;
+            }
+
+            .international-header a,
+            .van-popover a {
+                color: #212121;
+                transition: color 0.3s;
+            }
+
+                .international-header a:hover,
+                .van-popover a:hover {
+                    text-decoration: none;
+                    color: #00A1D6;
+                }
+
+            .international-header a,
+            .van-popover a {
+                text-decoration: none;
+            }
+
+                .international-header a:focus,
+                .van-popover a:focus,
+                .international-header *:focus,
+                .van-popover *:focus {
+                    outline: none;
+                }
+
+            .international-header *,
+            .van-popover * {
+                box-sizing: border-box;
+            }
+
+            .international-header .red-point,
+            .van-popover .red-point {
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: #fa5a57;
+                color: #fff;
+                right: 0;
+                top: 0px;
+            }
+
+            .international-header .mini-type,
+            .van-popover .mini-type {
+                position: relative;
+                background: #fff;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+            }
+
+                .international-header .mini-type .nav-link .nav-link-ul .nav-link-item .link,
+                .van-popover .mini-type .nav-link .nav-link-ul .nav-link-item .link {
+                    color: #212121;
+                    text-shadow: none;
+                }
+
+                    .international-header .mini-type .nav-link .nav-link-ul .nav-link-item .link:hover,
+                    .van-popover .mini-type .nav-link .nav-link-ul .nav-link-item .link:hover {
+                        color: #00A1D6;
+                    }
+
+                .international-header .mini-type .nav-search #nav_searchform,
+                .van-popover .mini-type .nav-search #nav_searchform {
+                    background: #F4F4F4;
+                    border: 1px solid #E7E7E7;
+                }
+
+                .international-header .mini-type .nav-user-center .bilifont,
+                .van-popover .mini-type .nav-user-center .bilifont {
+                    color: #999;
+                }
+
+                .international-header .mini-type .user-con.logout .item a,
+                .van-popover .mini-type .user-con.logout .item a {
+                    color: #212121 !important;
+                }
+
+                    .international-header .mini-type .user-con.logout .item a:hover,
+                    .van-popover .mini-type .user-con.logout .item a:hover {
+                        color: #00A1D6 !important;
+                    }
+
+        @media screen and (max-width: 1200px) {
+            .international-header .mini-type .mini-header--login .nav-search-box,
+            .van-popover .mini-type .mini-header--login .nav-search-box {
+                display: none;
+            }
+
+            .international-header .mini-type .mini-header--login .nav-user-center .user-con.search-icon,
+            .van-popover .mini-type .mini-header--login .nav-user-center .user-con.search-icon {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width: 990px) {
+            .international-header .mini-type .mini-header--logout .nav-search-box,
+            .van-popover .mini-type .mini-header--logout .nav-search-box {
+                display: none;
+            }
+
+            .international-header .mini-type .mini-header--logout .nav-user-center .user-con.search-icon,
+            .van-popover .mini-type .mini-header--logout .nav-user-center .user-con.search-icon {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width: 1110px) {
+            .international-header .mini-header--login .nav-search-box,
+            .van-popover .mini-header--login .nav-search-box {
+                display: none;
+            }
+
+            .international-header .mini-header--login .nav-user-center .user-con.search-icon,
+            .van-popover .mini-header--login .nav-user-center .user-con.search-icon {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .international-header .mini-header--logout .nav-search-box,
+            .van-popover .mini-header--logout .nav-search-box {
+                display: none;
+            }
+
+            .international-header .mini-header--logout .nav-user-center .user-con.search-icon,
+            .van-popover .mini-header--logout .nav-user-center .user-con.search-icon {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .van-popover {
+            padding: 0px;
+            text-align: inherit;
+        }
+
+        .slide-fade-enter-active {
+            transition: all 0.2s ease;
+        }
+
+        .slide-fade-leave-active {
+            transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+        }
+
+        .slide-fade-enter,
+        .slide-fade-leave-to {
+            transform: translateY(-5px);
+            opacity: 0;
+        }
+
+        .b-wrap {
+            width: 1630px;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 1870px) {
+            .b-wrap {
+                width: 1414px;
+            }
+
+                .b-wrap .page-tab .con li {
+                    width: 58px;
+                }
+
+                .b-wrap .friendship-link {
+                    width: 242px;
+                }
+        }
+
+        @media screen and (max-width: 1654px) {
+            .b-wrap {
+                width: 1198px;
+            }
+
+                .b-wrap .page-tab .con li {
+                    width: 50px !important;
+                }
+
+                .b-wrap .tab-line-itnl {
+                    margin: 0 15px;
+                }
+
+                    .b-wrap .tab-line-itnl.none {
+                        margin: 0 12px 0 0;
+                    }
+
+                .b-wrap .friendship-link {
+                    width: 220px;
+                }
+        }
+
+        @media screen and (max-width: 1438px) {
+            .b-wrap {
+                width: 999px;
+            }
+
+                .b-wrap .channel-menu-itnl .item.hide {
+                    display: none;
+                }
+
+                .b-wrap .page-tab .con li {
+                    width: 50px;
+                }
+        }
+    </style>
+</head>
+<body style="background-image: url(https://api.dujin.org/bing/1920.php);background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+    <form runat="server">
+        <ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <script src="./project/Scripts/WebForms/WebForms.js"></script>
+                <script src="./project/Scripts/WebForms/WebUIValidation.js"></script>
+                <script src="./project/Scripts/WebForms/MenuStandards.js"></script>
+                <script src="./project/Scripts/WebForms/GridView.js"></script>
+                <script src="./project/Scripts/WebForms/DetailsView.js"></script>
+                <script src="./project/Scripts/WebForms/TreeView.js"></script>
+                <script src="./project/Scripts/WebForms/WebParts.js"></script>
+                <script src="./project/Scripts/WebForms/Focus.js"></script>
+            </Scripts>
+            <ScriptManager>
+                <div id="internationalHeader" class="international-header report-wrap-module">
+                    <div class="mini-header m-header mini-type">
+                        <div class="mini-header__content mini-header--login">
+                            <div class="nav-link">
+                                <ul class="nav-link-ul mini">
+                                    <li class="nav-link-item">
+                                        <span>
+                                            <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
+                                                <img src="img/logo.png">
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <span>
+                                            <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
+                                                主站
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <span>
+                                            <a href="/project.html" aria-describedby="van-popover-5264" tabindex="0">项目</a>
+                                        </span>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <span>
+                                            <a href="/project/index.html" target="_blank" class="link van-popover__reference" tabindex="0">技术文档</a>
+                                        </span>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="About.html" target="_blank" class="link">关于</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text" style=" text-align:center;"><h1>sknrio Tech Team 2019-2020年度大展</h1></div>
-            <div class="jumbotron">
-                <h1>
-                    本次将于今年7月举行，尽情期待
-                </h1>
-                <p class="lead"></p>
-                <h2>
-                    2019年度大展视频
-                </h2>
-                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=139214045&aid=81344547&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
-                <h2>
-                    特效部：【航空剪辑】We can fly freely！我们可以自由飞翔
-                </h2>
-                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=119001955&aid=68666853&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>                
-                <h2>
-                    动画部：触摸天空MMD
-                </h2>
-                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=105527741&aid=60629291&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="jumbotron">
+                            <div class="text" style=" text-align:center;">
+                                <h2>sknrio Tech Team 2019-2020年度大展</h2>
+                                <h2>
+                                    本次将于今年7月举行，尽情期待
+                                </h2>
+                                <p class="lead"></p>
+                                <h2>
+                                    2019年度大展视频
+                                </h2>
+                                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=139214045&aid=81344547&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                                <h2>
+                                    特效部：【航空剪辑】We can fly freely！我们可以自由飞翔
+                                </h2>
+                                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=119001955&aid=68666853&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                                <h2>
+                                    动画部：触摸天空MMD
+                                </h2>
+                                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=105527741&aid=60629291&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
 
-                <h2>
-                    上期回顾：2018年度大展 ---滑稽展视频
-                </h2>
-                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=69071579&aid=39305150&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
-            </div>
-        </header>
-    </div>
-    <footer>
-        <div class="container">
-            <div class="footer-content d-flex justify-content-between align-items-center flex-wrap">
-                <div class="logo">
-                    <a href="index.html"><img src="img/f-logo.png" alt=""></a>
+                                <h2>
+                                    上期回顾：2018年度大展 ---滑稽展视频
+                                </h2>
+                                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=69071579&aid=39305150&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="copy-right-text">sknrio tech team &copy; 2020  |  All rights reserved. This template is made with </div>
-                <div class="footer-social">
+                <div class="container body-content">
+                    <ContentPlaceHolder ID="MainContent" runat="server">
+                        <ContentPlaceHolder>
+                            <hr />
+
+                            <footer>
+                                <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
+                            </footer>
                 </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer Widget Area -->
-    </div>
-    <script src="js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="assets/jquery.min.js?v=3.3.1"></script>
-    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
-    <script src="assets/autoload.js?v=1.4.2"></script>
+                <script src="js/vendor/jquery-2.2.4.min.js"></script>
+                <script src="js/jquery.ajaxchimp.min.js"></script>
+                <script src="js/owl.carousel.min.js"></script>
+                <script src="js/jquery.nice-select.min.js"></script>
+                <script src="js/jquery.magnific-popup.min.js"></script>
+                <script src="assets/jquery.min.js?v=3.3.1"></script>
+                <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
+                <script src="assets/autoload.js?v=1.4.2"></script>
 </body>
 </html>
