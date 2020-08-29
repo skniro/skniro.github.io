@@ -334,7 +334,7 @@ GS.dataCache['2C26A99BK03D7A4EC4SAA29EE1DB000A7E1E'] = {
             "useIntroScene": true,
             "introInfo": {
                 "scene": {
-                    "uid": "96EB6CA99CCFF94DE04917C216F085E8E747",
+                    "uid": "C53B746D309B814B9A6B91C7CDD0A0D4F6C1",
                     "name": "Language Menu"
                 }
             },

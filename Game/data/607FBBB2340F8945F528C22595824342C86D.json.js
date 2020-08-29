@@ -301,7 +301,7 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     },
                     "message": {
                         "lcId": null,
-                        "defaultText": "如果你看到了这里，恭喜你，你通关了这个全新的测试版，"
+                        "defaultText": "如果你看到了这里，恭喜你，你通关了这个角色介绍的测试版，"
                     },
                     "position": 0,
                     "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
@@ -334,7 +334,7 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     },
                     "message": {
                         "lcId": null,
-                        "defaultText": "这次的剧情以经是推翻重来第五次的了。"
+                        "defaultText": "Project Alice正如其名，Alice会是这个游戏的主角，但至于会如何发展？"
                     },
                     "position": 0,
                     "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
@@ -367,7 +367,7 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     },
                     "message": {
                         "lcId": null,
-                        "defaultText": "游戏中虽然是以高崎为主角来描述整个事件。"
+                        "defaultText": "请各位期待下一个测试版本揭晓吧（笑）"
                     },
                     "position": 0,
                     "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
@@ -413,7 +413,7 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     },
                     "message": {
                         "lcId": null,
-                        "defaultText": "但其实凛桑是最早出现的"
+                        "defaultText": "也许又会咕上半年吧（笑）"
                     },
                     "position": 0,
                     "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
@@ -425,138 +425,6 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     "animations": []
                 },
                 "uid": "7BB4D91361130648F73860F7A68E3A22217C",
-                "indent": 0,
-                "expanded": true
-            },
-            {
-                "id": "gs.ShowMessage",
-                "params": {
-                    "waitForCompletion": 1,
-                    "duration": 15,
-                    "expressionId": null,
-                    "custom": {
-                        "object": {
-                            "x": 0,
-                            "y": 0,
-                            "size": {
-                                "width": 300,
-                                "height": 100
-                            }
-                        }
-                    },
-                    "message": {
-                        "lcId": null,
-                        "defaultText": "虽然现在凛桑的名字是千代凛，但其实凛桑最早是叫千代神凛子，算是抹除了两个字吧。"
-                    },
-                    "position": 0,
-                    "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
-                    "partial": 0,
-                    "fieldFlags": {
-                        "duration": 1
-                    },
-                    "expressions": [],
-                    "animations": []
-                },
-                "uid": "96A2E90053FA374C728A6FE88143A059CD7E",
-                "indent": 0,
-                "expanded": true
-            },
-            {
-                "id": "gs.ShowMessage",
-                "params": {
-                    "waitForCompletion": 1,
-                    "duration": 15,
-                    "expressionId": null,
-                    "custom": {
-                        "object": {
-                            "x": 0,
-                            "y": 0,
-                            "size": {
-                                "width": 300,
-                                "height": 100
-                            }
-                        }
-                    },
-                    "message": {
-                        "lcId": null,
-                        "defaultText": "至于主角团的出现也和完全原来不一样了（笑）"
-                    },
-                    "position": 0,
-                    "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
-                    "partial": 0,
-                    "fieldFlags": {
-                        "duration": 1
-                    },
-                    "expressions": [],
-                    "animations": []
-                },
-                "uid": "22949CDB2C606747C728A98469F2E8FAE48E",
-                "indent": 0,
-                "expanded": true
-            },
-            {
-                "id": "gs.ShowMessage",
-                "params": {
-                    "waitForCompletion": 1,
-                    "duration": 15,
-                    "expressionId": null,
-                    "custom": {
-                        "object": {
-                            "x": 0,
-                            "y": 0,
-                            "size": {
-                                "width": 300,
-                                "height": 100
-                            }
-                        }
-                    },
-                    "message": {
-                        "lcId": null,
-                        "defaultText": "这个测试版的变动可以算是世界线变动吧。"
-                    },
-                    "position": 0,
-                    "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
-                    "partial": 0,
-                    "fieldFlags": {
-                        "duration": 1
-                    },
-                    "expressions": [],
-                    "animations": []
-                },
-                "uid": "6FDFC4A065714247E99989885BDB8398F53A",
-                "indent": 0,
-                "expanded": true
-            },
-            {
-                "id": "gs.ShowMessage",
-                "params": {
-                    "waitForCompletion": 1,
-                    "duration": 15,
-                    "expressionId": null,
-                    "custom": {
-                        "object": {
-                            "x": 0,
-                            "y": 0,
-                            "size": {
-                                "width": 300,
-                                "height": 100
-                            }
-                        }
-                    },
-                    "message": {
-                        "lcId": null,
-                        "defaultText": "到这里就结束了。\n   "
-                    },
-                    "position": 0,
-                    "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
-                    "partial": 0,
-                    "fieldFlags": {
-                        "duration": 1
-                    },
-                    "expressions": [],
-                    "animations": []
-                },
-                "uid": "91CF9205417B424DA29AEA37EAC34318C777",
                 "indent": 0,
                 "expanded": true
             },
@@ -635,6 +503,24 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     }
                 },
                 "uid": "6BB6B0A19337854C984A40C00423EFCE690C",
+                "indent": 0
+            },
+            {
+                "id": "vn.ChangeScene",
+                "params": {
+                    "scene": {
+                        "uid": "4B28387985C6F144615927926E09092086A3",
+                        "name": "The End"
+                    },
+                    "savePrevious": 0,
+                    "erasePictures": 0,
+                    "eraseTexts": 0,
+                    "eraseVideos": 0,
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "72D4AF8B472C024A301934277455D8D1CC52",
                 "indent": 0
             }
         ],

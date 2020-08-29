@@ -1,86 +1,38 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="STG，skniro tech group，skniro,STT,MC资源，材质，Win10美化，音乐创作">
-    <meta name="description" content=" STG是一个国际化的创作团体，我们目前的创作范围有游戏，视频，音乐等。希望有更多的小伙伴关注我们，加入我们。">
-    <title>skniro tech team</title>
-    <PlaceHolder runat="server">
-    </PlaceHolder>
-
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" href="project/Content/bootstrap.css">
-    <link rel="stylesheet" href="project/Content/Site.css">
-    <link rel="stylesheet" href="css/basic.css">
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
 </head>
-<body style="background-image: url(https://api.dujin.org/bing/1920.php);background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
-  
-                <div id="internationalHeader" class="international-header report-wrap-module">
-                    <div class="mini-header m-header mini-type">
-                        <div class="mini-header__content mini-header--login">
-                            <div class="nav-link">
-                                <ul class="nav-link-ul mini">
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
-                                                <img src="img/logo.png">
-                                            </a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
-                                                主站
-                                            </a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/project.html" aria-describedby="van-popover-5264" tabindex="0">项目</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/project/index.html" target="_blank" class="link van-popover__reference" tabindex="0">技术文档</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <a href="About.html" target="_blank" class="link">关于</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="text" style=" text-align:center;"><h1>The Project A.L.I.C.E</h1></div>
-                        <div class="jumbotron">
-                            <h1>Project Alice</h1>
-                            <p class="lead">bate0.0.5 Windows develop Ver</p>
-                            <p>
-                                <a class="btn btn-default" href="https://pan.baidu.com/s/1DyWmgWqgUnMpedt2yB4SwA">下载 &raquo;</a>
-                            </p>
-                            <p>
-                                <a class="btn btn-default" href="Game/index.html">技术测试版本浏览 &raquo;</a>
-                            </p>
-                            <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=70431113&aid=40102302&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="container body-content">
-                    <ContentPlaceHolder ID="MainContent" runat="server">
-                        <ContentPlaceHolder>
-                            <hr />
+<body class="ms-Fabric--selawik" dir="ltr">
+    <div id="new-header">
+        <script>
+            $("#new-header").load("master.html");
+        </script>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="text" style=" text-align:center;"><h1>The Project A.L.I.C.E</h1></div>
+            <div class="jumbotron">
+                <h1>Project Alice</h1>
+                <p class="lead">bate0.0.5 Windows develop Ver</p>
+                <p>
+                    <a class="ms-Fabric ms-Button" href="https://pan.baidu.com/s/1DyWmgWqgUnMpedt2yB4SwA">下载 &raquo;</a>
+                </p>
+                <p>
+                    <a class="ms-Fabric ms-Button" href="Game/index.html">技术测试版本浏览 &raquo;</a>
+                </p>
+                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=70431113&aid=40102302&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <ContentPlaceHolder ID="MainContent" runat="server">
+            <ContentPlaceHolder>
+                <hr />
 
-                            <footer>
-                                <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
-                            </footer>
-                </div>          
-                <script src="assets/jquery.min.js?v=3.3.1"></script>
-                <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
-                <script src="assets/autoload.js?v=1.4.2"></script>
+                <footer>
+                    <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
+                </footer>
+    </div>
 </body>
 </html>

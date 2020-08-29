@@ -1,88 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="STG，skniro tech group，skniro,STT,MC资源，材质，Win10美化，音乐创作">
-    <meta name="description" content=" STG是一个国际化的创作团体，我们目前的创作范围有游戏，视频，音乐等。希望有更多的小伙伴关注我们，加入我们。">
-    <title>skniro tech team</title>
-    <PlaceHolder runat="server">
-    </PlaceHolder>
-
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" href="/project/Content/bootstrap.css">
-    <link rel="stylesheet" href="/project/Content/Site.css">
-    <link rel="stylesheet" href="css/basic.css">
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
 </head>
-<body background="./img/background.png" ;background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
-                <div id="internationalHeader" class="international-header report-wrap-module">
-                    <div class="mini-header m-header mini-type">
-                        <div class="mini-header__content mini-header--login">
-                            <div class="nav-link">
-                                <ul class="nav-link-ul mini">
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
-                                                <img src="img/logo.png">
-                                            </a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
-                                                主站
-                                            </a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/project.html" aria-describedby="van-popover-5264" tabindex="0">项目</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/project/index.html" target="_blank" class="link van-popover__reference" tabindex="0">技术文档</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <a href="About.html" target="_blank" class="link">关于</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<body class="ms-Fabric--selawik" dir="ltr">
+    <div id="new-header">
+        <script>
+            $("#new-header").load("master.html");
+        </script>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="jumbotron">
+                <div class="text" style=" text-align:center;">
+                    <h2 class="mt-sm-5">和风幻想乡1.12.2高版本mod整合包</h2>
+                    <h2>
+                        中国风，和风，食物类mod整合包---和风幻想乡
+                    </h2>
+                    <img src='https://i.natfrp.com/a2a91353e6f377b60ca28d8e9e198e3a.png' width="640" height="430" alt='image'>
+                    <h3>下载链接:</h3>
+                    <h2 class="lead">和风幻想乡-1.12.2-1.0</h2>
+                    <p>
+                        <a class="ms-Fabric ms-Button" href="https://sknirotechteam.coding.net/s/583ab8ef-8700-4d19-b5f6-da766d5ee544">下载 &raquo;</a>
+                    </p>
+                    <h2 class="lead">材质包（可选，不必要）</h2>
+                    <a class="ms-Fabric ms-Button" href="https://sknirotechteam.coding.net/s/0f702a29-e3d1-48ab-b931-99f056a0b2ee">下载 &raquo;</a>
                 </div>
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="jumbotron">
-                            <div class="text" style=" text-align:center;">
-                                <h2 class="mt-sm-5">和风幻想乡1.12.2高版本mod整合包</h2>
-                                <h2>
-                                    中国风，和风，食物类mod整合包---和风幻想乡
-                                </h2>
-                                <img src='https://i.natfrp.com/a2a91353e6f377b60ca28d8e9e198e3a.png' width="640" height="430" alt='image'>
-                                <h3>下载链接:</h3>
-                                <h2 class="lead">和风幻想乡-1.12.2-1.0</h2>
-                                <p>
-                                    <a class="btn btn-default" href="https://sknirotechteam.coding.net/s/583ab8ef-8700-4d19-b5f6-da766d5ee544">下载 &raquo;</a>
-                                </p>
-                                <h2 class="lead">材质包（可选，不必要）</h2>
-                                <a class="btn btn-default" href="https://sknirotechteam.coding.net/s/0f702a29-e3d1-48ab-b931-99f056a0b2ee">下载 &raquo;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    <div class="container body-content">
-                        <ContentPlaceHolder ID="MainContent" runat="server">
-                            <ContentPlaceHolder>
-                                <hr />
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <ContentPlaceHolder ID="MainContent" runat="server">
+            <ContentPlaceHolder>
+                <hr />
 
-                                <footer>
-                                    <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
-                                </footer>
-                    </div>
-                    <script src="assets/jquery.min.js?v=3.3.1"></script>
-                    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
-                    <script src="assets/autoload.js?v=1.4.2"></script>
+                <footer>
+                    <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
+                </footer>
+    </div>
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
+    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
+    <script src="assets/autoload.js?v=1.4.2"></script>
 </body>
 </html>

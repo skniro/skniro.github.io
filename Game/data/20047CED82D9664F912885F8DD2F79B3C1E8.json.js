@@ -31,22 +31,28 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     "number": 100,
                     "hotspots": [
                         {
-                            "x": 894,
-                            "y": 80,
+                            "x": 0,
+                            "y": 265,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 447,
-                                "y": 40,
-                                "width": 179,
-                                "height": 127,
+                                "x": 0,
+                                "y": 265,
+                                "width": 415,
+                                "height": 64,
                                 "action": 1,
                                 "label": "back",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -58,32 +64,39 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 179,
-                                "height": 127
+                                "width": 415,
+                                "height": 64
                             }
                         },
                         {
-                            "x": 1206,
-                            "y": 256,
+                            "x": 671,
+                            "y": 248,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 603,
-                                "y": 128,
-                                "width": 206,
-                                "height": 54,
+                                "x": 671,
+                                "y": 248,
+                                "width": 45,
+                                "height": 21,
                                 "action": 1,
                                 "label": "display_window",
                                 "bindToSwitch": true,
                                 "switch": {
                                     "name": "Display - Window",
                                     "index": 0,
-                                    "scope": 0
+                                    "scope": 0,
+                                    "domain": "com.degica.vnm.default"
                                 },
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -95,32 +108,39 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 206,
-                                "height": 54
+                                "width": 45,
+                                "height": 21
                             }
                         },
                         {
-                            "x": 1428,
-                            "y": 258,
+                            "x": 671,
+                            "y": 198,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 714,
-                                "y": 129,
-                                "width": 241,
-                                "height": 54,
+                                "x": 671,
+                                "y": 198,
+                                "width": 45,
+                                "height": 21,
                                 "action": 1,
                                 "label": "display_fullscreen",
                                 "bindToSwitch": true,
                                 "switch": {
                                     "name": "Display - Fullscreen",
                                     "index": 1,
-                                    "scope": 0
+                                    "scope": 0,
+                                    "domain": "com.degica.vnm.default"
                                 },
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -132,19 +152,19 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 241,
-                                "height": 54
+                                "width": 45,
+                                "height": 21
                             }
                         },
                         {
-                            "x": 1424,
-                            "y": 344,
+                            "x": 1554,
+                            "y": 18,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 712,
-                                "y": 172,
+                                "x": 1424,
+                                "y": 344,
                                 "width": 193,
                                 "height": 51,
                                 "action": 1,
@@ -174,14 +194,14 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             }
                         },
                         {
-                            "x": 1210,
-                            "y": 342,
+                            "x": 1346,
+                            "y": 20,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 605,
-                                "y": 171,
+                                "x": 1210,
+                                "y": 342,
                                 "width": 145,
                                 "height": 49,
                                 "action": 1,
@@ -206,13 +226,13 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 145,
+                                "width": 197,
                                 "height": 49
                             }
                         },
                         {
-                            "x": 1210,
-                            "y": 398,
+                            "x": 1354,
+                            "y": 72,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
@@ -248,8 +268,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             }
                         },
                         {
-                            "x": 1424,
-                            "y": 400,
+                            "x": 1556,
+                            "y": 74,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
@@ -285,8 +305,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             }
                         },
                         {
-                            "x": 912,
-                            "y": 942,
+                            "x": 1630,
+                            "y": 970,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
@@ -324,8 +344,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             }
                         },
                         {
-                            "x": 1364,
-                            "y": 942,
+                            "x": 1524,
+                            "y": 970,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
@@ -354,6 +374,158 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                                 "width": 378,
                                 "height": 100
                             }
+                        },
+                        {
+                            "x": 0,
+                            "y": 393,
+                            "angle": 0,
+                            "zoom": 0,
+                            "horizontalFlip": false,
+                            "data": {
+                                "x": 0,
+                                "y": 393,
+                                "width": 415,
+                                "height": 64,
+                                "action": 1,
+                                "label": "Save Menu",
+                                "bindToSwitch": false,
+                                "bindEnabledState": false,
+                                "bindValueTo": false,
+                                "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
+                                "zoom": null,
+                                "angle": 0,
+                                "horizontalFlip": false
+                            },
+                            "color": {
+                                "red": 255,
+                                "green": 0,
+                                "blue": 255,
+                                "alpha": 130
+                            },
+                            "size": {
+                                "width": 415,
+                                "height": 64
+                            }
+                        },
+                        {
+                            "x": 0,
+                            "y": 329,
+                            "angle": 0,
+                            "zoom": 0,
+                            "horizontalFlip": false,
+                            "data": {
+                                "x": 0,
+                                "y": 329,
+                                "width": 415,
+                                "height": 64,
+                                "action": 1,
+                                "label": "Load Menu",
+                                "bindToSwitch": false,
+                                "bindEnabledState": false,
+                                "bindValueTo": false,
+                                "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
+                                "zoom": null,
+                                "angle": 0,
+                                "horizontalFlip": false
+                            },
+                            "color": {
+                                "red": 255,
+                                "green": 0,
+                                "blue": 255,
+                                "alpha": 130
+                            },
+                            "size": {
+                                "width": 415,
+                                "height": 64
+                            }
+                        },
+                        {
+                            "x": 0,
+                            "y": 521,
+                            "angle": 0,
+                            "zoom": 0,
+                            "horizontalFlip": false,
+                            "data": {
+                                "x": 0,
+                                "y": 521,
+                                "width": 415,
+                                "height": 64,
+                                "action": 1,
+                                "label": "CG",
+                                "bindToSwitch": false,
+                                "bindEnabledState": false,
+                                "bindValueTo": false,
+                                "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
+                                "zoom": null,
+                                "angle": 0,
+                                "horizontalFlip": false
+                            },
+                            "color": {
+                                "red": 255,
+                                "green": 0,
+                                "blue": 255,
+                                "alpha": 130
+                            },
+                            "size": {
+                                "width": 415,
+                                "height": 64
+                            }
+                        },
+                        {
+                            "x": 0,
+                            "y": 456,
+                            "angle": 0,
+                            "zoom": 0,
+                            "horizontalFlip": false,
+                            "data": {
+                                "x": 0,
+                                "y": 456,
+                                "width": 415,
+                                "height": 64,
+                                "action": 1,
+                                "label": "Settings",
+                                "bindToSwitch": false,
+                                "bindEnabledState": false,
+                                "bindValueTo": false,
+                                "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
+                                "zoom": null,
+                                "angle": 0,
+                                "horizontalFlip": false
+                            },
+                            "color": {
+                                "red": 255,
+                                "green": 0,
+                                "blue": 255,
+                                "alpha": 130
+                            },
+                            "size": {
+                                "width": 415,
+                                "height": 64
+                            }
                         }
                     ],
                     "ground": {
@@ -369,7 +541,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         }
                     },
                     "hover": {
-                        "name": "settings_hover",
+                        "name": "Settings_select",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -382,7 +554,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     },
                     "unselected": null,
                     "selected": {
-                        "name": "settings_hover",
+                        "name": "Settings_Hover",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -453,6 +625,9 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "scope": 1,
                         "index": 0,
                         "domain": "com.degica.vnm.default"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
                     }
                 },
                 "indent": 0,
@@ -461,8 +636,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
             {
                 "id": "gs.AddHotspot",
                 "params": {
-                    "shape": "rect",
-                    "positionType": 1,
+                    "shape": "pixel",
+                    "positionType": 0,
                     "actions": {
                         "onClick": {
                             "type": 0,
@@ -569,10 +744,10 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "scope": 0
                         },
                         "horizontal": 1,
-                        "vertical": 0,
+                        "vertical": 1,
                         "rect": {
-                            "x": 1229,
-                            "y": 546,
+                            "x": 595,
+                            "y": 430,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
@@ -592,23 +767,23 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 415,
+                                "width": 550,
                                 "height": 20
                             }
                         }
                     },
                     "position": 1,
                     "box": {
-                        "x": 1227,
-                        "y": 545,
+                        "x": 651,
+                        "y": 429,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
                         "data": {
-                            "x": 1076,
-                            "y": 364,
-                            "width": 20,
-                            "height": 16,
+                            "x": 651,
+                            "y": 433,
+                            "width": 8,
+                            "height": 12,
                             "horizontalFlip": false,
                             "zoom": 1,
                             "angle": 0
@@ -620,8 +795,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "alpha": 160
                         },
                         "size": {
-                            "width": 20,
-                            "height": 16
+                            "width": 8,
+                            "height": 24
                         }
                     },
                     "previewBackground": {
@@ -630,7 +805,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                 },
                 "indent": 0,
                 "uid": "301561DA6FC4A84B785B06C7BAF3BA202CFA",
-                "expanded": false
+                "expanded": true
             },
             {
                 "id": "gs.ShowPicture",
@@ -639,7 +814,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "type": "ui"
                     },
                     "size": {
-                        "type": 1,
+                        "type": 0,
                         "width": 316,
                         "height": 23
                     },
@@ -670,12 +845,14 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1227,
-                        "y": 545,
+                        "x": 649,
+                        "y": 429,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
-                        "data": {},
+                        "data": {
+                            "zoom": 1.19912902961612
+                        },
                         "color": {
                             "red": 0,
                             "green": 0,
@@ -688,7 +865,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "inOut": 1
                     },
                     "animation": {
-                        "type": 1,
+                        "type": 0,
                         "movement": 0,
                         "mask": {
                             "graphic": null,
@@ -697,10 +874,10 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     },
                     "fieldFlags": {
                         "duration": 0,
-                        "easing.type": 1,
+                        "easing.type": 0,
                         "animation.type": 0,
                         "zOrder": 0,
-                        "blendMode": 1,
+                        "blendMode": 0,
                         "visual.type": 0,
                         "visual.frame.thickness": 1,
                         "visual.frame.cornerSize": 1,
@@ -709,7 +886,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "size.type": 0,
                         "size.width": 0,
                         "size.height": 0,
-                        "viewport.type": 1,
+                        "viewport.type": 0,
                         "origin": 1
                     },
                     "previewBackground": {
@@ -731,7 +908,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                 },
                 "indent": 0,
                 "uid": "BAA3CD021AB3C24AA509E6C5B1859002C78C",
-                "expanded": false
+                "expanded": true
             },
             {
                 "id": "gs.AddHotspot",
@@ -1008,7 +1185,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                 },
                 "indent": 0,
                 "uid": "30C9DADD2C47C849E18A3F8426215BB2A2D6",
-                "expanded": false
+                "expanded": true
             },
             {
                 "id": "gs.AddHotspot",
@@ -1565,10 +1742,87 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                 "expanded": false
             },
             {
+                "id": "gs.ShowPicture",
+                "params": {
+                    "numberDomain": "com.degica.vnm.default",
+                    "viewport": {
+                        "type": "ui"
+                    },
+                    "size": {
+                        "type": 0,
+                        "width": 100,
+                        "height": 100
+                    },
+                    "visual": {
+                        "type": 0,
+                        "quad": {
+                            "color": {
+                                "red": 255,
+                                "green": 255,
+                                "blue": 255,
+                                "alpha": 255
+                            }
+                        },
+                        "frame": {
+                            "thickness": 16,
+                            "cornerSize": 16
+                        },
+                        "threePartImage": {
+                            "orientation": 0
+                        }
+                    },
+                    "predefinedPositionId": 0,
+                    "number": 3,
+                    "blendMode": 0,
+                    "zOrder": 0,
+                    "duration": 0,
+                    "origin": 0,
+                    "waitForCompletion": 0,
+                    "positionType": 1,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "easing": {
+                        "type": 0,
+                        "inOut": 1
+                    },
+                    "animation": {
+                        "type": 1,
+                        "movement": 0,
+                        "mask": {
+                            "graphic": null,
+                            "vague": 30
+                        }
+                    },
+                    "fieldFlags": {
+                        "origin": 0,
+                        "duration": 1
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    },
+                    "graphic": {
+                        "name": "slider_hover2",
+                        "hue": 0,
+                        "opacity": 255,
+                        "blending": 0,
+                        "tone": {
+                            "red": 0,
+                            "green": 0,
+                            "blue": 0,
+                            "grey": 0
+                        }
+                    }
+                },
+                "uid": "77D99BC460AA824DBD4972426AAB98FF8F30",
+                "indent": 0
+            },
+            {
                 "id": "gs.AddHotspot",
                 "params": {
                     "shape": "rect",
-                    "positionType": 1,
+                    "positionType": 0,
                     "actions": {
                         "onClick": {
                             "type": 0,
@@ -1677,8 +1931,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "horizontal": 1,
                         "vertical": 0,
                         "rect": {
-                            "x": 1228,
-                            "y": 842,
+                            "x": 652,
+                            "y": 756,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
@@ -1698,15 +1952,15 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 420,
+                                "width": 499,
                                 "height": 24
                             }
                         }
                     },
                     "position": 1,
                     "box": {
-                        "x": 1227,
-                        "y": 841,
+                        "x": 651,
+                        "y": 757,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
@@ -1726,7 +1980,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "alpha": 160
                         },
                         "size": {
-                            "width": 20,
+                            "width": 8,
                             "height": 23
                         }
                     },
@@ -1739,6 +1993,95 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                 "indent": 0,
                 "uid": "F49A1F595345B44C2529F5F426BBEFD3EB9F",
                 "expanded": false
+            },
+            {
+                "id": "gs.ShowPicture",
+                "params": {
+                    "numberDomain": "com.degica.vnm.default",
+                    "viewport": {
+                        "type": "ui"
+                    },
+                    "size": {
+                        "type": 0,
+                        "width": 100,
+                        "height": 100
+                    },
+                    "visual": {
+                        "type": 0,
+                        "quad": {
+                            "color": {
+                                "red": 255,
+                                "green": 255,
+                                "blue": 255,
+                                "alpha": 255
+                            }
+                        },
+                        "frame": {
+                            "thickness": 16,
+                            "cornerSize": 16
+                        },
+                        "threePartImage": {
+                            "orientation": 0
+                        }
+                    },
+                    "predefinedPositionId": 0,
+                    "number": 4,
+                    "blendMode": 0,
+                    "zOrder": 0,
+                    "duration": 0,
+                    "origin": 0,
+                    "waitForCompletion": 0,
+                    "positionType": 1,
+                    "position": {
+                        "x": 372,
+                        "y": 754,
+                        "angle": 0,
+                        "zoom": 1,
+                        "horizontalFlip": false,
+                        "data": {
+                            "zoom": 1.2057892899157572
+                        },
+                        "color": {
+                            "red": 0,
+                            "green": 0,
+                            "blue": 0,
+                            "alpha": 0
+                        }
+                    },
+                    "easing": {
+                        "type": 0,
+                        "inOut": 1
+                    },
+                    "animation": {
+                        "type": 1,
+                        "movement": 0,
+                        "mask": {
+                            "graphic": null,
+                            "vague": 30
+                        }
+                    },
+                    "fieldFlags": {
+                        "origin": 0,
+                        "duration": 1
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    },
+                    "graphic": {
+                        "name": "slider_hover2",
+                        "hue": 0,
+                        "opacity": 255,
+                        "blending": 0,
+                        "tone": {
+                            "red": 0,
+                            "green": 0,
+                            "blue": 0,
+                            "grey": 0
+                        }
+                    }
+                },
+                "uid": "A39706778E7D564D533A06992D872DE0CD0B",
+                "indent": 0
             },
             {
                 "id": "gs.ShowPicture",
@@ -1778,12 +2121,20 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     "waitForCompletion": 1,
                     "positionType": 1,
                     "position": {
-                        "x": 1227,
-                        "y": 841,
+                        "x": 643,
+                        "y": 755,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
-                        "data": {},
+                        "data": {
+                            "x": 651,
+                            "y": 767,
+                            "zoom": 1.2169526112767448,
+                            "angle": 0,
+                            "horizontalFlip": false,
+                            "width": 418,
+                            "height": 23
+                        },
                         "color": {
                             "red": 0,
                             "green": 0,
@@ -1805,10 +2156,10 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     },
                     "fieldFlags": {
                         "duration": 0,
-                        "easing.type": 1,
+                        "easing.type": 0,
                         "animation.type": 0,
                         "zOrder": 0,
-                        "blendMode": 1,
+                        "blendMode": 0,
                         "visual.type": 0,
                         "visual.frame.thickness": 1,
                         "visual.frame.cornerSize": 1,
@@ -2311,6 +2662,140 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                 "id": "gs.Idle",
                 "params": {},
                 "indent": 0,
+                "uid": "47292AAB3DBAA24B150985048C9C638CCFBA"
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "back"
+                },
+                "indent": 0,
+                "uid": "E17A511A4073B548ED9967A4968024A74F06"
+            },
+            {
+                "id": "vn.ReturnToPreviousScene",
+                "params": {},
+                "indent": 0,
+                "uid": "57D50C7E7B470049A569B7D02310A9D44CB8"
+            },
+            {
+                "id": "gs.Idle",
+                "params": {},
+                "uid": "3C31BBF55F9BB8423398D4E2AB4EBDCDEA7A",
+                "indent": 0
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "Load Menu"
+                },
+                "uid": "C9E9FEBE4251854CD428A301BFAFEC4F52C3",
+                "indent": 0
+            },
+            {
+                "id": "vn.CallScene",
+                "params": {
+                    "scene": {
+                        "uid": "E8023FF12DF3024AE35A80B7D3690BED05F3",
+                        "name": "Load Menu"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "989ADFE4109BA842DB394152BA8190EA4263",
+                "indent": 0
+            },
+            {
+                "id": "gs.Idle",
+                "params": {},
+                "indent": 0,
+                "uid": "80223BA4725CE7430539BB170FD2525C6007"
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "Save Menu"
+                },
+                "uid": "37A470F47D8FA94FA818FEA53AEA0D667452",
+                "indent": 0
+            },
+            {
+                "id": "vn.CallScene",
+                "params": {
+                    "scene": {
+                        "uid": "788F76F4231BE442882AEDA37BCF0AE6556B",
+                        "name": "Save Menu"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "B27BC65F7C17C443063B0AB773DD5A045CB0",
+                "indent": 0
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "Settings"
+                },
+                "uid": "E2BE96EC3455F14E380BEAF3F40C398F0149",
+                "indent": 0
+            },
+            {
+                "id": "vn.CallScene",
+                "params": {
+                    "scene": {
+                        "uid": "20047CED82D9664F912885F8DD2F79B3C1E8",
+                        "name": "Settings Menu"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "B6315CBE18066244538B52A6506B5480A6ED",
+                "indent": 0
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "CG"
+                },
+                "uid": "1E60052181A0354B044BF2C30DC646397EA8",
+                "indent": 0
+            },
+            {
+                "id": "vn.CallScene",
+                "params": {
+                    "scene": {
+                        "uid": "83F3B6066A2EE444DD0AD086BF9D53D4A299",
+                        "name": "CG Gallery"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "F641E5BA2A34944E2C59FE2136858C9BCF93",
+                "indent": 0
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "slot1"
+                },
+                "indent": 0,
+                "uid": "C80DD3359C3CA5466B2945E8F591C6CF5244"
+            },
+            {
+                "id": "gs.Idle",
+                "params": {},
+                "indent": 0,
+                "uid": "3F9569EB57E28742652BE1D541D18B5605AA"
+            },
+            {
+                "id": "gs.Idle",
+                "params": {},
+                "indent": 0,
                 "uid": "6F0E9C2D77B91540D74A7568DBE89B0141D1"
             },
             {
@@ -2588,7 +3073,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     "targetVariable": {
                         "name": "Display - Window",
                         "index": 0,
-                        "scope": 0
+                        "scope": 0,
+                        "domain": "com.degica.vnm.default"
                     },
                     "targetRangeScope": 0,
                     "rangeStart": 0,
@@ -3111,12 +3597,14 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
             {
                 "name": "Display - Window",
                 "index": 0,
-                "scope": 0
+                "scope": 0,
+                "domain": "com.degica.vnm.default"
             },
             {
                 "name": "Display - Fullscreen",
                 "index": 1,
-                "scope": 0
+                "scope": 0,
+                "domain": "com.degica.vnm.default"
             },
             {
                 "name": "Skip Msg - All Msg.",

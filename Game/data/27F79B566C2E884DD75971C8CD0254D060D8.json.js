@@ -1,16 +1,17 @@
 GS.dataCache['27F79B566C2E884DD75971C8CD0254D060D8'] = {
     "uid": "27F79B566C2E884DD75971C8CD0254D060D8",
-    "isLoaded": false,
-    "lastModificationTime": null,
+    "isLoaded": true,
+    "lastModificationTime": 0,
     "items": {
-        "name": "id：002",
+        "name": "yukishiro",
         "type": "data_record",
+        "order": 4,
         "category": "characters",
         "isFolder": false,
         "data": {
             "name": {
                 "lcId": null,
-                "defaultText": "id：002"
+                "defaultText": "yukishiro"
             },
             "textColor": {
                 "red": 255,
@@ -29,7 +30,6 @@ GS.dataCache['27F79B566C2E884DD75971C8CD0254D060D8'] = {
         },
         "id": "27F79B566C2E884DD75971C8CD0254D060D8",
         "localizableStrings": {},
-        "order": 4,
         "parentId": "ROOT"
     },
     "summary": [

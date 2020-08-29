@@ -145,22 +145,28 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "number": 100,
                     "hotspots": [
                         {
-                            "x": 902,
-                            "y": 82,
+                            "x": 0,
+                            "y": 265,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 451,
-                                "y": 41,
-                                "width": 162,
-                                "height": 122,
+                                "x": 0,
+                                "y": 265,
+                                "width": 415,
+                                "height": 64,
                                 "action": 1,
                                 "label": "back",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -172,21 +178,21 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 162,
-                                "height": 122
+                                "width": 415,
+                                "height": 64
                             }
                         },
                         {
-                            "x": 1794,
-                            "y": 176,
+                            "x": 1851,
+                            "y": 117,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 897,
-                                "y": 88,
-                                "width": 72,
-                                "height": 92,
+                                "x": 1851,
+                                "y": 117,
+                                "width": 69,
+                                "height": 64,
                                 "action": 1,
                                 "label": "page1",
                                 "bindToSwitch": true,
@@ -198,6 +204,12 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -209,33 +221,40 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 72,
-                                "height": 92
+                                "width": 69,
+                                "height": 64
                             }
                         },
                         {
-                            "x": 1792,
-                            "y": 270,
+                            "x": 1851,
+                            "y": 202,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 896,
-                                "y": 135,
-                                "width": 78,
-                                "height": 86,
+                                "x": 1851,
+                                "y": 202,
+                                "width": 69,
+                                "height": 64,
                                 "action": 1,
                                 "label": "page2",
                                 "bindToSwitch": true,
                                 "switch": {
-                                    "name": "Page 2",
+                                    "name": "Backlog Opened",
                                     "index": 1,
                                     "scope": 1,
+                                    "changed": true,
                                     "domain": "com.degica.vnm.default"
                                 },
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -247,33 +266,40 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 78,
-                                "height": 86
+                                "width": 69,
+                                "height": 64
                             }
                         },
                         {
-                            "x": 1792,
-                            "y": 354,
+                            "x": 1851,
+                            "y": 287,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 896,
-                                "y": 177,
-                                "width": 77,
-                                "height": 90,
+                                "x": 1851,
+                                "y": 287,
+                                "width": 69,
+                                "height": 64,
                                 "action": 1,
                                 "label": "page3",
                                 "bindToSwitch": true,
                                 "switch": {
-                                    "name": "Page 3",
+                                    "name": "Toggle Skip",
                                     "index": 2,
                                     "scope": 1,
-                                    "domain": "com.degica.vnm.default"
+                                    "domain": "com.degica.vnm.default",
+                                    "changed": true
                                 },
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -285,33 +311,40 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 77,
-                                "height": 90
+                                "width": 69,
+                                "height": 64
                             }
                         },
                         {
-                            "x": 1792,
-                            "y": 440,
+                            "x": 1851,
+                            "y": 372,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 896,
-                                "y": 220,
-                                "width": 76,
-                                "height": 89,
+                                "x": 1851,
+                                "y": 372,
+                                "width": 69,
+                                "height": 64,
                                 "action": 1,
                                 "label": "page4",
                                 "bindToSwitch": true,
                                 "switch": {
-                                    "name": "Page 4",
+                                    "name": "Toggle Auto",
                                     "index": 3,
                                     "scope": 1,
-                                    "domain": "com.degica.vnm.default"
+                                    "domain": "com.degica.vnm.default",
+                                    "changed": true
                                 },
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -323,21 +356,21 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 76,
-                                "height": 89
+                                "width": 69,
+                                "height": 64
                             }
                         },
                         {
-                            "x": 1794,
-                            "y": 528,
+                            "x": 1851,
+                            "y": 457,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 897,
-                                "y": 264,
-                                "width": 78,
-                                "height": 89,
+                                "x": 1851,
+                                "y": 457,
+                                "width": 69,
+                                "height": 64,
                                 "action": 1,
                                 "label": "page5",
                                 "bindToSwitch": true,
@@ -349,6 +382,12 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -360,27 +399,33 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 78,
-                                "height": 89
+                                "width": 69,
+                                "height": 64
                             }
                         },
                         {
-                            "x": 1050,
-                            "y": 274,
+                            "x": 872,
+                            "y": 117,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 525,
-                                "y": 137,
-                                "width": 260,
-                                "height": 152,
+                                "x": 872,
+                                "y": 117,
+                                "width": 230,
+                                "height": 136,
                                 "action": 1,
                                 "label": "slot1",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -392,27 +437,33 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 260,
-                                "height": 152
+                                "width": 230,
+                                "height": 136
                             }
                         },
                         {
-                            "x": 1048,
-                            "y": 462,
+                            "x": 872,
+                            "y": 304,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 524,
-                                "y": 231,
-                                "width": 262,
-                                "height": 149,
+                                "x": 872,
+                                "y": 304,
+                                "width": 230,
+                                "height": 136,
                                 "action": 1,
                                 "label": "slot2",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -424,27 +475,33 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 262,
-                                "height": 149
+                                "width": 230,
+                                "height": 136
                             }
                         },
                         {
-                            "x": 1046,
-                            "y": 644,
+                            "x": 872,
+                            "y": 491,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 523,
-                                "y": 322,
-                                "width": 275,
-                                "height": 158,
+                                "x": 872,
+                                "y": 491,
+                                "width": 230,
+                                "height": 136,
                                 "action": 1,
                                 "label": "slot3",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -456,27 +513,33 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 275,
-                                "height": 158
+                                "width": 230,
+                                "height": 136
                             }
                         },
                         {
-                            "x": 1046,
-                            "y": 830,
+                            "x": 872,
+                            "y": 676,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 523,
-                                "y": 415,
-                                "width": 279,
-                                "height": 155,
+                                "x": 872,
+                                "y": 676,
+                                "width": 230,
+                                "height": 136,
                                 "action": 1,
                                 "label": "slot4",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -488,27 +551,33 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 279,
-                                "height": 155
+                                "width": 230,
+                                "height": 136
                             }
                         },
                         {
-                            "x": 1498,
-                            "y": 264,
+                            "x": 1165,
+                            "y": 117,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 749,
-                                "y": 132,
-                                "width": 284,
-                                "height": 162,
+                                "x": 1165,
+                                "y": 117,
+                                "width": 230,
+                                "height": 136,
                                 "action": 1,
                                 "label": "slot5",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -520,27 +589,33 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 284,
-                                "height": 162
+                                "width": 230,
+                                "height": 136
                             }
                         },
                         {
-                            "x": 1498,
-                            "y": 456,
+                            "x": 1162,
+                            "y": 303,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 749,
-                                "y": 228,
-                                "width": 285,
-                                "height": 158,
+                                "x": 1162,
+                                "y": 303,
+                                "width": 230,
+                                "height": 136,
                                 "action": 1,
                                 "label": "slot6",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -552,27 +627,33 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 285,
-                                "height": 158
+                                "width": 230,
+                                "height": 136
                             }
                         },
                         {
-                            "x": 1500,
-                            "y": 832,
+                            "x": 1162,
+                            "y": 676,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 750,
-                                "y": 416,
-                                "width": 275,
-                                "height": 152,
+                                "x": 1162,
+                                "y": 676,
+                                "width": 230,
+                                "height": 136,
                                 "action": 1,
                                 "label": "slot8",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -584,27 +665,33 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 275,
-                                "height": 152
+                                "width": 230,
+                                "height": 136
                             }
                         },
                         {
-                            "x": 1496,
-                            "y": 644,
+                            "x": 1162,
+                            "y": 491,
                             "angle": 0,
                             "zoom": 1,
                             "horizontalFlip": false,
                             "data": {
-                                "x": 748,
-                                "y": 322,
-                                "width": 279,
-                                "height": 156,
+                                "x": 1162,
+                                "y": 491,
+                                "width": 230,
+                                "height": 136,
                                 "action": 1,
                                 "label": "slot7",
                                 "bindToSwitch": false,
                                 "bindEnabledState": false,
                                 "bindValueTo": false,
                                 "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
                                 "zoom": 1,
                                 "angle": 0,
                                 "horizontalFlip": false
@@ -616,8 +703,160 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                                 "alpha": 160
                             },
                             "size": {
-                                "width": 279,
-                                "height": 156
+                                "width": 230,
+                                "height": 136
+                            }
+                        },
+                        {
+                            "x": 0,
+                            "y": 329,
+                            "angle": 0,
+                            "zoom": 1,
+                            "horizontalFlip": false,
+                            "data": {
+                                "x": 0,
+                                "y": 329,
+                                "width": 415,
+                                "height": 64,
+                                "action": 1,
+                                "label": "Load Menu",
+                                "bindToSwitch": false,
+                                "bindEnabledState": false,
+                                "bindValueTo": false,
+                                "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
+                                "zoom": null,
+                                "angle": 0,
+                                "horizontalFlip": false
+                            },
+                            "color": {
+                                "red": 255,
+                                "green": 0,
+                                "blue": 255,
+                                "alpha": 130
+                            },
+                            "size": {
+                                "width": 415,
+                                "height": 64
+                            }
+                        },
+                        {
+                            "x": 0,
+                            "y": 393,
+                            "angle": 0,
+                            "zoom": 1,
+                            "horizontalFlip": false,
+                            "data": {
+                                "x": 0,
+                                "y": 393,
+                                "width": 415,
+                                "height": 64,
+                                "action": 1,
+                                "label": "Save Menu",
+                                "bindToSwitch": false,
+                                "bindEnabledState": false,
+                                "bindValueTo": false,
+                                "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
+                                "zoom": 1,
+                                "angle": 0,
+                                "horizontalFlip": false
+                            },
+                            "color": {
+                                "red": 255,
+                                "green": 0,
+                                "blue": 255,
+                                "alpha": 130
+                            },
+                            "size": {
+                                "width": 415,
+                                "height": 64
+                            }
+                        },
+                        {
+                            "x": 0,
+                            "y": 521,
+                            "angle": 0,
+                            "zoom": 1,
+                            "horizontalFlip": false,
+                            "data": {
+                                "x": 0,
+                                "y": 521,
+                                "width": 415,
+                                "height": 64,
+                                "action": 1,
+                                "label": "CG",
+                                "bindToSwitch": false,
+                                "bindEnabledState": false,
+                                "bindValueTo": false,
+                                "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
+                                "zoom": null,
+                                "angle": 0,
+                                "horizontalFlip": false
+                            },
+                            "color": {
+                                "red": 255,
+                                "green": 0,
+                                "blue": 255,
+                                "alpha": 130
+                            },
+                            "size": {
+                                "width": 415,
+                                "height": 64
+                            }
+                        },
+                        {
+                            "x": 0,
+                            "y": 457,
+                            "angle": 0,
+                            "zoom": 1,
+                            "horizontalFlip": false,
+                            "data": {
+                                "x": 0,
+                                "y": 457,
+                                "width": 415,
+                                "height": 64,
+                                "action": 1,
+                                "label": "Settings",
+                                "bindToSwitch": false,
+                                "bindEnabledState": false,
+                                "bindValueTo": false,
+                                "finish": false,
+                                "onClickSound": {
+                                    "name": ""
+                                },
+                                "onHoverSound": {
+                                    "name": ""
+                                },
+                                "zoom": 1,
+                                "angle": 0,
+                                "horizontalFlip": false
+                            },
+                            "color": {
+                                "red": 255,
+                                "green": 0,
+                                "blue": 255,
+                                "alpha": 130
+                            },
+                            "size": {
+                                "width": 415,
+                                "height": 64
                             }
                         }
                     ],
@@ -647,7 +886,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     },
                     "unselected": null,
                     "selected": {
-                        "name": "SaveGame_Hover",
+                        "name": "SaveGame_Selected",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -659,7 +898,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         }
                     },
                     "selectedHover": {
-                        "name": "SaveGame_Hover",
+                        "name": "SaveGame_Selected",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -755,8 +994,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1063,
-                        "y": 289,
+                        "x": 879,
+                        "y": 123,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
@@ -856,19 +1095,19 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1063,
-                        "y": 475,
+                        "x": 879,
+                        "y": 311,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
                         "data": {
-                            "x": 580,
-                            "y": 255,
+                            "x": 1063,
+                            "y": 475,
                             "zoom": 1,
                             "angle": 0,
                             "horizontalFlip": false,
-                            "width": 259,
-                            "height": 146
+                            "width": 217,
+                            "height": 122
                         },
                         "color": {
                             "red": 0,
@@ -965,8 +1204,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1063,
-                        "y": 660,
+                        "x": 879,
+                        "y": 496,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
@@ -1074,12 +1313,20 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1063,
-                        "y": 846,
+                        "x": 879,
+                        "y": 682,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
-                        "data": {},
+                        "data": {
+                            "x": 1063,
+                            "y": 846,
+                            "zoom": 1,
+                            "angle": 0,
+                            "horizontalFlip": false,
+                            "width": 217,
+                            "height": 122
+                        },
                         "color": {
                             "red": 0,
                             "green": 0,
@@ -1175,8 +1422,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1525,
-                        "y": 289,
+                        "x": 1171,
+                        "y": 123,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
@@ -1284,8 +1531,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1525,
-                        "y": 475,
+                        "x": 1171,
+                        "y": 309,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
@@ -1393,8 +1640,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1525,
-                        "y": 661,
+                        "x": 1169,
+                        "y": 497,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
@@ -1494,8 +1741,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "waitForCompletion": 0,
                     "positionType": 1,
                     "position": {
-                        "x": 1525,
-                        "y": 847,
+                        "x": 1169,
+                        "y": 687,
                         "angle": 0,
                         "zoom": 1,
                         "horizontalFlip": false,
@@ -1774,7 +2021,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.Idle",
                 "params": {},
                 "indent": 0,
-                "uid": "41C7EDAB16CC88405779E1E5EA497298BD19"
+                "uid": "E8D8A4789AC5C54D558878519659F90DD101"
             },
             {
                 "id": "gs.Label",
@@ -1782,46 +2029,127 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                     "name": "back"
                 },
                 "indent": 0,
-                "uid": "B346DB965886D14E525B9033C0145F5FBE81"
-            },
-            {
-                "id": "gs.ChangeBooleanVariables",
-                "params": {
-                    "target": 0,
-                    "targetReference": {
-                        "scope": 1,
-                        "index": 0,
-                        "domain": "com.degica.vnm.default"
-                    },
-                    "targetVariable": {
-                        "scope": 1,
-                        "index": 0,
-                        "domain": "com.degica.vnm.default"
-                    },
-                    "targetRangeScope": 0,
-                    "rangeStart": 0,
-                    "rangeEnd": 0,
-                    "value": {
-                        "name": "In Game",
-                        "index": 5,
-                        "scope": 0
-                    },
-                    "targetReferenceDomain": "com.degica.vnm.default"
-                },
-                "indent": 0,
-                "uid": "992C7794172A7847598A20E029123DC851E5"
+                "uid": "26573F9F1D0F904B475B52398F4570686ED1"
             },
             {
                 "id": "vn.ReturnToPreviousScene",
                 "params": {},
                 "indent": 0,
-                "uid": "25E85F434241604DC659F2D7E690F858CDBD"
+                "uid": "DBD824BC3475D84AA1299518FEDE26C52A6D"
+            },
+            {
+                "id": "gs.Idle",
+                "params": {},
+                "uid": "2726FE3C4DBA864762889436F1623D008AB8",
+                "indent": 0
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "Load Menu"
+                },
+                "uid": "902EF97B7280704AAC495A6208C5564B76EC",
+                "indent": 0
+            },
+            {
+                "id": "vn.CallScene",
+                "params": {
+                    "scene": {
+                        "uid": "E8023FF12DF3024AE35A80B7D3690BED05F3",
+                        "name": "Load Menu"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "1CD12A4F0A5A73498F99567443BC8286C769",
+                "indent": 0
             },
             {
                 "id": "gs.Idle",
                 "params": {},
                 "indent": 0,
-                "uid": "EEFAD0908EECA246FD8AA7A4E0E5170E8573"
+                "uid": "732DFDDB62A3F44E8A89CCD58AD175309F90"
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "Save Menu"
+                },
+                "uid": "F24A33038DDEC047E71A4FA4015FDBA0D405",
+                "indent": 0
+            },
+            {
+                "id": "vn.CallScene",
+                "params": {
+                    "scene": {
+                        "uid": "788F76F4231BE442882AEDA37BCF0AE6556B",
+                        "name": "Save Menu"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "45661B986C1614415A6804A38FE0432EA2AA",
+                "indent": 0
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "Settings"
+                },
+                "uid": "F41165CD5765F24D8D4AEDC6294603F030BB",
+                "indent": 0
+            },
+            {
+                "id": "vn.CallScene",
+                "params": {
+                    "scene": {
+                        "uid": "20047CED82D9664F912885F8DD2F79B3C1E8",
+                        "name": "Settings Menu"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "D22AA35B27B4D2470659A2E1893965C9E9FE",
+                "indent": 0
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "CG"
+                },
+                "uid": "26B1DE871F0C2045394A1DC2E89BA6C0FE90",
+                "indent": 0
+            },
+            {
+                "id": "vn.CallScene",
+                "params": {
+                    "scene": {
+                        "uid": "83F3B6066A2EE444DD0AD086BF9D53D4A299",
+                        "name": "CG Gallery"
+                    },
+                    "previewBackground": {
+                        "name": "$live_preview_snapshot"
+                    }
+                },
+                "uid": "7514BDAB3FEDA64DA53908C8E9CF58DD85C3",
+                "indent": 0
+            },
+            {
+                "id": "gs.Label",
+                "params": {
+                    "name": "slot1"
+                },
+                "indent": 0,
+                "uid": "722A97D84D87F84484293523AD9B9EDA838A"
+            },
+            {
+                "id": "gs.Idle",
+                "params": {},
+                "indent": 0,
+                "uid": "41C7EDAB16CC88405779E1E5EA497298BD19"
             },
             {
                 "id": "gs.Label",
@@ -2552,7 +2880,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
             {
                 "name": "",
                 "index": 0,
-                "scope": 0
+                "scope": 0,
+                "domain": "com.degica.vnm.default"
             }
         ]
     },

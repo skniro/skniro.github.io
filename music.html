@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
+    <script src="/apimusic/skPlayer.min.js"></script>
+    <script>
+        var player = new skPlayer({
+            ...
+            //可选项配置同上
+            music: {
+            //必需项,音乐配置
+            type: 'file',
+            //必需项,自配置文件方式指定填'file'
+            source: [
+                //必需项,音乐文件数组
+                {
+                    name: '打呼',
+                    //必需项,歌名
+                    author: '潘玮柏&杨丞琳',
+                    //必需项,歌手
+                    src: '/apimusic/m190501ws3tmd1q43ww8ww1cf4fjhm0t-192k.m4a',
+                    //必需项,音乐文件
+                    cover: 'xxx.jpg'
+                    //必需项,封面图片
+                },
+                ... 
+        ]
+        }
+});
+    </script>
+</head>
+<body class="ms-Fabric--selawik" dir="ltr">
+    <div id="new-header">
+        <script>
+            $("#new-header").load("master.html");
+        </script>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="jumbotron">
+                <h2>[明日方舟]莫斯提马同人曲-Time looper（时间之环）</h2>
+                <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=205341006&aid=796216798&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+
+                <h2>
+                    SAO音乐魔法之旅-GPAsuna
+                </h2>
+                <div id="skPlayer"></div>             
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <ContentPlaceHolder ID="MainContent" runat="server">
+            <ContentPlaceHolder>
+                <footer>
+                    <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
+                </footer>
+    </div>
+</body>
+</html>

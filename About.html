@@ -1,80 +1,55 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>skniro teah team</title>
-    <PlaceHolder runat="server">
-    </PlaceHolder>
-
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" href="project/Content/bootstrap.css">
-    <link rel="stylesheet" href="project/Content/Site.css">
-    <link rel="stylesheet" href="css/basic.css">
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
 </head>
-<body style="background-image: url(https://api.dujin.org/bing/1920.php);background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">   
-                <div id="internationalHeader" class="international-header report-wrap-module">
-                    <div class="mini-header m-header mini-type">
-                        <div class="mini-header__content mini-header--login">
-                            <div class="nav-link">
-                                <ul class="nav-link-ul mini">
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
-                                                <img src="img/logo.png">
-                                            </a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
-                                                主站
-                                            </a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/project.html" aria-describedby="van-popover-5264" tabindex="0">项目</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <span>
-                                            <a href="/project/index.html" target="_blank" class="link van-popover__reference" tabindex="0">技术文档</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-link-item">
-                                        <a href="About.html" target="_blank" class="link">关于</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<body class="ms-Fabric--selawik" dir="ltr">
+    <div id="new-header">
+        <script>
+            $("#new-header").load("master.html");
+        </script>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="jumbotron">
+                <div class="text" style=" text-align:center;">
+                    <h2>STG团队简介</h2>
                 </div>
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="jumbotron">
-                            <div class="text" style=" text-align:center;">
-                                    <h2>联系方式</h2>
-                                    <div class="contact">
-                                        <h4>邮箱：colamjc@gamil.com</h4> <br>
-                                        <h4>QQ群：724554769</h4> <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container body-content">
-                        <ContentPlaceHolder ID="MainContent" runat="server">
-                            <ContentPlaceHolder>
-                                <hr />
+                <div class="contact">
+                    <h3>
+                        skniro tech team&GCBTeam是一个多元化的创作团体，<br>
+                        我们目前的创作范围有游戏，视频，音乐等。希望有更<br>
+                        多的小伙伴关注我们，加入我们。<br>
+                    </h3>
+                    <h3>
+                        部门：<br>
+                        GCBT：实况主（UP主）美术绘画。<br>
+                        音乐部：音乐，表达出声音的美好。<br>
+                        游戏部：QQ飞车车队 Hypixel KoB公会 材质 地图 BGM包制作 服务器Project Alice游戏项目<br>
+                    </h3>
+                    <h3>
+                        人员：<br>
+                        执行代理：skniro<br>
+                        行政顾问：GPAsuna 、Blackhold黑洞<br>
+                        GCBT部长：Blackhold黑洞<br>
+                        音乐部部长：GPAsuna<br>
+                        游戏部部长：Blackhold黑洞<br>
+                    </h3>
+                    <h3>官网：www.sttsakara.top</h3> <br>
+                    <h3>邮箱：colamjc@gamil.com</h3> <br>
+                    <h3>QQ群：724554769</h3> <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <ContentPlaceHolder ID="MainContent" runat="server">
+            <ContentPlaceHolder>
+                <hr />
 
-                                <footer>
-                                    <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
-                                </footer>
-                    </div>
-                    <script src="assets/jquery.min.js?v=3.3.1"></script>
-                    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
-                    <script src="assets/autoload.js?v=1.4.2"></script>
+                <footer>
+                    <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
+                </footer>
+    </div>
 </body>
 </html>

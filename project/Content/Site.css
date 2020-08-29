@@ -2,6 +2,15 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url(https://blog.mrabit.com/bing/today);
+    opacity: 0.95;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-attachment: fixed;
 }
 
 /* Wrapping element */
@@ -23,11 +32,12 @@ textarea {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
-        margin-top: 20px;
-        opacity: 0.78;
+        margin-top: 5px;
+        opacity: 0.90;
         background-image: ;
     }
     .body-content {
         padding: 0;
     }
 }
+

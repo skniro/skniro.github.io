@@ -122,7 +122,20 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                         },
                         "fieldFlags": {
                             "duration": 1,
-                            "origin": 1
+                            "origin": 1,
+                            "easing.type": 1,
+                            "animation.type": 1,
+                            "zOrder": 1,
+                            "blendMode": 1,
+                            "visual.type": 1,
+                            "visual.frame.thickness": 1,
+                            "visual.frame.cornerSize": 1,
+                            "visual.threePartImage.orientation": 1,
+                            "visual.quad.color": 1,
+                            "size.type": 1,
+                            "size.width": 1,
+                            "size.height": 1,
+                            "viewport.type": 1
                         },
                         "previewBackground": {
                             "name": "$live_preview_snapshot"
@@ -142,7 +155,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                         "numberDomain": "com.degica.vnm.default"
                     },
                     "indent": 1,
-                    "uid": "AB588AC14E968346904A68A2222734813D0B"
+                    "uid": "AB588AC14E968346904A68A2222734813D0B",
+                    "expanded": false
                 },
                 {
                     "id": "gs.ShowPicture",
@@ -199,7 +213,20 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                         },
                         "fieldFlags": {
                             "duration": 1,
-                            "origin": 1
+                            "origin": 1,
+                            "easing.type": 1,
+                            "animation.type": 1,
+                            "zOrder": 1,
+                            "blendMode": 1,
+                            "visual.type": 1,
+                            "visual.frame.thickness": 1,
+                            "visual.frame.cornerSize": 1,
+                            "visual.threePartImage.orientation": 1,
+                            "visual.quad.color": 1,
+                            "size.type": 1,
+                            "size.width": 1,
+                            "size.height": 1,
+                            "viewport.type": 1
                         },
                         "previewBackground": {
                             "name": "$live_preview_snapshot"
@@ -219,7 +246,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                         "numberDomain": "com.degica.vnm.default"
                     },
                     "indent": 1,
-                    "uid": "33C27B6A5D56414A483930736AF4A0330940"
+                    "uid": "33C27B6A5D56414A483930736AF4A0330940",
+                    "expanded": false
                 },
                 {
                     "id": "gs.ShowPicture",
@@ -236,10 +264,10 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "type": 4,
                             "quad": {
                                 "color": {
-                                    "red": 156,
-                                    "green": 87,
-                                    "blue": 0,
-                                    "alpha": 160
+                                    "red": 255,
+                                    "green": 255,
+                                    "blue": 255,
+                                    "alpha": 0
                                 }
                             },
                             "frame": {
@@ -253,7 +281,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                         "predefinedPositionId": 0,
                         "number": 10,
                         "blendMode": 0,
-                        "zOrder": 10000,
+                        "zOrder": 9000,
                         "duration": 0,
                         "origin": 0,
                         "waitForCompletion": 0,
@@ -279,7 +307,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "easing.type": 1,
                             "animation.type": 0,
                             "zOrder": 0,
-                            "blendMode": 1,
+                            "blendMode": 0,
                             "visual.type": 0,
                             "visual.frame.thickness": 1,
                             "visual.frame.cornerSize": 1,
@@ -288,8 +316,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "size.type": 0,
                             "size.width": 0,
                             "size.height": 0,
-                            "viewport.type": 1,
-                            "origin": 1
+                            "viewport.type": 0,
+                            "origin": 0
                         },
                         "previewBackground": {
                             "name": "$live_preview_snapshot"
@@ -431,104 +459,15 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             }
                         },
                         "number": 9,
-                        "numberDomain": "com.degica.vnm.default"
-                    },
-                    "indent": 0,
-                    "uid": "832EA99D351A13415578B596FCF7B4DBC00A",
-                    "expanded": false
-                },
-                {
-                    "id": "gs.ShowPicture",
-                    "params": {
-                        "viewport": {
-                            "type": "ui"
-                        },
-                        "size": {
-                            "type": 0,
-                            "width": 100,
-                            "height": 100
-                        },
-                        "visual": {
-                            "type": 0,
-                            "quad": {
-                                "color": {
-                                    "red": 255,
-                                    "green": 255,
-                                    "blue": 255,
-                                    "alpha": 255
-                                }
-                            },
-                            "frame": {
-                                "thickness": 16,
-                                "cornerSize": 16
-                            },
-                            "threePartImage": {
-                                "orientation": 0
-                            }
-                        },
-                        "predefinedPositionId": 8,
-                        "number": 11,
-                        "blendMode": 0,
-                        "zOrder": 10000,
-                        "duration": 0,
-                        "origin": 0,
-                        "waitForCompletion": 0,
-                        "positionType": 0,
-                        "position": {
-                            "x": 329,
-                            "y": 219,
-                            "angle": 0,
-                            "zoom": 1,
-                            "horizontalFlip": false,
-                            "data": {},
-                            "color": {
-                                "red": 0,
-                                "green": 0,
-                                "blue": 0,
-                                "alpha": 0
-                            }
-                        },
-                        "easing": {
-                            "type": 0,
-                            "inOut": 1
-                        },
-                        "animation": {
-                            "type": 1,
-                            "movement": 0,
-                            "mask": {
-                                "graphic": null,
-                                "vague": 30
-                            }
-                        },
-                        "fieldFlags": {
-                            "duration": 1,
-                            "easing.type": 1,
-                            "animation.type": 0,
-                            "zOrder": 0,
-                            "blendMode": 1,
-                            "visual.type": 1,
-                            "visual.frame.thickness": 1,
-                            "visual.frame.cornerSize": 1,
-                            "visual.threePartImage.orientation": 1,
-                            "visual.quad.color": 1,
-                            "size.type": 1,
-                            "size.width": 1,
-                            "size.height": 1,
-                            "viewport.type": 1,
-                            "origin": 1
-                        },
+                        "numberDomain": "com.degica.vnm.default",
                         "previewBackground": {
                             "name": "$live_preview_snapshot"
                         },
-                        "graphic": {
-                            "name": "Message",
-                            "index": 0,
-                            "scope": 0
-                        },
-                        "numberDomain": "com.degica.vnm.default"
+                        "selectedGraphic": null,
+                        "baseGraphic": null
                     },
                     "indent": 0,
-                    "uid": "BC7E6EC839BC25441F4A0871A3BAF901044B",
+                    "uid": "832EA99D351A13415578B596FCF7B4DBC00A",
                     "expanded": false
                 },
                 {
@@ -631,6 +570,100 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                     "indent": 0,
                     "uid": "D26228A387FD384B418ACDC59830CD6B9CAE",
                     "expanded": false
+                },
+                {
+                    "id": "gs.ShowPicture",
+                    "params": {
+                        "viewport": {
+                            "type": "ui"
+                        },
+                        "size": {
+                            "type": 0,
+                            "width": 100,
+                            "height": 100
+                        },
+                        "visual": {
+                            "type": 0,
+                            "quad": {
+                                "color": {
+                                    "red": 255,
+                                    "green": 255,
+                                    "blue": 255,
+                                    "alpha": 255
+                                }
+                            },
+                            "frame": {
+                                "thickness": 16,
+                                "cornerSize": 16
+                            },
+                            "threePartImage": {
+                                "orientation": 0
+                            }
+                        },
+                        "predefinedPositionId": 8,
+                        "number": 11,
+                        "blendMode": 0,
+                        "zOrder": 9000,
+                        "duration": 0,
+                        "origin": 0,
+                        "waitForCompletion": 0,
+                        "positionType": 0,
+                        "position": {
+                            "x": 329,
+                            "y": 219,
+                            "angle": 0,
+                            "zoom": 1,
+                            "horizontalFlip": false,
+                            "data": {},
+                            "color": {
+                                "red": 0,
+                                "green": 0,
+                                "blue": 0,
+                                "alpha": 0
+                            }
+                        },
+                        "easing": {
+                            "type": 0,
+                            "inOut": 1
+                        },
+                        "animation": {
+                            "type": 1,
+                            "movement": 0,
+                            "mask": {
+                                "graphic": null,
+                                "vague": 30
+                            }
+                        },
+                        "fieldFlags": {
+                            "duration": 0,
+                            "easing.type": 0,
+                            "animation.type": 0,
+                            "zOrder": 0,
+                            "blendMode": 1,
+                            "visual.type": 0,
+                            "visual.frame.thickness": 1,
+                            "visual.frame.cornerSize": 1,
+                            "visual.threePartImage.orientation": 1,
+                            "visual.quad.color": 1,
+                            "size.type": 1,
+                            "size.width": 1,
+                            "size.height": 1,
+                            "viewport.type": 1,
+                            "origin": 1
+                        },
+                        "previewBackground": {
+                            "name": "$live_preview_snapshot"
+                        },
+                        "graphic": {
+                            "name": "Message",
+                            "index": 0,
+                            "scope": 0
+                        },
+                        "numberDomain": "com.degica.vnm.default"
+                    },
+                    "indent": 0,
+                    "uid": "7DA10F92431B75486319A3B4B6CF9C1D88C3",
+                    "expanded": true
                 },
                 {
                     "id": "gs.ShowPicture",
@@ -893,7 +926,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                     },
                     "indent": 0,
                     "uid": "A05ECF8F1A44E14E404A6D4339DC2659F549",
-                    "expanded": true
+                    "expanded": false
                 },
                 {
                     "id": "gs.AddHotspot",
@@ -1055,7 +1088,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                     },
                     "indent": 0,
                     "uid": "2620A90E817892459F4BE637677D11E81B48",
-                    "expanded": true
+                    "expanded": false
                 },
                 {
                     "id": "gs.Idle",

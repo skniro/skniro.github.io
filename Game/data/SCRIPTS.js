@@ -1,7 +1,7 @@
 if (!window.$PARAMS) { window.$PARAMS = {} };Object.mixin(window.$PARAMS, {
     "platform": {
         "usePlayStoreExpansionFile": false,
-        "gameIdentifier": "com.example.game",
+        "gameIdentifier": "com.ProjectAlice.game",
         "isSteamOS": false
     },
     "test": false,
@@ -13,46 +13,101 @@ if (!window.$PARAMS) { window.$PARAMS = {} };Object.mixin(window.$PARAMS, {
     },
     "fontFamilies": [
         "Rubik-Regular",
-        "Tallys"
+        "Tallys",
+        "1338D5CE250D7447D52894B2C1DA00C35652"
     ]
 });
 
+var resizeScreen, stockHeight;
+
+stockHeight = [2160, 1440, 1080, 960, 720, 640, 576, 480, 360, 240];
+
+resizeScreen = function() {
+  var diff, gameResolution, height, i, isFullscreen, len, ratio, screenResolution, width;
+  gameResolution = {
+    width: $PARAMS.resolution.width,
+    height: $PARAMS.resolution.height
+  };
+  screenResolution = {
+    width: window.screen.availWidth,
+    height: window.screen.availHeight
+  };
+  if ($PARAMS.preview || GameManager.inLivePreview) {
+    return;
+  }
+  if (typeof nw === "undefined" || nw === null) {
+    return;
+  }
+  isFullscreen = nw.Window.get().isFullscreen;
+  ratio = gameResolution.width / gameResolution.height;
+  if (isFullscreen) {
+    return;
+  }
+  for (i = 0, len = stockHeight.length; i < len; i++) {
+    height = stockHeight[i];
+    if (gameResolution.height < height) {
+      continue;
+    }
+    if (screenResolution.height < height) {
+      continue;
+    }
+    width = height * ratio;
+    if (screenResolution.width < width) {
+      continue;
+    }
+    diff = {
+      width: window.innerWidth - width,
+      height: window.innerHeight - height
+    };
+    window.resizeBy(-diff.width, -diff.height);
+    return;
+  }
+};
+
+if (gs.YEM == null) {
+  gs.YEM = {};
+}
+
+gs.YEM.resizeScreen = resizeScreen;
+
+gs.YEM.resizeScreen();
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQU9BLElBQUE7O0FBQUEsV0FBQSxHQUFjLENBQUMsSUFBRCxFQUFNLElBQU4sRUFBVyxJQUFYLEVBQWlCLEdBQWpCLEVBQXNCLEdBQXRCLEVBQTJCLEdBQTNCLEVBQWdDLEdBQWhDLEVBQXFDLEdBQXJDLEVBQTBDLEdBQTFDLEVBQStDLEdBQS9DOztBQUVkLFlBQUEsR0FBZSxTQUFBO0FBQ1gsTUFBQTtFQUFBLGNBQUEsR0FDSTtJQUFBLEtBQUEsRUFBTyxPQUFPLENBQUMsVUFBVSxDQUFDLEtBQTFCO0lBQ0EsTUFBQSxFQUFRLE9BQU8sQ0FBQyxVQUFVLENBQUMsTUFEM0I7O0VBRUosZ0JBQUEsR0FDSTtJQUFBLEtBQUEsRUFBTyxNQUFNLENBQUMsTUFBTSxDQUFDLFVBQXJCO0lBQ0EsTUFBQSxFQUFRLE1BQU0sQ0FBQyxNQUFNLENBQUMsV0FEdEI7O0VBRUosSUFBRyxPQUFPLENBQUMsT0FBUixJQUFtQixXQUFXLENBQUMsYUFBbEM7QUFBcUQsV0FBckQ7O0VBQ0EsSUFBSSx3Q0FBSjtBQUFhLFdBQWI7O0VBQ0EsWUFBQSxHQUFlLEVBQUUsQ0FBQyxNQUFNLENBQUMsR0FBVixDQUFBLENBQWUsQ0FBQztFQUMvQixLQUFBLEdBQVEsY0FBYyxDQUFDLEtBQWYsR0FBdUIsY0FBYyxDQUFDO0VBRTlDLElBQUcsWUFBSDtBQUFxQixXQUFyQjs7QUFDQSxPQUFBLDZDQUFBOztJQUNJLElBQUcsY0FBYyxDQUFDLE1BQWYsR0FBd0IsTUFBM0I7QUFBdUMsZUFBdkM7O0lBQ0EsSUFBRyxnQkFBZ0IsQ0FBQyxNQUFqQixHQUEwQixNQUE3QjtBQUF5QyxlQUF6Qzs7SUFDQSxLQUFBLEdBQVEsTUFBQSxHQUFTO0lBQ2pCLElBQUcsZ0JBQWdCLENBQUMsS0FBakIsR0FBeUIsS0FBNUI7QUFBdUMsZUFBdkM7O0lBQ0EsSUFBQSxHQUNJO01BQUEsS0FBQSxFQUFPLE1BQU0sQ0FBQyxVQUFQLEdBQW9CLEtBQTNCO01BQ0EsTUFBQSxFQUFRLE1BQU0sQ0FBQyxXQUFQLEdBQXFCLE1BRDdCOztJQUVKLE1BQU0sQ0FBQyxRQUFQLENBQWdCLENBQUMsSUFBSSxDQUFDLEtBQXRCLEVBQTZCLENBQUMsSUFBSSxDQUFDLE1BQW5DO0FBQ0E7QUFUSjtBQWJXOztBQXdCZixJQUFnQixjQUFoQjtFQUFBLEVBQUUsQ0FBQyxHQUFILEdBQVMsR0FBVDs7O0FBQ0EsRUFBRSxDQUFDLEdBQUcsQ0FBQyxZQUFQLEdBQXNCOztBQUN0QixFQUFFLENBQUMsR0FBRyxDQUFDLFlBQVAsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbIiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxyXG4jXHJcbiMgICBZYW1pIGFuZCBBcmNoZWlhIEVuZ2luZSAtLSBMRURBIC0tIEJldHRlciBBdXRvIFNjcmVlbiBTY2FsaW5nXHJcbiMgICBGaXhlcyB0aGUgaXNzdWUgd2l0aCBWTk0gbm90IHNjYWxpbmcgcHJvcGVybHkuXHJcbiMgICBcclxuIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcblxyXG5zdG9ja0hlaWdodCA9IFsyMTYwLDE0NDAsMTA4MCwgOTYwLCA3MjAsIDY0MCwgNTc2LCA0ODAsIDM2MCwgMjQwXVxyXG5cclxucmVzaXplU2NyZWVuID0gKCkgLT5cclxuICAgIGdhbWVSZXNvbHV0aW9uID0gXHJcbiAgICAgICAgd2lkdGg6ICRQQVJBTVMucmVzb2x1dGlvbi53aWR0aFxyXG4gICAgICAgIGhlaWdodDogJFBBUkFNUy5yZXNvbHV0aW9uLmhlaWdodFxyXG4gICAgc2NyZWVuUmVzb2x1dGlvbiA9IFxyXG4gICAgICAgIHdpZHRoOiB3aW5kb3cuc2NyZWVuLmF2YWlsV2lkdGhcclxuICAgICAgICBoZWlnaHQ6IHdpbmRvdy5zY3JlZW4uYXZhaWxIZWlnaHRcclxuICAgIGlmICRQQVJBTVMucHJldmlldyBvciBHYW1lTWFuYWdlci5pbkxpdmVQcmV2aWV3IHRoZW4gcmV0dXJuXHJcbiAgICBpZiAhbnc/IHRoZW4gcmV0dXJuXHJcbiAgICBpc0Z1bGxzY3JlZW4gPSBudy5XaW5kb3cuZ2V0KCkuaXNGdWxsc2NyZWVuXHJcbiAgICByYXRpbyA9IGdhbWVSZXNvbHV0aW9uLndpZHRoIC8gZ2FtZVJlc29sdXRpb24uaGVpZ2h0XHJcbiAgICBcclxuICAgIGlmIGlzRnVsbHNjcmVlbiB0aGVuIHJldHVyblxyXG4gICAgZm9yIGhlaWdodCBpbiBzdG9ja0hlaWdodFxyXG4gICAgICAgIGlmIGdhbWVSZXNvbHV0aW9uLmhlaWdodCA8IGhlaWdodCB0aGVuIGNvbnRpbnVlXHJcbiAgICAgICAgaWYgc2NyZWVuUmVzb2x1dGlvbi5oZWlnaHQgPCBoZWlnaHQgdGhlbiBjb250aW51ZVxyXG4gICAgICAgIHdpZHRoID0gaGVpZ2h0ICogcmF0aW9cclxuICAgICAgICBpZiBzY3JlZW5SZXNvbHV0aW9uLndpZHRoIDwgd2lkdGggdGhlbiBjb250aW51ZVxyXG4gICAgICAgIGRpZmYgPSBcclxuICAgICAgICAgICAgd2lkdGg6IHdpbmRvdy5pbm5lcldpZHRoIC0gd2lkdGhcclxuICAgICAgICAgICAgaGVpZ2h0OiB3aW5kb3cuaW5uZXJIZWlnaHQgLSBoZWlnaHRcclxuICAgICAgICB3aW5kb3cucmVzaXplQnkoLWRpZmYud2lkdGgsIC1kaWZmLmhlaWdodClcclxuICAgICAgICByZXR1cm5cclxuICAgIFxyXG5ncy5ZRU0gPSB7fSBpZiAhZ3MuWUVNP1xyXG5ncy5ZRU0ucmVzaXplU2NyZWVuID0gcmVzaXplU2NyZWVuXHJcbmdzLllFTS5yZXNpemVTY3JlZW4oKSJdfQ==
+//# sourceURL=LEDA_Better_Auto_Screen_Scaling_6.js
 
 
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiIiLCJzb3VyY2VzQ29udGVudCI6WyIiXX0=
 //# sourceURL=Constants_9.js
-// Generated by CoffeeScript 1.12.7
-(function() {
-  window.$.noConflict();
+window.$.noConflict();
 
-  window.$ = function(f, data, event) {
-    return new ui.Formula(f, data || null, event || null);
-  };
+window.$ = function(f, data, event) {
+  return new ui.Formula(f, data || null, event || null);
+};
 
 
-  /**
-  * Namespace for Visual Novel specific elements.
-  * @namespace vn
-   */
+/**
+* Namespace for Visual Novel specific elements.
+* @namespace vn
+ */
 
-  window.vn = {};
-
-
-  /**
-  * Namespace for user interface elements.
-  * @namespace ui
-   */
-
-  window.ui = {};
+window.vn = {};
 
 
-  /**
-  * Namespace for universal elements.
-  * @namespace gs
-   */
+/**
+* Namespace for user interface elements.
+* @namespace ui
+ */
 
-}).call(this);
+window.ui = {};
 
+
+/**
+* Namespace for universal elements.
+* @namespace gs
+ */
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVFBLE1BQU0sQ0FBQyxDQUFDLENBQUMsVUFBVCxDQUFBOztBQUNBLE1BQU0sQ0FBQyxDQUFQLEdBQVcsU0FBQyxDQUFELEVBQUksSUFBSixFQUFVLEtBQVY7U0FBd0IsSUFBQSxFQUFFLENBQUMsT0FBSCxDQUFXLENBQVgsRUFBYyxJQUFBLElBQVEsSUFBdEIsRUFBNEIsS0FBQSxJQUFTLElBQXJDO0FBQXhCOzs7QUFFWDs7Ozs7QUFJQSxNQUFNLENBQUMsRUFBUCxHQUFZOzs7QUFFWjs7Ozs7QUFJQSxNQUFNLENBQUMsRUFBUCxHQUFZOzs7QUFFWiIsInNvdXJjZXNDb250ZW50IjpbIiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuI1xuIyAgIFNjcmlwdDogTmFtZXNwYWNlc1xuI1xuIyAgICQkQ09QWVJJR0hUJCRcbiNcbiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuXG53aW5kb3cuJC5ub0NvbmZsaWN0KClcbndpbmRvdy4kID0gKGYsIGRhdGEsIGV2ZW50KSAtPiBuZXcgdWkuRm9ybXVsYShmLCBkYXRhIHx8IG51bGwsIGV2ZW50IHx8IG51bGwpXG5cbiMjIypcbiogTmFtZXNwYWNlIGZvciBWaXN1YWwgTm92ZWwgc3BlY2lmaWMgZWxlbWVudHMuXG4qIEBuYW1lc3BhY2Ugdm5cbiMjI1xud2luZG93LnZuID0ge31cblxuIyMjKlxuKiBOYW1lc3BhY2UgZm9yIHVzZXIgaW50ZXJmYWNlIGVsZW1lbnRzLlxuKiBAbmFtZXNwYWNlIHVpXG4jIyNcbndpbmRvdy51aSA9IHt9XG5cbiMjIypcbiogTmFtZXNwYWNlIGZvciB1bml2ZXJzYWwgZWxlbWVudHMuXG4qIEBuYW1lc3BhY2UgZ3NcbiMjI1xuIl19
+//# sourceURL=Namespaces_8.js
 // Generated by CoffeeScript 1.12.7
 
 /**
@@ -149,7 +204,6 @@ if (!window.$PARAMS) { window.$PARAMS = {} };Object.mixin(window.$PARAMS, {
 
 }).call(this);
 
-// Generated by CoffeeScript 1.12.7
 
 /**
 * Enumeration containing default fonts.
@@ -160,39 +214,36 @@ if (!window.$PARAMS) { window.$PARAMS = {} };Object.mixin(window.$PARAMS, {
 * @static
 * @final
  */
+var Fonts;
 
-(function() {
-  var Fonts;
+Fonts = (function() {
+  function Fonts() {}
 
-  Fonts = (function() {
-    function Fonts() {}
+  Fonts.initialize = function() {
+    var size;
+    size = Math.round(9 / 240 * Graphics.height);
 
-    Fonts.initialize = function() {
-      var size;
-      size = Math.round(9 / 240 * Graphics.height);
+    /**
+    * Used as default font for text if no font is specified.
+    *
+    * @property TEXT
+    * @type gs.Font
+    * @static
+    * @final
+     */
+    this.TEXT = ResourceManager.getFont("Verdana", size);
+    this.TRANSPARENT = new Font("Verdana", size);
+    return this.TRANSPARENT.color.alpha = 0;
+  };
 
-      /**
-      * Used as default font for text if no font is specified.
-      *
-      * @property TEXT
-      * @type gs.Font
-      * @static
-      * @final
-       */
-      this.TEXT = ResourceManager.getFont("Verdana", size);
-      this.TRANSPARENT = new Font("Verdana", size);
-      return this.TRANSPARENT.color.alpha = 0;
-    };
+  return Fonts;
 
-    return Fonts;
+})();
 
-  })();
+gs.Fonts = Fonts;
 
-  gs.Fonts = Fonts;
-
-}).call(this);
-
-// Generated by CoffeeScript 1.12.7
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFRQTs7Ozs7Ozs7O0FBQUEsSUFBQTs7QUFTTTs7O0VBQ0YsS0FBQyxDQUFBLFVBQUQsR0FBYSxTQUFBO0FBQ1QsUUFBQTtJQUFBLElBQUEsR0FBTyxJQUFJLENBQUMsS0FBTCxDQUFXLENBQUEsR0FBSSxHQUFKLEdBQVUsUUFBUSxDQUFDLE1BQTlCOztBQUVQOzs7Ozs7OztJQVFBLElBQUMsQ0FBQSxJQUFELEdBQVEsZUFBZSxDQUFDLE9BQWhCLENBQXdCLFNBQXhCLEVBQW1DLElBQW5DO0lBQ1IsSUFBQyxDQUFBLFdBQUQsR0FBbUIsSUFBQSxJQUFBLENBQUssU0FBTCxFQUFnQixJQUFoQjtXQUNuQixJQUFDLENBQUEsV0FBVyxDQUFDLEtBQUssQ0FBQyxLQUFuQixHQUEyQjtFQWJsQjs7Ozs7O0FBZWpCLEVBQUUsQ0FBQyxLQUFILEdBQVciLCJzb3VyY2VzQ29udGVudCI6WyIjID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiNcbiMgICBTY3JpcHQ6IEZvbnRzXG4jXG4jICAgJCRDT1BZUklHSFQkJFxuI1xuIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5cbiMjIypcbiogRW51bWVyYXRpb24gY29udGFpbmluZyBkZWZhdWx0IGZvbnRzLlxuKlxuKiBAbW9kdWxlIGdzXG4qIEBjbGFzcyBGb250c1xuKiBAbWVtYmVyb2YgZ3NcbiogQHN0YXRpY1xuKiBAZmluYWxcbiMjI1xuY2xhc3MgRm9udHNcbiAgICBAaW5pdGlhbGl6ZTogLT5cbiAgICAgICAgc2l6ZSA9IE1hdGgucm91bmQoOSAvIDI0MCAqIEdyYXBoaWNzLmhlaWdodClcbiAgICAgICAgXG4gICAgICAgICMjIypcbiAgICAgICAgKiBVc2VkIGFzIGRlZmF1bHQgZm9udCBmb3IgdGV4dCBpZiBubyBmb250IGlzIHNwZWNpZmllZC5cbiAgICAgICAgKlxuICAgICAgICAqIEBwcm9wZXJ0eSBURVhUXG4gICAgICAgICogQHR5cGUgZ3MuRm9udFxuICAgICAgICAqIEBzdGF0aWNcbiAgICAgICAgKiBAZmluYWxcbiAgICAgICAgIyMjXG4gICAgICAgIEBURVhUID0gUmVzb3VyY2VNYW5hZ2VyLmdldEZvbnQoXCJWZXJkYW5hXCIsIHNpemUpXG4gICAgICAgIEBUUkFOU1BBUkVOVCA9IG5ldyBGb250KFwiVmVyZGFuYVwiLCBzaXplKVxuICAgICAgICBAVFJBTlNQQVJFTlQuY29sb3IuYWxwaGEgPSAwXG4gICAgIFxuZ3MuRm9udHMgPSBGb250cyJdfQ==
+//# sourceURL=Fonts_75.js
 
 /**
 * Enumeration describing the different types of image-handling.
@@ -203,53 +254,51 @@ if (!window.$PARAMS) { window.$PARAMS = {} };Object.mixin(window.$PARAMS, {
 * @memberof gs
 * @static
  */
+var ImageHandling;
 
-(function() {
-  var ImageHandling;
+ImageHandling = (function() {
+  function ImageHandling() {}
 
-  ImageHandling = (function() {
-    function ImageHandling() {}
+  ImageHandling.initialize = function() {
 
-    ImageHandling.initialize = function() {
+    /**
+    * Uses full image-size.
+    * @property IMAGE_SIZE
+    * @type number
+    * @static
+    * @final
+     */
+    this.IMAGE_SIZE = 0;
 
-      /**
-      * Uses full image-size.
-      * @property IMAGE_SIZE
-      * @type number
-      * @static
-      * @final
-       */
-      this.IMAGE_SIZE = 0;
+    /**
+    * Uses only half image-height.
+    * @property HALF_IMAGE_HEIGHT
+    * @type number
+    * @static
+    * @final
+     */
+    this.HALF_IMAGE_HEIGHT = 1;
 
-      /**
-      * Uses only half image-height.
-      * @property HALF_IMAGE_HEIGHT
-      * @type number
-      * @static
-      * @final
-       */
-      this.HALF_IMAGE_HEIGHT = 1;
+    /**
+    * Uses a custom defined source-rectangle.
+    * @property CUSTOM_SIZE
+    * @type number
+    * @static
+    * @final
+     */
+    return this.CUSTOM_SIZE = 2;
+  };
 
-      /**
-      * Uses a custom defined source-rectangle.
-      * @property CUSTOM_SIZE
-      * @type number
-      * @static
-      * @final
-       */
-      return this.CUSTOM_SIZE = 2;
-    };
+  return ImageHandling;
 
-    return ImageHandling;
+})();
 
-  })();
+ImageHandling.initialize();
 
-  ImageHandling.initialize();
+gs.ImageHandling = ImageHandling;
 
-  gs.ImageHandling = ImageHandling;
-
-}).call(this);
-
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFRQTs7Ozs7Ozs7O0FBQUEsSUFBQTs7QUFTTTs7O0VBQ0YsYUFBQyxDQUFBLFVBQUQsR0FBYSxTQUFBOztBQUNUOzs7Ozs7O0lBT0EsSUFBQyxDQUFBLFVBQUQsR0FBYzs7QUFFZDs7Ozs7OztJQU9BLElBQUMsQ0FBQSxpQkFBRCxHQUFxQjs7QUFFckI7Ozs7Ozs7V0FPQSxJQUFDLENBQUEsV0FBRCxHQUFlO0VBMUJOOzs7Ozs7QUE0QmpCLGFBQWEsQ0FBQyxVQUFkLENBQUE7O0FBQ0EsRUFBRSxDQUFDLGFBQUgsR0FBbUIiLCJzb3VyY2VzQ29udGVudCI6WyIjID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiNcbiMgICBTY3JpcHQ6IEltYWdlSGFuZGxpbmdcbiNcbiMgICAkJENPUFlSSUdIVCQkXG4jXG4jID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cblxuIyMjKlxuKiBFbnVtZXJhdGlvbiBkZXNjcmliaW5nIHRoZSBkaWZmZXJlbnQgdHlwZXMgb2YgaW1hZ2UtaGFuZGxpbmcuXG4qXG4qIEBtb2R1bGUgZ3NcbiogQGNsYXNzIEltYWdlSGFuZGxpbmdcbiogQGV4dGVuZHMgZ3MuQ29tcG9uZW50XG4qIEBtZW1iZXJvZiBnc1xuKiBAc3RhdGljXG4jIyNcbmNsYXNzIEltYWdlSGFuZGxpbmdcbiAgICBAaW5pdGlhbGl6ZTogLT5cbiAgICAgICAgIyMjKlxuICAgICAgICAqIFVzZXMgZnVsbCBpbWFnZS1zaXplLlxuICAgICAgICAqIEBwcm9wZXJ0eSBJTUFHRV9TSVpFXG4gICAgICAgICogQHR5cGUgbnVtYmVyXG4gICAgICAgICogQHN0YXRpY1xuICAgICAgICAqIEBmaW5hbFxuICAgICAgICAjIyNcbiAgICAgICAgQElNQUdFX1NJWkUgPSAwXG4gICAgICAgIFxuICAgICAgICAjIyMqXG4gICAgICAgICogVXNlcyBvbmx5IGhhbGYgaW1hZ2UtaGVpZ2h0LlxuICAgICAgICAqIEBwcm9wZXJ0eSBIQUxGX0lNQUdFX0hFSUdIVFxuICAgICAgICAqIEB0eXBlIG51bWJlclxuICAgICAgICAqIEBzdGF0aWNcbiAgICAgICAgKiBAZmluYWxcbiAgICAgICAgIyMjXG4gICAgICAgIEBIQUxGX0lNQUdFX0hFSUdIVCA9IDFcbiAgICAgICAgXG4gICAgICAgICMjIypcbiAgICAgICAgKiBVc2VzIGEgY3VzdG9tIGRlZmluZWQgc291cmNlLXJlY3RhbmdsZS5cbiAgICAgICAgKiBAcHJvcGVydHkgQ1VTVE9NX1NJWkVcbiAgICAgICAgKiBAdHlwZSBudW1iZXJcbiAgICAgICAgKiBAc3RhdGljXG4gICAgICAgICogQGZpbmFsXG4gICAgICAgICMjI1xuICAgICAgICBAQ1VTVE9NX1NJWkUgPSAyXG4gICAgXG5JbWFnZUhhbmRsaW5nLmluaXRpYWxpemUoKVxuZ3MuSW1hZ2VIYW5kbGluZyA9IEltYWdlSGFuZGxpbmciXX0=
+//# sourceURL=ImageHandling_95.js
 // Generated by CoffeeScript 1.12.7
 
 /**
@@ -394,7 +443,6 @@ if (!window.$PARAMS) { window.$PARAMS = {} };Object.mixin(window.$PARAMS, {
 
 }).call(this);
 
-// Generated by CoffeeScript 1.12.7
 
 /**
 * Holds different easing types and helper methods.
@@ -404,204 +452,202 @@ if (!window.$PARAMS) { window.$PARAMS = {} };Object.mixin(window.$PARAMS, {
 * @memberof gs
 * @constructor
  */
+var Easings;
 
-(function() {
-  var Easings;
+Easings = (function() {
+  function Easings() {}
 
-  Easings = (function() {
-    function Easings() {}
-
-    Easings.initialize = function() {
-
-      /**
-      * Contains all easing functions by type and in/out.
-      * @property EASE_FUNCTIONS
-      * @type Function[][]
-      * @static
-      * @final
-       */
-      this.EASE_FUNCTIONS = [[Math.linearTween, Math.linearTween, Math.linearTween], [Math.easeOutQuad, Math.easeInQuad, Math.easeInOutQuad], [Math.easeOutCubic, Math.easeInCubic, Math.easeInOutCubic], [Math.easeOutQuart, Math.easeInQuart, Math.easeInOutQuart], [Math.easeOutQuint, Math.easeInQuint, Math.easeInOutQuint], [Math.easeOutSine, Math.easeInSine, Math.easeInOutSine], [Math.easeOutExpo, Math.easeInExpo, Math.easeInOutExpo], [Math.easeOutCirc, Math.easeInCirc, Math.easeInOutCirc], [Math.easeOutElastic, Math.easeInElastic, Math.easeInOutElastic], [Math.easeOutBounce, Math.easeInBounce, Math.easeInOutBounce], [Math.easeOutBack, Math.easeInBack, Math.easeInOutBack]];
-
-      /**
-      * @property BY_INDEX
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.BY_INDEX = [[[0, 0], [0, 0], [0, 0]], [[1, 0], [1, 1], [1, 2]], [[2, 0], [2, 1], [2, 2]], [[3, 0], [3, 1], [3, 2]], [[4, 0], [4, 1], [4, 2]], [[5, 0], [5, 1], [5, 2]], [[6, 0], [6, 1], [6, 2]], [[7, 0], [7, 1], [7, 2]], [[8, 0], [8, 1], [8, 2]], [[9, 0], [9, 1], [9, 2]], [[10, 0], [10, 1], [10, 2]]];
-
-      /**
-      * @property BY_STRING
-      * @type Object
-      * @static
-      * @final
-       */
-      this.BY_STRING = {
-        "linear_in": [0, 0],
-        "linear_out": [0, 0],
-        "linear_inout": [0, 0],
-        "quad_out": [1, 0],
-        "quad_in": [1, 1],
-        "quad_inout": [1, 2],
-        "cubic_out": [2, 0],
-        "cubic_in": [2, 1],
-        "cubic_inout": [2, 2],
-        "quart_out": [3, 0],
-        "quart_in": [3, 1],
-        "quart_inout": [3, 2],
-        "quint_out": [4, 0],
-        "quint_in": [4, 1],
-        "quint_inout": [4, 2],
-        "sine_out": [5, 0],
-        "sine_in": [5, 1],
-        "sine_inout": [5, 2],
-        "expo_out": [6, 0],
-        "expo_in": [6, 1],
-        "expo_inout": [6, 2],
-        "circ_out": [7, 0],
-        "circ_in": [7, 1],
-        "circ_inout": [7, 2],
-        "elastic_out": [8, 0],
-        "elastic_in": [8, 1],
-        "elastic_inout": [8, 2],
-        "bounce_out": [9, 0],
-        "bounce_in": [9, 1],
-        "bounce_inout": [9, 2],
-        "back_out": [10, 0],
-        "back_in": [10, 1],
-        "back_inout": [10, 2]
-      };
-
-      /**
-      * @property EASE_LINEAR
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_LINEAR = this.BY_INDEX[gs.EasingTypes.EASE_LINEAR];
-
-      /**
-      * @property EASE_QUADRATIC
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_QUADRATIC = this.BY_INDEX[gs.EasingTypes.EASE_QUADRATIC];
-
-      /**
-      * @property EASE_CUBIC
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_CUBIC = this.BY_INDEX[gs.EasingTypes.EASE_CUBIC];
-
-      /**
-      * @property EASE_QUARTIC
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_QUARTIC = this.BY_INDEX[gs.EasingTypes.EASE_QUARTIC];
-
-      /**
-      * @property EASE_QUINTIC
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_QUINTIC = this.BY_INDEX[gs.EasingTypes.EASE_QUINTIC];
-
-      /**
-      * @property EASE_SINUSOIDAL
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_SINUSOIDAL = this.BY_INDEX[gs.EasingTypes.EASE_SINUSOIDAL];
-
-      /**
-      * @property EASE_EXPONENTIAL
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_EXPONENTIAL = this.BY_INDEX[gs.EasingTypes.EASE_EXPONENTIAL];
-
-      /**
-      * @property EASE_CIRCULAR
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_CIRCULAR = this.BY_INDEX[gs.EasingTypes.EASE_CIRCULAR];
-
-      /**
-      * @property EASE_ELASTIC
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_ELASTIC = this.BY_INDEX[gs.EasingTypes.EASE_ELASTIC];
-
-      /**
-      * @property EASE_BOUNCE
-      * @type number[][]
-      * @static
-      * @final
-       */
-      this.EASE_BOUNCE = this.BY_INDEX[gs.EasingTypes.EASE_BOUNCE];
-
-      /**
-      * @property EASE_BACK
-      * @type number[][]
-      * @static
-      * @final
-       */
-      return this.EASE_BACK = this.BY_INDEX[gs.EasingTypes.EASE_BACK];
-    };
-
+  Easings.initialize = function() {
 
     /**
-    * @method fromValues
-    * @param {number} index - The index.
-    * @param {number} inOut - The in-out value.
+    * Contains all easing functions by type and in/out.
+    * @property EASE_FUNCTIONS
+    * @type Function[][]
+    * @static
+    * @final
      */
-
-    Easings.fromValues = function(index, inOut) {
-      return gs.Easings.BY_INDEX[index][inOut];
-    };
-
+    this.EASE_FUNCTIONS = [[Math.linearTween, Math.linearTween, Math.linearTween], [Math.easeOutQuad, Math.easeInQuad, Math.easeInOutQuad], [Math.easeOutCubic, Math.easeInCubic, Math.easeInOutCubic], [Math.easeOutQuart, Math.easeInQuart, Math.easeInOutQuart], [Math.easeOutQuint, Math.easeInQuint, Math.easeInOutQuint], [Math.easeOutSine, Math.easeInSine, Math.easeInOutSine], [Math.easeOutExpo, Math.easeInExpo, Math.easeInOutExpo], [Math.easeOutCirc, Math.easeInCirc, Math.easeInOutCirc], [Math.easeOutElastic, Math.easeInElastic, Math.easeInOutElastic], [Math.easeOutBounce, Math.easeInBounce, Math.easeInOutBounce], [Math.easeOutBack, Math.easeInBack, Math.easeInOutBack]];
 
     /**
-    * @method fromObject
-    * @param {Object} obj - The easing data-object.
+    * @property BY_INDEX
+    * @type number[][]
+    * @static
+    * @final
      */
-
-    Easings.fromObject = function(obj, flags, defaults) {
-      return gs.Easings.BY_INDEX[obj.type][obj.inOut];
-    };
-
+    this.BY_INDEX = [[[0, 0], [0, 0], [0, 0]], [[1, 0], [1, 1], [1, 2]], [[2, 0], [2, 1], [2, 2]], [[3, 0], [3, 1], [3, 2]], [[4, 0], [4, 1], [4, 2]], [[5, 0], [5, 1], [5, 2]], [[6, 0], [6, 1], [6, 2]], [[7, 0], [7, 1], [7, 2]], [[8, 0], [8, 1], [8, 2]], [[9, 0], [9, 1], [9, 2]], [[10, 0], [10, 1], [10, 2]]];
 
     /**
-    * @method fromString
-    * @param {String} s - The easing string like "quad_in" for example.
+    * @property BY_STRING
+    * @type Object
+    * @static
+    * @final
      */
-
-    Easings.fromString = function(s) {
-      return gs.Easings.BY_STRING[s || "linear_inout"];
+    this.BY_STRING = {
+      "linear_in": [0, 0],
+      "linear_out": [0, 0],
+      "linear_inout": [0, 0],
+      "quad_out": [1, 0],
+      "quad_in": [1, 1],
+      "quad_inout": [1, 2],
+      "cubic_out": [2, 0],
+      "cubic_in": [2, 1],
+      "cubic_inout": [2, 2],
+      "quart_out": [3, 0],
+      "quart_in": [3, 1],
+      "quart_inout": [3, 2],
+      "quint_out": [4, 0],
+      "quint_in": [4, 1],
+      "quint_inout": [4, 2],
+      "sine_out": [5, 0],
+      "sine_in": [5, 1],
+      "sine_inout": [5, 2],
+      "expo_out": [6, 0],
+      "expo_in": [6, 1],
+      "expo_inout": [6, 2],
+      "circ_out": [7, 0],
+      "circ_in": [7, 1],
+      "circ_inout": [7, 2],
+      "elastic_out": [8, 0],
+      "elastic_in": [8, 1],
+      "elastic_inout": [8, 2],
+      "bounce_out": [9, 0],
+      "bounce_in": [9, 1],
+      "bounce_inout": [9, 2],
+      "back_out": [10, 0],
+      "back_in": [10, 1],
+      "back_inout": [10, 2]
     };
 
-    return Easings;
+    /**
+    * @property EASE_LINEAR
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_LINEAR = this.BY_INDEX[gs.EasingTypes.EASE_LINEAR];
 
-  })();
+    /**
+    * @property EASE_QUADRATIC
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_QUADRATIC = this.BY_INDEX[gs.EasingTypes.EASE_QUADRATIC];
 
-  Easings.initialize();
+    /**
+    * @property EASE_CUBIC
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_CUBIC = this.BY_INDEX[gs.EasingTypes.EASE_CUBIC];
 
-  gs.Easings = Easings;
+    /**
+    * @property EASE_QUARTIC
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_QUARTIC = this.BY_INDEX[gs.EasingTypes.EASE_QUARTIC];
 
-}).call(this);
+    /**
+    * @property EASE_QUINTIC
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_QUINTIC = this.BY_INDEX[gs.EasingTypes.EASE_QUINTIC];
 
+    /**
+    * @property EASE_SINUSOIDAL
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_SINUSOIDAL = this.BY_INDEX[gs.EasingTypes.EASE_SINUSOIDAL];
+
+    /**
+    * @property EASE_EXPONENTIAL
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_EXPONENTIAL = this.BY_INDEX[gs.EasingTypes.EASE_EXPONENTIAL];
+
+    /**
+    * @property EASE_CIRCULAR
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_CIRCULAR = this.BY_INDEX[gs.EasingTypes.EASE_CIRCULAR];
+
+    /**
+    * @property EASE_ELASTIC
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_ELASTIC = this.BY_INDEX[gs.EasingTypes.EASE_ELASTIC];
+
+    /**
+    * @property EASE_BOUNCE
+    * @type number[][]
+    * @static
+    * @final
+     */
+    this.EASE_BOUNCE = this.BY_INDEX[gs.EasingTypes.EASE_BOUNCE];
+
+    /**
+    * @property EASE_BACK
+    * @type number[][]
+    * @static
+    * @final
+     */
+    return this.EASE_BACK = this.BY_INDEX[gs.EasingTypes.EASE_BACK];
+  };
+
+
+  /**
+  * @method fromValues
+  * @param {number} index - The index.
+  * @param {number} inOut - The in-out value.
+   */
+
+  Easings.fromValues = function(index, inOut) {
+    return gs.Easings.BY_INDEX[index][inOut];
+  };
+
+
+  /**
+  * @method fromObject
+  * @param {Object} obj - The easing data-object.
+   */
+
+  Easings.fromObject = function(obj, flags, defaults) {
+    return gs.Easings.BY_INDEX[obj.type][obj.inOut];
+  };
+
+
+  /**
+  * @method fromString
+  * @param {String} s - The easing string like "quad_in" for example.
+   */
+
+  Easings.fromString = function(s) {
+    return gs.Easings.BY_STRING[s || "linear_inout"];
+  };
+
+  return Easings;
+
+})();
+
+Easings.initialize();
+
+gs.Easings = Easings;
+
+//# sourceMappingURL=data:application/json;base64,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QyxLQUFELEVBQVEsS0FBUjtXQUFrQixFQUFFLENBQUMsT0FBTyxDQUFDLFFBQVMsQ0FBQSxLQUFBLENBQU8sQ0FBQSxLQUFBO0VBQTdDOzs7QUFFYjs7Ozs7RUFJQSxPQUFDLENBQUEsVUFBRCxHQUFhLFNBQUMsR0FBRCxFQUFNLEtBQU4sRUFBYSxRQUFiO1dBQTBCLEVBQUUsQ0FBQyxPQUFPLENBQUMsUUFBUyxDQUFBLEdBQUcsQ0FBQyxJQUFKLENBQVUsQ0FBQSxHQUFHLENBQUMsS0FBSjtFQUF4RDs7O0FBRWI7Ozs7O0VBSUEsT0FBQyxDQUFBLFVBQUQsR0FBYSxTQUFDLENBQUQ7V0FBTyxFQUFFLENBQUMsT0FBTyxDQUFDLFNBQVUsQ0FBQSxDQUFBLElBQUssY0FBTDtFQUE1Qjs7Ozs7O0FBRWpCLE9BQU8sQ0FBQyxVQUFSLENBQUE7O0FBQ0EsRUFBRSxDQUFDLE9BQUgsR0FBYSIsInNvdXJjZXNDb250ZW50IjpbIiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuI1xuIyAgIFNjcmlwdDogRWFzaW5nc1xuI1xuIyAgICQkQ09QWVJJR0hUJCRcbiNcbiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuXG4jIyMqXG4qIEhvbGRzIGRpZmZlcmVudCBlYXNpbmcgdHlwZXMgYW5kIGhlbHBlciBtZXRob2RzLlxuKlxuKiBAbW9kdWxlIGdzXG4qIEBjbGFzcyBFYXNpbmdzXG4qIEBtZW1iZXJvZiBnc1xuKiBAY29uc3RydWN0b3JcbiMjIyAgXG5jbGFzcyBFYXNpbmdzXG4gICAgQGluaXRpYWxpemU6IC0+XG4gICAgICAgICMjIypcbiAgICAgICAgKiBDb250YWlucyBhbGwgZWFzaW5nIGZ1bmN0aW9ucyBieSB0eXBlIGFuZCBpbi9vdXQuXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfRlVOQ1RJT05TXG4gICAgICAgICogQHR5cGUgRnVuY3Rpb25bXVtdXG4gICAgICAgICogQHN0YXRpY1xuICAgICAgICAqIEBmaW5hbFxuICAgICAgICAjIyNcbiAgICAgICAgQEVBU0VfRlVOQ1RJT05TID0gW1tNYXRoLmxpbmVhclR3ZWVuLCBNYXRoLmxpbmVhclR3ZWVuLCBNYXRoLmxpbmVhclR3ZWVuXSwgXG4gICAgICAgICAgICAgICAgICAgICBbTWF0aC5lYXNlT3V0UXVhZCwgTWF0aC5lYXNlSW5RdWFkLCBNYXRoLmVhc2VJbk91dFF1YWRdLCBcbiAgICAgICAgICAgICAgICAgICAgIFtNYXRoLmVhc2VPdXRDdWJpYywgTWF0aC5lYXNlSW5DdWJpYywgTWF0aC5lYXNlSW5PdXRDdWJpY10sIFxuICAgICAgICAgICAgICAgICAgICAgW01hdGguZWFzZU91dFF1YXJ0LCBNYXRoLmVhc2VJblF1YXJ0LCBNYXRoLmVhc2VJbk91dFF1YXJ0XSxcbiAgICAgICAgICAgICAgICAgICAgIFtNYXRoLmVhc2VPdXRRdWludCwgTWF0aC5lYXNlSW5RdWludCwgTWF0aC5lYXNlSW5PdXRRdWludF0sXG4gICAgICAgICAgICAgICAgICAgICBbTWF0aC5lYXNlT3V0U2luZSwgTWF0aC5lYXNlSW5TaW5lLCBNYXRoLmVhc2VJbk91dFNpbmVdLFxuICAgICAgICAgICAgICAgICAgICAgW01hdGguZWFzZU91dEV4cG8sIE1hdGguZWFzZUluRXhwbywgTWF0aC5lYXNlSW5PdXRFeHBvXSxcbiAgICAgICAgICAgICAgICAgICAgIFtNYXRoLmVhc2VPdXRDaXJjLCBNYXRoLmVhc2VJbkNpcmMsIE1hdGguZWFzZUluT3V0Q2lyY10sXG4gICAgICAgICAgICAgICAgICAgICBbTWF0aC5lYXNlT3V0RWxhc3RpYywgTWF0aC5lYXNlSW5FbGFzdGljLCBNYXRoLmVhc2VJbk91dEVsYXN0aWNdLFxuICAgICAgICAgICAgICAgICAgICAgW01hdGguZWFzZU91dEJvdW5jZSwgTWF0aC5lYXNlSW5Cb3VuY2UsIE1hdGguZWFzZUluT3V0Qm91bmNlXSxcbiAgICAgICAgICAgICAgICAgICAgIFtNYXRoLmVhc2VPdXRCYWNrLCBNYXRoLmVhc2VJbkJhY2ssIE1hdGguZWFzZUluT3V0QmFja11dXG4gICAgICAgIFxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEJZX0lOREVYXG4gICAgICAgICogQHR5cGUgbnVtYmVyW11bXVxuICAgICAgICAqIEBzdGF0aWNcbiAgICAgICAgKiBAZmluYWxcbiAgICAgICAgIyMjICAgICAgICAgICAgIFxuICAgICAgICBAQllfSU5ERVggPSBbW1swLCAwXSwgWzAsIDBdLCBbMCwgMF1dLCBcbiAgICAgICAgICAgICAgICAgICAgIFtbMSwgMF0sIFsxLCAxXSwgWzEsIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbMiwgMF0sIFsyLCAxXSwgWzIsIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbMywgMF0sIFszLCAxXSwgWzMsIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbNCwgMF0sIFs0LCAxXSwgWzQsIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbNSwgMF0sIFs1LCAxXSwgWzUsIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbNiwgMF0sIFs2LCAxXSwgWzYsIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbNywgMF0sIFs3LCAxXSwgWzcsIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbOCwgMF0sIFs4LCAxXSwgWzgsIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbOSwgMF0sIFs5LCAxXSwgWzksIDJdXSxcbiAgICAgICAgICAgICAgICAgICAgIFtbMTAsIDBdLCBbMTAsIDFdLCBbMTAsIDJdXV1cbiAgICAgICAgIFxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEJZX1NUUklOR1xuICAgICAgICAqIEB0eXBlIE9iamVjdFxuICAgICAgICAqIEBzdGF0aWNcbiAgICAgICAgKiBAZmluYWxcbiAgICAgICAgIyMjICAgICAgICAgICAgICAgXG4gICAgICAgIEBCWV9TVFJJTkcgPSB7XG4gICAgICAgICAgICBcImxpbmVhcl9pblwiOiBbMCwgMF0sIFwibGluZWFyX291dFwiOiBbMCwgMF0sIFwibGluZWFyX2lub3V0XCI6IFswLCAwXSxcbiAgICAgICAgICAgIFwicXVhZF9vdXRcIjogWzEsIDBdLCBcInF1YWRfaW5cIjogWzEsIDFdLCBcInF1YWRfaW5vdXRcIjogWzEsIDJdLFxuICAgICAgICAgICAgXCJjdWJpY19vdXRcIjogWzIsIDBdLCBcImN1YmljX2luXCI6IFsyLCAxXSwgXCJjdWJpY19pbm91dFwiOiBbMiwgMl0sXG4gICAgICAgICAgICBcInF1YXJ0X291dFwiOiBbMywgMF0sIFwicXVhcnRfaW5cIjogWzMsIDFdLCBcInF1YXJ0X2lub3V0XCI6IFszLCAyXSxcbiAgICAgICAgICAgIFwicXVpbnRfb3V0XCI6IFs0LCAwXSwgXCJxdWludF9pblwiOiBbNCwgMV0sIFwicXVpbnRfaW5vdXRcIjogWzQsIDJdLFxuICAgICAgICAgICAgXCJzaW5lX291dFwiOiBbNSwgMF0sIFwic2luZV9pblwiOiBbNSwgMV0sIFwic2luZV9pbm91dFwiOiBbNSwgMl0sXG4gICAgICAgICAgICBcImV4cG9fb3V0XCI6IFs2LCAwXSwgXCJleHBvX2luXCI6IFs2LCAxXSwgXCJleHBvX2lub3V0XCI6IFs2LCAyXSxcbiAgICAgICAgICAgIFwiY2lyY19vdXRcIjogWzcsIDBdLCBcImNpcmNfaW5cIjogWzcsIDFdLCBcImNpcmNfaW5vdXRcIjogWzcsIDJdLFxuICAgICAgICAgICAgXCJlbGFzdGljX291dFwiOiBbOCwgMF0sIFwiZWxhc3RpY19pblwiOiBbOCwgMV0sIFwiZWxhc3RpY19pbm91dFwiOiBbOCwgMl0sXG4gICAgICAgICAgICBcImJvdW5jZV9vdXRcIjogWzksIDBdLCBcImJvdW5jZV9pblwiOiBbOSwgMV0sIFwiYm91bmNlX2lub3V0XCI6IFs5LCAyXSxcbiAgICAgICAgICAgIFwiYmFja19vdXRcIjogWzEwLCAwXSwgXCJiYWNrX2luXCI6IFsxMCwgMV0sIFwiYmFja19pbm91dFwiOiBbMTAsIDJdXG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgICMjIypcbiAgICAgICAgKiBAcHJvcGVydHkgRUFTRV9MSU5FQVJcbiAgICAgICAgKiBAdHlwZSBudW1iZXJbXVtdXG4gICAgICAgICogQHN0YXRpY1xuICAgICAgICAqIEBmaW5hbFxuICAgICAgICAjIyMgIFxuICAgICAgICBARUFTRV9MSU5FQVIgPSBAQllfSU5ERVhbZ3MuRWFzaW5nVHlwZXMuRUFTRV9MSU5FQVJdXG4gICAgICAgIFxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfUVVBRFJBVElDXG4gICAgICAgICogQHR5cGUgbnVtYmVyW11bXVxuICAgICAgICAqIEBzdGF0aWNcbiAgICAgICAgKiBAZmluYWxcbiAgICAgICAgIyMjICBcbiAgICAgICAgQEVBU0VfUVVBRFJBVElDID0gQEJZX0lOREVYW2dzLkVhc2luZ1R5cGVzLkVBU0VfUVVBRFJBVElDXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfQ1VCSUNcbiAgICAgICAgKiBAdHlwZSBudW1iZXJbXVtdXG4gICAgICAgICogQHN0YXRpY1xuICAgICAgICAqIEBmaW5hbFxuICAgICAgICAjIyMgIFxuICAgICAgICBARUFTRV9DVUJJQyA9IEBCWV9JTkRFWFtncy5FYXNpbmdUeXBlcy5FQVNFX0NVQklDXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfUVVBUlRJQ1xuICAgICAgICAqIEB0eXBlIG51bWJlcltdW11cbiAgICAgICAgKiBAc3RhdGljXG4gICAgICAgICogQGZpbmFsXG4gICAgICAgICMjIyAgXG4gICAgICAgIEBFQVNFX1FVQVJUSUMgPSBAQllfSU5ERVhbZ3MuRWFzaW5nVHlwZXMuRUFTRV9RVUFSVElDXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfUVVJTlRJQ1xuICAgICAgICAqIEB0eXBlIG51bWJlcltdW11cbiAgICAgICAgKiBAc3RhdGljXG4gICAgICAgICogQGZpbmFsXG4gICAgICAgICMjIyAgXG4gICAgICAgIEBFQVNFX1FVSU5USUMgPSBAQllfSU5ERVhbZ3MuRWFzaW5nVHlwZXMuRUFTRV9RVUlOVElDXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfU0lOVVNPSURBTFxuICAgICAgICAqIEB0eXBlIG51bWJlcltdW11cbiAgICAgICAgKiBAc3RhdGljXG4gICAgICAgICogQGZpbmFsXG4gICAgICAgICMjIyAgXG4gICAgICAgIEBFQVNFX1NJTlVTT0lEQUwgPSBAQllfSU5ERVhbZ3MuRWFzaW5nVHlwZXMuRUFTRV9TSU5VU09JREFMXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfRVhQT05FTlRJQUxcbiAgICAgICAgKiBAdHlwZSBudW1iZXJbXVtdXG4gICAgICAgICogQHN0YXRpY1xuICAgICAgICAqIEBmaW5hbFxuICAgICAgICAjIyMgIFxuICAgICAgICBARUFTRV9FWFBPTkVOVElBTCA9IEBCWV9JTkRFWFtncy5FYXNpbmdUeXBlcy5FQVNFX0VYUE9ORU5USUFMXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfQ0lSQ1VMQVJcbiAgICAgICAgKiBAdHlwZSBudW1iZXJbXVtdXG4gICAgICAgICogQHN0YXRpY1xuICAgICAgICAqIEBmaW5hbFxuICAgICAgICAjIyMgIFxuICAgICAgICBARUFTRV9DSVJDVUxBUiA9IEBCWV9JTkRFWFtncy5FYXNpbmdUeXBlcy5FQVNFX0NJUkNVTEFSXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfRUxBU1RJQ1xuICAgICAgICAqIEB0eXBlIG51bWJlcltdW11cbiAgICAgICAgKiBAc3RhdGljXG4gICAgICAgICogQGZpbmFsXG4gICAgICAgICMjIyAgXG4gICAgICAgIEBFQVNFX0VMQVNUSUMgPSBAQllfSU5ERVhbZ3MuRWFzaW5nVHlwZXMuRUFTRV9FTEFTVElDXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfQk9VTkNFXG4gICAgICAgICogQHR5cGUgbnVtYmVyW11bXVxuICAgICAgICAqIEBzdGF0aWNcbiAgICAgICAgKiBAZmluYWxcbiAgICAgICAgIyMjICBcbiAgICAgICAgQEVBU0VfQk9VTkNFID0gQEJZX0lOREVYW2dzLkVhc2luZ1R5cGVzLkVBU0VfQk9VTkNFXVxuICAgICAgICAjIyMqXG4gICAgICAgICogQHByb3BlcnR5IEVBU0VfQkFDS1xuICAgICAgICAqIEB0eXBlIG51bWJlcltdW11cbiAgICAgICAgKiBAc3RhdGljXG4gICAgICAgICogQGZpbmFsXG4gICAgICAgICMjIyAgXG4gICAgICAgIEBFQVNFX0JBQ0sgPSBAQllfSU5ERVhbZ3MuRWFzaW5nVHlwZXMuRUFTRV9CQUNLXVxuICAgIFxuICAgICMjIypcbiAgICAqIEBtZXRob2QgZnJvbVZhbHVlc1xuICAgICogQHBhcmFtIHtudW1iZXJ9IGluZGV4IC0gVGhlIGluZGV4LlxuICAgICogQHBhcmFtIHtudW1iZXJ9IGluT3V0IC0gVGhlIGluLW91dCB2YWx1ZS5cbiAgICAjIyNcbiAgICBAZnJvbVZhbHVlczogKGluZGV4LCBpbk91dCkgLT4gZ3MuRWFzaW5ncy5CWV9JTkRFWFtpbmRleF1baW5PdXRdXG4gICAgXG4gICAgIyMjKlxuICAgICogQG1ldGhvZCBmcm9tT2JqZWN0XG4gICAgKiBAcGFyYW0ge09iamVjdH0gb2JqIC0gVGhlIGVhc2luZyBkYXRhLW9iamVjdC5cbiAgICAjIyNcbiAgICBAZnJvbU9iamVjdDogKG9iaiwgZmxhZ3MsIGRlZmF1bHRzKSAtPiBncy5FYXNpbmdzLkJZX0lOREVYW29iai50eXBlXVtvYmouaW5PdXRdXG4gICAgXG4gICAgIyMjKlxuICAgICogQG1ldGhvZCBmcm9tU3RyaW5nXG4gICAgKiBAcGFyYW0ge1N0cmluZ30gcyAtIFRoZSBlYXNpbmcgc3RyaW5nIGxpa2UgXCJxdWFkX2luXCIgZm9yIGV4YW1wbGUuXG4gICAgIyMjXG4gICAgQGZyb21TdHJpbmc6IChzKSAtPiBncy5FYXNpbmdzLkJZX1NUUklOR1tzIHx8IFwibGluZWFyX2lub3V0XCJdXG4gICAgXG5FYXNpbmdzLmluaXRpYWxpemUoKVxuZ3MuRWFzaW5ncyA9IEVhc2luZ3MiXX0=
+//# sourceURL=Easings_114.js
 // Generated by CoffeeScript 1.12.7
 
 /**
@@ -37119,6 +37165,44 @@ ui.UiFactory.layouts.webStartLayout = {
 
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLEVBQUUsQ0FBQyxTQUFTLENBQUMsT0FBTyxDQUFDLGNBQXJCLEdBQXNDO0VBQ2xDLE1BQUEsRUFBUSxlQUQwQjtFQUVsQyxPQUFBLEVBQVMsQ0FBQyxDQUFELEVBQUksQ0FBSixFQUFPLFFBQVEsQ0FBQyxLQUFoQixFQUF1QixRQUFRLENBQUMsTUFBaEMsQ0FGeUI7RUFHbEMsV0FBQSxFQUFhO0lBQUUsV0FBQSxFQUFhLDRCQUFmO0dBSHFCO0VBSWxDLFVBQUEsRUFBWTtJQUNSO01BQ0ksTUFBQSxFQUFRLFVBRFo7TUFFSSxPQUFBLEVBQVMsQ0FBQyxDQUFELEVBQUksQ0FBSixFQUFPLFFBQVEsQ0FBQyxLQUFoQixFQUF1QixRQUFRLENBQUMsTUFBaEMsQ0FGYjtNQUdJLE9BQUEsRUFBUyxrQkFIYjtLQURRO0dBSnNCIiwic291cmNlc0NvbnRlbnQiOlsidWkuVWlGYWN0b3J5LmxheW91dHMud2ViU3RhcnRMYXlvdXQgPSB7XG4gICAgXCJ0eXBlXCI6IFwidWkuRnJlZUxheW91dFwiLFxuICAgIFwiZnJhbWVcIjogWzAsIDAsIEdyYXBoaWNzLndpZHRoLCBHcmFwaGljcy5oZWlnaHRdLFxuICAgIFwiY29tcG9uZW50XCI6IHsgXCJjbGFzc05hbWVcIjogXCJDb21wb25lbnRfV2ViU3RhcnRCZWhhdmlvclwiIH0sXG4gICAgXCJjb250cm9sc1wiOiBbXG4gICAgICAgIHtcbiAgICAgICAgICAgIFwidHlwZVwiOiBcInVpLkltYWdlXCIsXG4gICAgICAgICAgICBcImZyYW1lXCI6IFswLCAwLCBHcmFwaGljcy53aWR0aCwgR3JhcGhpY3MuaGVpZ2h0XSxcbiAgICAgICAgICAgIFwiaW1hZ2VcIjogXCJ3ZWItc3RhcnQtc2NyZWVuXCJcbiAgICAgICAgfVxuICAgIF1cbn0iXX0=
 //# sourceURL=Layout_WebStart_28.js
+/**
+ * Layouts\[FS] CellPhoneUI_Constants
+ * Redefines constants from the original Layouts\Constants and adds some new
+ * ones. Customize them here!
+ */
+
+(function(){
+    class DesktopUIConstants {
+        static initClass() {
+            this.OPTION_BUTTON_W = 78;
+            this.OPTION_BUTTON_H = 78;
+            this.OPTION_BUTTON_L_IMAGE_ON = "m-checkbox-large-on";
+            this.OPTION_BUTTON_L_IMAGE_OFF = "m-checkbox-large-off";
+            this.OPTION_BUTTON_S_IMAGE_ON = "m-checkbox-small-on";
+            this.OPTION_BUTTON_S_IMAGE_OFF = "m-checkbox-small-off";
+            this.OPTION_BUTTON_MSG_IMAGE_ON = "msg-checkbox-small-on";
+            this.OPTION_BUTTON_MSG_IMAGE_OFF = "msg-checkbox-small-off";
+            this.SLIDER_TRACK_H = 3;
+            this.TEXT_FONT = "Power Clear";
+            this.TEXT_SIZE_SMALL = 20;
+            this.TEXT_SIZE_MESSAGE = 30;
+            this.TEXT_SIZE_MESSAGE_NAME = 25;
+            this.TEXT_COLOR_NORMAL = [0, 0, 0, 255];
+            this.TEXT_COLOR_SPECIAL = [0, 0, 255, 255];
+            this.LAYOUT_SETTINGS_WINDOW_W = 630;
+            this.LAYOUT_SETTINGS_WINDOW_X = Graphics.width - this.LAYOUT_SETTINGS_WINDOW_W - 190;
+            this.LAYOUT_SETTINGS_VOICES_WINDOW_X = 720;
+            this.LAYOUT_SETTINGS_VOICES_WINDOW_W = 540;
+            this.LAYOUT_SETTINGS_WINDOW_LABEL_W = 80;
+            this.CG_GALLERY_CONTENT_WIDTH = (Math.floor((Graphics.width-260-(Graphics.width - (Graphics.width - 200))) / 175) * 175) + 20;
+            this.MESSAGE_BOX_IDS = ["messageBox", "nvlMessageBox"];
+            //Styles
+            
+        }
+    }
+    DesktopUIConstants.initClass();
+    gs.DesktopUIConstants = gs.UIConstants = DesktopUIConstants;
+}());
 ui.UiFactory.layouts.cgGalleryLayout = {
   "type": "ui.FreeLayout",
   "orientation": "vertical",
@@ -41764,6 +41848,2122 @@ ui.UiFactory.customTypes["ui.StepSlider"] = {
 
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiIiLCJzb3VyY2VzQ29udGVudCI6WyIiXX0=
 //# sourceURL=Style_New_15.js
+ui.UiFactory.layouts.gameLayout = {
+  "type": "ui.FreeLayout",
+  "frame": [0, 0, Graphics.width, Graphics.height],
+  "controls": [
+    {
+      "type": "ui.Panel",
+      "frame": [0, 0, Graphics.width, Graphics.height],
+      "updateBehavior": "continuous",
+      "formulas": [
+        $(function() {
+          return o.ui.enabled = $dataFields.tempSettings.menuAccess;
+        })
+      ],
+      "actions": [
+        {
+          "event": "onCancel",
+          "name": "prepareSaveGame",
+          "params": {
+            "snapshot": true
+          }
+        }, {
+          "event": "onCancel",
+          "name": "switchGameScene",
+          "params": {
+            "name": "Save Menu",
+            "savePrevious": true
+          }
+        }
+      ]
+    }, {
+      "type": "ui.MessageBox",
+      "visible": false,
+      "id": "messageBox",
+      "frame": [0, 0, Graphics.width, Graphics.height]
+    }, {
+      "type": "ui.MessageBoxNVL",
+      "visible": false,
+      "id": "nvlMessageBox",
+      "frame": [0, 0, Graphics.width, Graphics.height]
+    }, {
+      "type": "ui.MessageMenu",
+      "visible": false,
+      "id": "messageMenu",
+      "frame": [0, 0, Graphics.width, Graphics.height]
+    }, {
+      "type": "ui.GameMessage",
+      "id": "gameMessage",
+      "params": {
+        "id": "gameMessage"
+      },
+      "frame": [320, Graphics.height - 220]
+    }, {
+      "type": "ui.GameMessageNVL",
+      "id": "nvlGameMessage",
+      "params": {
+        "id": "nvlGameMessage"
+      },
+      "frame": [0, 0]
+    }
+  ]
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLEVBQUUsQ0FBQyxTQUFTLENBQUMsT0FBTyxDQUFDLFVBQXJCLEdBQWtDO0VBQzlCLE1BQUEsRUFBUSxlQURzQjtFQUU5QixPQUFBLEVBQVMsQ0FBQyxDQUFELEVBQUksQ0FBSixFQUFPLFFBQVEsQ0FBQyxLQUFoQixFQUF1QixRQUFRLENBQUMsTUFBaEMsQ0FGcUI7RUFHOUIsVUFBQSxFQUFXO0lBQ1A7TUFDSSxNQUFBLEVBQVEsVUFEWjtNQUVJLE9BQUEsRUFBUyxDQUFDLENBQUQsRUFBSSxDQUFKLEVBQU8sUUFBUSxDQUFDLEtBQWhCLEVBQXVCLFFBQVEsQ0FBQyxNQUFoQyxDQUZiO01BR0ksZ0JBQUEsRUFBa0IsWUFIdEI7TUFJSSxVQUFBLEVBQVk7UUFBQyxDQUFBLENBQUUsU0FBQTtpQkFBRyxDQUFDLENBQUMsRUFBRSxDQUFDLE9BQUwsR0FBZSxXQUFXLENBQUMsWUFBWSxDQUFDO1FBQTNDLENBQUYsQ0FBRDtPQUpoQjtNQUtJLFNBQUEsRUFBVztRQUNQO1VBQUUsT0FBQSxFQUFTLFVBQVg7VUFBdUIsTUFBQSxFQUFRLGlCQUEvQjtVQUFrRCxRQUFBLEVBQVU7WUFBRSxVQUFBLEVBQVksSUFBZDtXQUE1RDtTQURPLEVBRVA7VUFBRSxPQUFBLEVBQVMsVUFBWDtVQUF1QixNQUFBLEVBQVEsaUJBQS9CO1VBQWtELFFBQUEsRUFBVTtZQUFFLE1BQUEsRUFBUSxXQUFWO1lBQXVCLGNBQUEsRUFBZ0IsSUFBdkM7V0FBNUQ7U0FGTztPQUxmO0tBRE8sRUFXUDtNQUNJLE1BQUEsRUFBUSxlQURaO01BRUksU0FBQSxFQUFXLEtBRmY7TUFHSSxJQUFBLEVBQU0sWUFIVjtNQUlJLE9BQUEsRUFBUyxDQUFDLENBQUQsRUFBSSxDQUFKLEVBQU8sUUFBUSxDQUFDLEtBQWhCLEVBQXVCLFFBQVEsQ0FBQyxNQUFoQyxDQUpiO0tBWE8sRUFpQlA7TUFDSSxNQUFBLEVBQVEsa0JBRFo7TUFFSSxTQUFBLEVBQVcsS0FGZjtNQUdJLElBQUEsRUFBTSxlQUhWO01BSUksT0FBQSxFQUFTLENBQUMsQ0FBRCxFQUFJLENBQUosRUFBTyxRQUFRLENBQUMsS0FBaEIsRUFBdUIsUUFBUSxDQUFDLE1BQWhDLENBSmI7S0FqQk8sRUF1QlA7TUFDSSxNQUFBLEVBQVEsZ0JBRFo7TUFFSSxTQUFBLEVBQVcsS0FGZjtNQUdJLElBQUEsRUFBTSxhQUhWO01BSUksT0FBQSxFQUFTLENBQUMsQ0FBRCxFQUFJLENBQUosRUFBTyxRQUFRLENBQUMsS0FBaEIsRUFBdUIsUUFBUSxDQUFDLE1BQWhDLENBSmI7S0F2Qk8sRUE2QlA7TUFDSSxNQUFBLEVBQVEsZ0JBRFo7TUFFSSxJQUFBLEVBQU0sYUFGVjtNQUdJLFFBQUEsRUFBVTtRQUFFLElBQUEsRUFBTSxhQUFSO09BSGQ7TUFJSSxPQUFBLEVBQVMsQ0FBQyxHQUFELEVBQU0sUUFBUSxDQUFDLE1BQVQsR0FBa0IsR0FBeEIsQ0FKYjtLQTdCTyxFQW1DUDtNQUNJLE1BQUEsRUFBUSxtQkFEWjtNQUVJLElBQUEsRUFBTSxnQkFGVjtNQUdJLFFBQUEsRUFBVTtRQUFFLElBQUEsRUFBTSxnQkFBUjtPQUhkO01BSUksT0FBQSxFQUFTLENBQUMsQ0FBRCxFQUFJLENBQUosQ0FKYjtLQW5DTztHQUhtQiIsInNvdXJjZXNDb250ZW50IjpbInVpLlVpRmFjdG9yeS5sYXlvdXRzLmdhbWVMYXlvdXQgPSB7XG4gICAgXCJ0eXBlXCI6IFwidWkuRnJlZUxheW91dFwiLFxuICAgIFwiZnJhbWVcIjogWzAsIDAsIEdyYXBoaWNzLndpZHRoLCBHcmFwaGljcy5oZWlnaHRdLFxuICAgIFwiY29udHJvbHNcIjpbXG4gICAgICAgIHtcbiAgICAgICAgICAgIFwidHlwZVwiOiBcInVpLlBhbmVsXCIsXG4gICAgICAgICAgICBcImZyYW1lXCI6IFswLCAwLCBHcmFwaGljcy53aWR0aCwgR3JhcGhpY3MuaGVpZ2h0XSxcbiAgICAgICAgICAgIFwidXBkYXRlQmVoYXZpb3JcIjogXCJjb250aW51b3VzXCIsXG4gICAgICAgICAgICBcImZvcm11bGFzXCI6IFskIC0+IG8udWkuZW5hYmxlZCA9ICRkYXRhRmllbGRzLnRlbXBTZXR0aW5ncy5tZW51QWNjZXNzXSxcbiAgICAgICAgICAgIFwiYWN0aW9uc1wiOiBbXG4gICAgICAgICAgICAgICAgeyBcImV2ZW50XCI6IFwib25DYW5jZWxcIiwgXCJuYW1lXCI6IFwicHJlcGFyZVNhdmVHYW1lXCIsIFwicGFyYW1zXCI6IHsgXCJzbmFwc2hvdFwiOiB0cnVlIH0gfSxcbiAgICAgICAgICAgICAgICB7IFwiZXZlbnRcIjogXCJvbkNhbmNlbFwiLCBcIm5hbWVcIjogXCJzd2l0Y2hHYW1lU2NlbmVcIiwgXCJwYXJhbXNcIjogeyBcIm5hbWVcIjogXCJTYXZlIE1lbnVcIiwgXCJzYXZlUHJldmlvdXNcIjogdHJ1ZSB9IH1cbiAgICAgICAgICAgIF1cbiAgICAgICAgfSxcbiAgICAgICAge1xuICAgICAgICAgICAgXCJ0eXBlXCI6IFwidWkuTWVzc2FnZUJveFwiLFxuICAgICAgICAgICAgXCJ2aXNpYmxlXCI6IG5vLFxuICAgICAgICAgICAgXCJpZFwiOiBcIm1lc3NhZ2VCb3hcIixcbiAgICAgICAgICAgIFwiZnJhbWVcIjogWzAsIDAsIEdyYXBoaWNzLndpZHRoLCBHcmFwaGljcy5oZWlnaHRdXG4gICAgICAgIH0sXG4gICAgICAgIHtcbiAgICAgICAgICAgIFwidHlwZVwiOiBcInVpLk1lc3NhZ2VCb3hOVkxcIixcbiAgICAgICAgICAgIFwidmlzaWJsZVwiOiBubyxcbiAgICAgICAgICAgIFwiaWRcIjogXCJudmxNZXNzYWdlQm94XCIsXG4gICAgICAgICAgICBcImZyYW1lXCI6IFswLCAwLCBHcmFwaGljcy53aWR0aCwgR3JhcGhpY3MuaGVpZ2h0XVxuICAgICAgICB9LFxuICAgICAgICB7XG4gICAgICAgICAgICBcInR5cGVcIjogXCJ1aS5NZXNzYWdlTWVudVwiLFxuICAgICAgICAgICAgXCJ2aXNpYmxlXCI6IG5vLFxuICAgICAgICAgICAgXCJpZFwiOiBcIm1lc3NhZ2VNZW51XCIsXG4gICAgICAgICAgICBcImZyYW1lXCI6IFswLCAwLCBHcmFwaGljcy53aWR0aCwgR3JhcGhpY3MuaGVpZ2h0XVxuICAgICAgICB9LFxuICAgICAgICB7XG4gICAgICAgICAgICBcInR5cGVcIjogXCJ1aS5HYW1lTWVzc2FnZVwiLFxuICAgICAgICAgICAgXCJpZFwiOiBcImdhbWVNZXNzYWdlXCIsXG4gICAgICAgICAgICBcInBhcmFtc1wiOiB7IFwiaWRcIjogXCJnYW1lTWVzc2FnZVwiIH0sXG4gICAgICAgICAgICBcImZyYW1lXCI6IFszMjAsIEdyYXBoaWNzLmhlaWdodCAtIDIyMF1cbiAgICAgICAgfSxcbiAgICAgICAge1xuICAgICAgICAgICAgXCJ0eXBlXCI6IFwidWkuR2FtZU1lc3NhZ2VOVkxcIixcbiAgICAgICAgICAgIFwiaWRcIjogXCJudmxHYW1lTWVzc2FnZVwiLFxuICAgICAgICAgICAgXCJwYXJhbXNcIjogeyBcImlkXCI6IFwibnZsR2FtZU1lc3NhZ2VcIiB9LFxuICAgICAgICAgICAgXCJmcmFtZVwiOiBbMCwgMF1cbiAgICAgICAgfVxuICAgIF1cbn0iXX0=
+//# sourceURL=Layout_Game_19.js
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_CGGallery
+ * Edits to the original Layouts\Layout_CGGallery
+ */
+
+ui.UiFactory.layouts.cgGalleryLayout = {
+    "type": "ui.FreeLayout",
+    "orientation": "vertical",
+    "preload": {
+        "graphics": [
+            { "name": $(() => $dataFields.database.system.menuBackground.name || 'bg-generic') },
+            { "path": ($(() => $dataFields.database.cgGalleryArray)), "image": ($(() => (o.thumb != null ? o.thumb.name : undefined) != null ? (o.thumb != null ? o.thumb.name : undefined) : o))},
+            { "path": ["locked"], "image": ($(() => o))}
+        ]
+    },
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "controls": [
+        {
+            "id": "background",
+            "type": "ui.Image",
+            "imageHandling": 0,
+            "image"() { return $dataFields.database.system.menuBackground.name || 'bg-generic'; },
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            "type": "ui.Button",
+            "id": "backButton",
+            "params": { "text": { "lcId": "B0FD4BF121D9E44E7589CDD35869F86F2227", "defaultText": "Back" }, "action": { "name": "previousLayout" } },
+            "frame": [Graphics.width - 170, Graphics.height - 45, 150, 45],
+            "order": 1
+        },
+        {
+            "type": "ui.TitledWindow",
+            "components": [{ "type": "Component_HotspotBehavior", "params": {} }],
+            "id": "galleryWindow",
+            "frame": [Graphics.width - 410, 0, 220, Graphics.height],
+            "params": { "title": { "lcId": "F957AB5C572C3642839AAB12D429F0C1AA3C", "defaultText": "Chapters" } }
+        },
+        {
+            "type": "ui.DataScrollView",
+            "frame": [Graphics.width - 410, 10 + 45, 220, Graphics.height - 45 - 10],
+            "params": {
+                "spacing": [10, 10],
+                "columns": 1,
+                "dataSource": $(() => $dataFields.chapters),
+                "template": {
+                    "size": [220, 45],
+                    "descriptor": {
+                        "type": "ui.Text",
+                        "formulas": [$(function() { 
+                            o.text = $dataFields.chapters[o.index].items.name;
+                            if (this.onInitialize && (o.index === 0)) { return o.ui.selected = true; }
+                        })
+                        ],
+                        "font": { "name": "Times New Roman", "italic": true, "size": 45 },
+                        "style": "selectableText",
+                        "selectable": true,
+                        "group": "chapters",
+                        "frame": [0, 0],
+                        "sizeToFit": true,
+                        "action": { 
+                            "event": "onAccept",
+                            "name": "executeFormulas", 
+                            "params": [
+                                $(() => $scrollView.controls[1].behavior.dataSource = $dataFields.cgGalleryByChapter[$dataFields.chapters[o.index].uid])
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "ui.TitledWindow",
+            "components": [{ "type": "Component_HotspotBehavior", "params": {} }],
+            "id": "galleryWindow",
+            "frame": [Graphics.width - gs.UIConstants.CG_GALLERY_CONTENT_WIDTH - 430, 0, gs.UIConstants.CG_GALLERY_CONTENT_WIDTH, Graphics.height],
+            "params": { "title": { "lcId": "A80D12A37EE45448BD2A2695D7C86820AB03", "defaultText": "Gallery" } }
+        },
+        {
+            "type": "ui.DataScrollView",
+            "chainOrder": 3,
+            "id": "scrollView",
+            "frame": [Graphics.width - gs.UIConstants.CG_GALLERY_CONTENT_WIDTH - 430, gs.UIConstants.CG_GALLERY_CONTENT_WIDTH, Graphics.height - 45 - 10],
+            "params": {
+                "spacing": [10, 10],
+                "columns": Math.floor(gs.UIConstants.CG_GALLERY_CONTENT_WIDTH / 165),
+                "dataSource": $(() => $dataFields.cgGalleryByChapter[$dataFields.chapters[0] != null ? $dataFields.chapters[0].uid : undefined]),
+                "template": {
+                    "size": [165, 124],
+                    "descriptor": {
+                        "type": "ui.FreeLayout",
+                        "frame": [0, 0],
+                        "sizeToFit": true,
+                        "group": "gallery",
+                        "style": "cgGalleryImage",
+                        "controls": [
+                            {
+                                "type": "ui.Frame",
+                                "style": "cgGalleryImageFrame",
+                                "frame": [0, 0, "100%", "100%"],
+                                "padding": [-16, -16, -16, -16],
+                                "zIndex": 10,
+                                "actions": [
+                                    { 
+                                        "condition": { "field": ($(() => o.parent.controls[1].image)), "notEqualTo": ($(() => 'locked')) },  
+                                        "name": "executeFormulas", 
+                                        "params": [$(() => $tempFields.selectedImage = o.parent.data[0].graphic.name)]
+                                    },
+                                    { 
+                                        "condition": { "field": ($(() => o.parent.controls[1].image)), "notEqualTo": ($(() => 'locked')) },  
+                                        "name": "switchLayout", 
+                                        "params": { "name": "cgGalleryImageLayout", "savePrevious": true }
+                                    }
+                                ]
+                            },
+                            { 
+                                "type": "ui.Image",
+                                "frame":[0, 0, 165, 124] ,
+                                "fixedSize": true,
+                                "image": "locked",
+                                "formulas": [
+                                    ($(function() {
+                                        if ($dataFields.globalData.cgGallery[o.parent.data[0].index].unlocked) {
+                                            return o.image = o.parent.data[0].thumb.name;
+                                        }})),
+                                    ($(function() {
+                                        if (!$dataFields.globalData.cgGallery[o.parent.data[0].index].unlocked) {
+                                            return o.image = "locked";
+                                        }}))
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_SettingsAudio
+ * Edits to the original Layouts\Layout_SettingsAudio
+ */
+ 
+ ui.UiFactory.layouts.settingsAudio = {
+    "type": "ui.FreeLayout",
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "preload": { graphics: [{name: $(() => $dataFields.database.system.menuBackground.name || 'bg-generic')}] },
+    "controls": [
+        {
+            "type": "ui.Image",
+            "executeFieldFormulas": true,
+            "image"() { return $dataFields.database.system.menuBackground.name||'bg-generic'; },
+            "components": [{ "type": "Component_HotspotBehavior", "params": { "actionButton": "right" } }],
+            "frame": [0, 0, Graphics.width, Graphics.height],
+            "actions": [
+                { "event": "onCancel", "name": "saveSettings", "params": { } },
+                { "event": "onCancel", "name": "previousLayout", "params": { } }
+            ]
+        },
+        {
+            "type": "ui.BackButton",
+            "frame": [Graphics.width - 170, Graphics.height - 45, 150, 45]
+        },
+        {
+            "type": "ui.TitledWindow",
+            "frame": [
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_X, 
+                0, 
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_W, 
+                Graphics.height
+            ],
+            "params": { "title": { "lcId": "9EDC6A1760DE464C3469A5B77772305ACB56", "defaultText": "Audio Settings" } }
+        },
+        {
+            "type": "ui.VerticalScrollView",
+            "id": "settingsScrollView",
+            "frame": [
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_X, 
+                45, 
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_W, 
+                Graphics.height - 45 - 10
+            ],
+            "params": {
+                "dataField": 1,
+                "template": {
+                    "type": "ui.StackLayout",
+                    "orientation": "vertical",
+                    "sizeToFit": true,
+                    "controls": [
+                        {
+                            "type": "ui.Text",
+                            "styles": ["windowCategoryUIText"],
+                            "margin": [10, 5, 0, 0],
+                            "text": { "lcId": "26260DB310D5D540721AF635B495750C03A5", "defaultText": "Audio" },
+                            "sizeToFit": true,
+                            "frame": [0, 0]
+                        },
+                        {
+                            "type": "ui.StackLayout",
+                            "orientation": "vertical",
+                            "margin": [gs.UIConstants.LAYOUT_SETTINGS_WINDOW_LABEL_W, 0, 0, 0],
+                            "sizeToFit": true,
+                            "id": "volumeControl",
+                            "controls": [
+                                { "type": "ui.SettingsMenuSlider", "params": { "id": "bgmVolume", "label": { "lcId": "DBE389A484EE65464E583082C1A3A9410B6C", "defaultText": "Music" }, "write": ($(v => $dataFields.settings.bgmVolume = v)), "read": ($(() => $dataFields.settings.bgmVolume)) } },
+                                { "type": "ui.SettingsMenuSlider", "params": { "id": "seVolume",  "label": { "lcId": "64F490CD4547394ADA4B4D67693D24289F4B", "defaultText": "Sound Effects" }, "write": ($(v => $dataFields.settings.seVolume = v)), "read": ($(() => $dataFields.settings.seVolume)) } },
+                                { "type": "ui.SettingsMenuSlider", "params": { "id": "voiceVolume", "label": { "lcId": "4BA0665E3B4D05412D4B81373A88DB3543EB", "defaultText": "Voice" }, "write": ($(v => $dataFields.settings.voiceVolume = v)), "read": ($(() => $dataFields.settings.voiceVolume)) } }
+                            ]
+                        },
+                        {
+                            "type": "ui.Text",
+                            "styles": ["windowCategoryUIText"],
+                            "margin": [10, 5, 0, 0],
+                            "text": { "lcId": "DD4C5C8987E8B7493A2B4139B342CA461DC9", "defaultText": "Voices" },
+                            "sizeToFit": true,
+                            "frame": [0, 0]
+                        },
+                        {
+                            "type": "ui.StackLayout",
+                            "orientation": "vertical",
+                            "margin": [gs.UIConstants.LAYOUT_SETTINGS_WINDOW_LABEL_W, 0, 0, 0],
+                            "sizeToFit": true,
+                            "dataField": ($(() => $dataFields.database.charactersArray)),
+                            "template": {
+                                "type": "ui.StackLayout",
+                                "orientation": "vertical",
+                                "sizeToFit": true,
+                                "controls": [
+                                    {
+                                        "type": "ui.Text",
+                                        "frame": [0, 0],
+                                        "sizeToFit": true,
+                                        "text": "Anna",
+                                        "styles": ["regularUIText"],
+                                        "margin": [10, 0, 0, 0],
+                                        "formulas": [$(() => o.text = lcs($dataFields.database.charactersArray[o.parent.index].name))],
+                                    },
+                                    { 
+                                        "type": "ui.Slider", 
+                                        "margin": [10, 0, 0, 0],
+                                        "frame": [100, 0, gs.UIConstants.LAYOUT_SETTINGS_WINDOW_W - gs.UIConstants.LAYOUT_SETTINGS_WINDOW_LABEL_W - 30, gs.UIConstants.OPTION_BUTTON_H], 
+                                        "params": { "actions": [], "max": 100, "write": ($(v => $dataFields.settings.voicesByCharacter[$dataFields.database.charactersArray[o.parent.parent.index].index] = v)), "read": ($(() => $dataFields.settings.voicesByCharacter[$dataFields.database.charactersArray[o.parent.parent.index].index])) } 
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "ui.Panel",
+            "frame": [gs.UIConstants.LAYOUT_SETTINGS_WINDOW_X, 45, gs.UIConstants.LAYOUT_SETTINGS_WINDOW_LABEL_W, Graphics.height - 45],
+            "style": "windowSubPanel"
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_SettingsMenu
+ * Edits to the original Layouts\Layout_SettingsMenu
+ */
+ 
+ ui.UiFactory.layouts.settingsMenuLayout = {
+    "type": "ui.FreeLayout",
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "preload": { 
+        graphics: [{name: $(() => $dataFields.database.system.menuBackground.name || 'bg-generic')}],
+        "sounds": [{ "name": $(() => $dataFields.database.system.menuSelectSound != null ? $dataFields.database.system.menuSelectSound.name : undefined) }]
+    },
+    "controls": [
+        {
+            "executeFieldFormulas": true,
+            "type": "ui.Image",
+            "image"() { return $dataFields.database.system.menuBackground.name || 'bg-generic'; },
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            "type": "ui.Window",
+            "frame": ["40%", "50%", "20%", "50%"],
+            "zIndex": 4999
+        },
+        {
+            "type": "ui.StackLayout",
+            "orientation": "vertical",
+            "sizeToFit": true,
+            "zIndex": 5000,
+            "frame": ["40%", "52%", "20%", "48%"],
+            "controls": [
+                {
+                    "id": "general",
+                    type: "ui.Text",
+                    initialFocus: true,
+                    focusable: true,
+                    nextKeyObject: "message",
+                    styles: ["titleText"],
+                    "text": {
+                        "lcId": "149D0E4B8AF8574E5A8BF574FD9A9590B69A",
+                        "defaultText": "General"
+                    },
+                    //frame: ["70%", "50%"],
+                    "alignmentX": "center",
+                    sizeToFit: true,
+                    "action": {
+                        "name": "switchLayout",
+                        "params": {
+                            "name": "settingsGeneral",
+                            "savePrevious": true }
+                    }
+                },
+                {
+                    "id": "message",
+                    type: "ui.Text",
+                    focusable: true,
+                    nextKeyObject: "audio",
+                    styles: ["titleText"],
+                    "text": {
+                        "lcId": "6683560332F9274AEE1B5D96FCA020F57DDE",
+                        "defaultText": "Message"
+                    },
+                    //frame: ["70%", "50%"],
+                    "alignmentX": "center",
+                    sizeToFit: true,
+                    "action": {
+                        "name": "switchLayout",
+                        "params": {
+                            "name": "settingsMessage",
+                            "savePrevious": true }
+                    }
+                },
+                {
+                    "id": "audio",
+                    type: "ui.Text",
+                    focusable: true,
+                    nextKeyObject: "general",
+                    styles: ["titleText"],
+                    "text": {
+                        "lcId": "92FDB732611153400B595AD7D92206CDC592",
+                        "defaultText": "Audio"
+                    },
+                    //frame: ["70%", "50%"],
+                    "alignmentX": "center",
+                    sizeToFit: true,
+                    "action": {
+                        "name": "switchLayout",
+                        "params": {
+                            "name": "settingsAudio",
+                            "savePrevious": true }
+                    }
+                },
+                {
+                    "type": "ui.Button",
+                    "formulas": [$(() => o.visible = $tempFields.inGame)],
+                    "params": { 
+                        "text": { "lcId": "A6EE5D6732DD454DDE988B569929C5F2DA62", "defaultText": "Back to Title" }, 
+                        "action": { "name": "createControl", "params": { "descriptor": { 
+                            "id": "confirmationDialog",
+                            "type": "ui.ConfirmationDialog",
+                            "zIndex": 90000,
+                            "params": { 
+                                "message": { "lcId": "ABC85CC3669B83481309BDF44B98EF11B59B", "defaultText": "Do you really want to exit?" },
+                                "acceptActions": [{"name":"exitGame"},{"name": "switchLayout", "params": { "name": "titleLayout", "clear": true } }] , 
+                                "rejectActions": [{"name":"disposeControl","params":($(() => 'confirmationDialog'))}]}
+                        } } }
+                    },
+                    "frame": [0, 0, 300, 55],
+                    "margin": [0, 0, 0, 20]
+                }
+            ]
+        },
+        {
+            "type": "ui.BackButton",
+            "frame": [Graphics.width - 170, Graphics.height - 45, 150, 45]
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_SettingsMessage
+ * Edits to the original Layouts\Layout_SettingsMessage
+ */
+
+ui.UiFactory.layouts.settingsMessage = {
+    "type": "ui.FreeLayout",
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "preload": { graphics: [{name: $(() => $dataFields.database.system.menuBackground.name || 'bg-generic')}] },
+    "controls": [
+        {
+            "executeFieldFormulas": true,
+            "type": "ui.Image",
+            "image"() { return $dataFields.database.system.menuBackground.name || 'bg-generic'; },
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            "type": "ui.BackButton",
+            "frame": [Graphics.width - 170, Graphics.height - 45, 150, 45]
+        },
+        {
+            "type": "ui.TitledWindow",
+            "frame": [
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_X, 
+                0, 
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_W, 
+                Graphics.height
+            ],
+            "params": { "title": { "lcId": "B5E0981F6D6A9240653B23A0D09B3383048E", "defaultText": "Message Settings" } }
+        },
+        {
+            "type": "ui.VerticalScrollView",
+            "id": "settingsScrollView",
+            "frame": [
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_X, 
+                45, 
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_W, 
+                Graphics.height - 45 - 10
+            ],
+            "params": {
+                "dataField": 1,
+                "template": {
+                    "type": "ui.StackLayout",
+                    "orientation": "vertical",
+                    "sizeToFit": true,
+                    "controls": [
+                        {
+                            "type": "ui.StackLayout",
+                            "orientation": "vertical",
+                            "sizeToFit": true,
+                            "controls": [
+                                { "type": "ui.SettingsStepSlider", "params": { "label": { "lcId": "179347604CAF0640628824725774FFBD07B6", "defaultText": "Message Speed" }, "steps": 6, "write": ($(v => $dataFields.settings.messageSpeed = v)), "read": ($(() => Math.round($dataFields.settings.messageSpeed))), "data": 
+                                    [
+                                        { "lcId": "41A878A74A390447FB9AB956122AD13373D1", "defaultText": "Slowest" }, 
+                                        { "lcId": "3D840F7D30D472419059F342ACF0C846B0ED", "defaultText": "Slow" }, 
+                                        { "lcId": "12C3DA314B22614AC67890D37019784EDFA9", "defaultText": "Normal" }, 
+                                        { "lcId": "889AFB7C545AE8477889E11480BE6871ECA1", "defaultText": "Fast" }, 
+                                        { "lcId": "DE5E3CF01CDA784C378B428533F4D6E03C96", "defaultText": "Fastest" },
+                                        { "lcId": "FB31C7F852F3C04DE95AD7E4D3ABA68B14BA", "defaultText": "Instant" }
+                                    ] 
+                                } },
+                                { "type": "ui.SettingsOptionSet", "params": { "label": { "lcId": "ED439B0C58174541F17B79280D5763C674AB", "defaultText": "Auto-Message" }, "group": "autoMessage", "write": ($(v => $dataFields.settings.autoMessage.enabled = v)), "read": ($(() => $dataFields.settings.autoMessage.enabled)) } },
+                                { "type": "ui.SettingsStepSlider", "params": { "label": { "lcId": "D073E5F78F4FF8423249BBC5E61064361B09", "defaultText": "Auto-Message Duration" }, "group": "autoMessageDuration", "write": ($(v => $dataFields.settings.autoMessage.time = v)), "read": ($(() => $dataFields.settings.autoMessage.time)), "data": 
+                                    [
+                                        { "lcId": "4FE0B4B30E8789487D7B88D2839ECBCE5C70", "defaultText": "1 Second" }, 
+                                        { "lcId": "1C20A916753BC840952864867489B576DBD5", "defaultText": "2 Seconds" }, 
+                                        { "lcId": "FBF01A7B3C1BB2489F2B2D0581A257A102E6", "defaultText": "3 Seconds" }, 
+                                        { "lcId": "DE0D08A67E84B1476E4A1B604CB64E4BC942", "defaultText": "4 Seconds" }, 
+                                        { "lcId": "964CF20A55D2F3404B389B67AAF1CDA51656", "defaultText": "5 Seconds" }
+                                    ] 
+                                } },
+                                { "type": "ui.SettingsOptionSet", "params": { "label": { "lcId": "994D4B5C1BFA5445385B8AE32706997132F1", "defaultText": { "lcId": "994D4B5C1BFA5445385B8AE32706997132F1", "defaultText": "Wait for Voice" } }, "group": "waitForVoice", "write": ($(v => $dataFields.settings.autoMessage.waitForVoice = v)), "read": ($(() => $dataFields.settings.autoMessage.waitForVoice)) } },
+                                { "type": "ui.SettingsOptionSet", "params": { "label": { "lcId": "BF3E948519A9084E721AF585C8C7D51235A7", "defaultText": { "lcId": "BF3E948519A9084E721AF585C8C7D51235A7", "defaultText": "Stop on Click" } }, "group": "stopOnAction", "write": ($(v => $dataFields.settings.autoMessage.stopOnAction = v)), "read": ($(() => $dataFields.settings.autoMessage.stopOnAction)) } },
+                                { "type": "ui.SettingsOptionSet", "params": { "label": { "lcId": "3538F7E582FC20467E7947F77FB45789115E", "defaultText": { "lcId": "3538F7E582FC20467E7947F77FB45789115E", "defaultText": "Time Message to Voice" } }, "group": "timeMessageToVoice", "write": ($(v => $dataFields.settings.timeMessageToVoice = v)), "read": ($(() => $dataFields.settings.timeMessageToVoice)) } }
+                            ]
+                        },
+                        {
+                            "type": "ui.StackLayout",
+                            "orientation": "vertical",
+                            "sizeToFit": true,
+                            "controls": [
+                                {
+                                    "type": "ui.StackLayout",
+                                    "orientation": "vertical",
+                                    "sizeToFit": true,
+                                    "controls": [
+                                        { 
+                                            "type": "ui.Text", 
+                                            "text": { "lcId": "0B7D6CF76F833444EF39BBC8B590114C97A4", "defaultText": "Skip" }, 
+                                            "styles": ["regularUIText"], 
+                                            "frame": [0, 0, 220, 37],
+                                            "margin": [10, 0, 0, 0], 
+                                            "alignmentY": "top" 
+                                        },
+                                        {
+                                            "type": "ui.StackLayout",
+                                            "sizeToFit": true,
+                                            "controls": [
+                                                { 
+                                                    "type": "ui.OptionButton", 
+                                                    "params": { 
+                                                        "label": { "lcId": "C138CE3C9564C54707492AA264690B5BBB90", "defaultText": "Videos" }, 
+                                                        "write": $(v => $dataFields.settings.allowVideoSkip = v),
+                                                        "read": $(() => $dataFields.settings.allowVideoSkip)
+                                                    }
+                                                },
+                                                { 
+                                                    "type": "ui.OptionButton", 
+                                                    "params": { 
+                                                        "label": { "lcId": "E4A4BA053854774F582852D558E4E5C23AC5", "defaultText": "Voices" }, 
+                                                        "write": $(v => $dataFields.settings.skipVoiceOnAction = v),
+                                                        "read": $(() => $dataFields.settings.skipVoiceOnAction)
+                                                    } 
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ui.StackLayout",
+                                            "sizeToFit": true,
+                                            "controls": [
+                                                { 
+                                                    "type": "ui.OptionButton", 
+                                                    "params": { 
+                                                        "label": { "lcId": "469C50C92465724C9F48BD86BB799E781F3C", "defaultText": "Unread" }, 
+                                                        "write": $(v => $dataFields.settings.allowSkipUnreadMessages = v),
+                                                        "read": $(() => $dataFields.settings.allowSkipUnreadMessages)
+                                                    } 
+                                                },
+                                                { 
+                                                    "type": "ui.OptionButton", 
+                                                    "params": { 
+                                                        "label": { "lcId": "F84B92944EA3354A49184BF155F42220FE9B", "defaultText": "Choices" }, 
+                                                        "write": $(v => $dataFields.settings.allowChoiceSkip = v),
+                                                        "read": $(() => $dataFields.settings.allowChoiceSkip)
+                                                    } 
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_LoadMenu
+ * Edits to the original Layouts\Layout_LoadMenu
+ */
+ 
+ui.UiFactory.layouts.loadMenuLayout = {
+    "type": "ui.FreeLayout",
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "preload": { graphics: [{name: $(() => $dataFields.database.system.menuBackground.name || 'bg-generic')}] },
+    "controls": [
+        {
+            "type": "ui.Image",
+            "image"() { return $dataFields.database.system.menuBackground.name || 'bg-generic'; },
+            "frame": [0, 0, Graphics.width, Graphics.height],
+            "action": { "event": "onCancel", "name": "previousLayout", "params": {}}
+        },
+        {
+            "type": "ui.BackButton",
+            "frame": [Graphics.width - 170, Graphics.height - 45, 150, 45]
+        },
+        {
+            "type": "ui.TitledWindow",
+            "frame": [Graphics.width - 180 - Math.floor((Graphics.width-200)/420)*420, 0, Math.floor((Graphics.width-200)/420)*420, Graphics.height],
+            "params": { "title": { "lcId": "B215F6EB2576884547399CC0CF2F38E855FD", "defaultText": "Load Game" } },
+            "zIndex": 5000,
+        },
+        {
+            "type": "ui.DataScrollView",
+            "id": "list",
+            "zIndex": 4999,
+            "frame": [Graphics.width - 170 - Math.floor((Graphics.width-200)/420)*420, 45, Math.floor((Graphics.width-200)/420)*420, Graphics.height - 45],
+            "params": { 
+                "columns": Math.floor((Graphics.width-200)/420),
+                "spacing": [10, 10],
+                "dataSource": ($(() => $dataFields.saveGameSlots)), 
+                "template": {
+                    "descriptor": {
+                        "type": "ui.SaveGameSlot",
+                        "params": {
+                            "actions": [
+                                { 
+                                    "name": "executeFormulas", 
+                                    "params": [
+                                        $(() => $tempFields.slot = o.parent.index)
+                                    ] 
+                                },
+                                { 
+                                    "name": "createControl", 
+                                    "conditions": [
+                                        { "field": ($(() => $dataFields.saveGameSlots[$tempFields.slot] != null ? $dataFields.saveGameSlots[$tempFields.slot].date : undefined)), "notEqualTo": ($(() => '')) },
+                                        { "field": ($(() => $dataFields.settings.confirmation)), "equalTo": true },
+                                        { "field": ($(() => $dataFields.tempSettings.loadMenuAccess)), "equalTo": true }
+                                    ],
+                                    "params": { 
+                                        "descriptor": { 
+                                            "id": "confirmationDialog",
+                                            "type": "ui.ConfirmationDialog",
+                                            "zIndex": 9999,
+                                            "params": { 
+                                                "message": { "lcId": "2BD08CC65B9A2248C749B9C4DEEAADE8E20A", "defaultText": "Do you really want to load?" },
+                                                "acceptActions": [{ "name": "loadGame", "params": { "slot": ($(() => $tempFields.slot)) } }], 
+                                                "rejectActions": [{"name":"disposeControl","params":($(() => 'confirmationDialog'))}]}
+                                        } 
+                                    } 
+                                },
+                                { "conditions": [
+                                    { "field": ($(() => $dataFields.saveGameSlots[$tempFields.slot] != null ? $dataFields.saveGameSlots[$tempFields.slot].date : undefined)), "notEqualTo": ($(() => '')) },
+                                    { "field": ($(() => !$dataFields.settings.confirmation || !$dataFields.tempSettings.loadMenuAccess)), "equalTo": true }
+                                ], "name": "loadGame", "params": { "slot": ($(() => $tempFields.slot)) } }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_Game
+ * Edits to the original Layouts\Layout_Game
+ */
+ 
+ ui.UiFactory.layouts.gameLayout = {
+    "type": "ui.FreeLayout",
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "controls":[
+        {
+            "type": "ui.Panel",
+            "frame": [0, 0, Graphics.width, Graphics.height],
+            "updateBehavior": "continuous",
+            "formulas": [$(() => o.ui.enabled = $dataFields.tempSettings.menuAccess)],
+            "action": { 
+                "event": "onCancel", 
+                "name": "switchLayout", 
+                "params": { "name": "settingsMenuLayout", "savePrevious": true }
+            }
+        },
+        {
+            "type": "ui.MessageBox",
+            "visible": false,
+            "id": "messageBox",
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            "type": "ui.MessageBoxNVL",
+            "visible": false,
+            "id": "nvlMessageBox",
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            "type": "ui.MessageMenu",
+            "visible": false,
+            "id": "messageMenu",
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            "type": "ui.GameMessage",
+            "id": "gameMessage",
+            "params": { "id": "gameMessage" },
+            "frame": [320, Graphics.height - 220]
+        },
+        {
+            "type": "ui.GameMessageNVL",
+            "id": "nvlGameMessage",
+            "params": { "id": "nvlGameMessage" },
+            "frame": [0, 0]
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_Title
+ * Edits to the original Layouts\Layout_Title
+ */
+ 
+ ui.UiFactory.layouts.titleLayout = {
+    type: "ui.FreeLayout",
+    frame: [0, 0, Graphics.width, Graphics.height],
+    music: ($(() => $dataFields.database.system.titleMusic)),
+    preload: { graphics: [{name: $(() => $dataFields.database.system.titleScreen.name || 'bg-generic')}]},
+    controls: [
+        {
+            "type": "ui.Image",
+            "imageHandling": 0,
+            "image"() { return $dataFields.database.system.titleScreen.name || 'bg-generic'; },
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            type: "ui.Text",
+            styles: ["gameTitle"],
+            text() { return $dataFields.database.system.gameTitle; },
+            frame: ["30%", "10%", "40%", "20%"],
+            sizeToFit: true,
+        },
+        {
+            "type": "ui.Window",
+            "frame": ["40%", "50%", "20%", "50%"],
+            "zIndex": 4999
+        },
+        {
+            "type": "ui.StackLayout",
+            "orientation": "vertical",
+            "frame": ["40%", "52%", "20%", "48%"],
+            "zIndex": 5000,
+            "controls": [
+                {
+                    type: "ui.Text",
+                    id: "newGame",
+                    initialFocus: true,
+                    focusable: true,
+                    nextKeyObject: "loadGame",
+                    styles: ["titleText"],
+                    text: { 
+                        lcId: "4FE8B0BD58FD914BFA8824E07226FB7F7974", 
+                        defaultText: "New Game" 
+                    },
+                    //frame: ["70%", "50%"],
+                    "alignmentX": "center",
+                    sizeToFit: true,
+                    action: {
+                        name: "newGame"
+                    }
+                },
+                {
+                    type: "ui.Text",
+                    id: "loadGame",
+                    focusable: true,
+                    nextKeyObject: "gallery",
+                    styles: ["titleText"],
+                    text: {
+                    lcId: "0B92E27C6AAE1648AF1B28B2E938923EDDD7",
+                    defaultText: "Load Game"
+                    },
+                    action: {
+                        name: "switchLayout", 
+                        params: { 
+                            name: "loadMenuLayout", savePrevious: true, snapshot: true
+                        }
+                    },
+                    //frame: ["70% - 10", "50% + 50"],
+                    "alignmentX": "center",
+                    sizeToFit: true
+                },
+                {
+                    type: "ui.Text",
+                    id: "gallery",
+                    focusable: true,
+                    nextKeyObject: "settings",
+                    styles: ["titleText"],
+                    text: {
+                        lcId: "5DC22AD29AE4C84F4979470215C2383A0620",
+                        defaultText: "Gallery"
+                    },
+                    action: {
+                        name: "switchLayout",
+                        params: {
+                            name: "cgGalleryLayout",
+                            savePrevious: true
+                        }
+                    },
+                    //frame: ["70% - 20", "50% + 100"],
+                    "alignmentX": "center",                    
+                    sizeToFit: true
+                },
+                {
+                    type: "ui.Text",
+                    id: "settings",
+                    focusable: true,
+                    nextKeyObject: "quit",
+                    styles: ["titleText"],
+                    text: {
+                        lcId: "D77D7952535CB1422759B668DBFB3C4FD441",
+                        defaultText: "Settings"
+                    },
+                    //frame: ["70% - 30", "50% + 150"],
+                    "alignmentX": "center",
+                    sizeToFit: true,
+                    action: {
+                        name: "switchLayout",
+                        params: {
+                            name: "settingsMenuLayout",
+                            savePrevious: true
+                        }
+                    }
+                },
+                {
+                    type: "ui.Text",
+                    styles: ["titleText"],
+                    id: "quit",
+                    focusable: true,
+                    nextKeyObject: "newGame",
+                    text: {
+                        lcId: "377A3D6B2286414CAB8AAA93605A675D3AD6",
+                        defaultText: "Quit"
+                    },
+                    //frame: ["70% - 40", "50% + 200"],
+                    "alignmentX": "center",
+                    action: {
+                        name: "quitGame"
+                    },
+                    sizeToFit: true
+                }            
+            ]
+        }    
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_SettingsGeneral
+ * Edits to the original Layouts\Layout_SettingsGeneral
+ */
+ 
+ ui.UiFactory.layouts.settingsGeneral = {
+    "type": "ui.FreeLayout",
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "preload": { graphics: [{name: $(() => $dataFields.database.system.menuBackground.name || 'bg-generic')}] },
+    "controls": [
+        {
+            "type": "ui.Image",
+            "image"() { return $dataFields.database.system.menuBackground.name || 'bg-generic'; },
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            "type": "ui.BackButton",
+            "frame": [Graphics.width - 170, Graphics.height - 45, 150, 45]
+        },
+        {
+            "type": "ui.TitledWindow",
+            "frame": [
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_X, 
+                0, 
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_W, 
+                Graphics.height
+            ],
+            "params": { "title": { "lcId": "4D3EC62F007AF64B0C68E8081C003D041370", "defaultText": "General Settings" } }
+        },
+        {
+            "type": "ui.VerticalScrollView",
+            "id": "settingsScrollView",
+            "frame": [
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_X, 
+                45, 
+                gs.UIConstants.LAYOUT_SETTINGS_WINDOW_W, 
+                Graphics.height - 45 - 10
+            ],
+            "params": {
+                "dataField": 1,
+                "template": {
+                    "type": "ui.StackLayout",
+                    "orientation": "vertical",
+                    "sizeToFit": true,
+                    "controls": [
+                        { 
+                            "type": "ui.SettingsOptionSet", 
+                            "params": { 
+                                "label": { 
+                                    "lcId": "2BB9D02557CFE84BAE8B7401501783BA6FBF", 
+                                    "defaultText": "Display Mode" 
+                                }, 
+                                "write": $(v => $dataFields.settings.fullScreen = v),
+                                "read": $(() => $dataFields.settings.fullScreen),
+                                "group": "displayMode",
+                                "onLabel": { 
+                                    "lcId": "06C8957A5B6A0949DD28B96486586E93FCD4", 
+                                    "defaultText": "Fullscreen" 
+                                }, 
+                                "offLabel": { 
+                                    "lcId": "C5BB4D477FDFE54D2B5A0473BEC61239C219", 
+                                    "defaultText": "Windowed" 
+                                },
+                                "onAction": { 
+                                    "name": "enterFullScreen", 
+                                    "params": {} 
+                                }, 
+                                "offAction": { 
+                                    "name": "leaveFullScreen", 
+                                    "params": {} 
+                                } 
+                            } 
+                        },
+                        { 
+                            "type": "ui.SettingsOptionSet", 
+                            "params": { 
+                                "label": { 
+                                    "lcId": "1C7C50BC434287404B392232B960C5701039", 
+                                    "defaultText": "Screen Adjustment" 
+                                }, 
+                                "write": $(v => $dataFields.settings.aspectRatio = v),
+                                "read": $(() => $dataFields.settings.aspectRatio),
+                                "group": "screenAdjust",
+                                "onLabel": { 
+                                    "lcId": "33B51B1130853144E4888263A53B022C4ADB", 
+                                    "defaultText": "Stretch" 
+                                }, 
+                                "offLabel": { 
+                                    "lcId": "A583EEF38BB725426A6AB8965DCCDDED2982", 
+                                    "defaultText": "Ratio" 
+                                },
+                                "onAction": { 
+                                    "name": "adjustAspectRatio", 
+                                    "params": true 
+                                }, 
+                                "offAction": { 
+                                    "name": "adjustAspectRatio", 
+                                    "params": false 
+                                } 
+                            } 
+                        },
+                        { 
+                            "type": "ui.SettingsOptionSet", 
+                            "params": { 
+                                "label": { "lcId": "4F0DB69F055E3742208BE803F70C506572A3", "defaultText": "Confirmation" }, 
+                                "onLabel": { 
+                                    "lcId": "DB87E66F8299B549E56B2F048040DA406BCC", 
+                                    "defaultText": "On" 
+                                }, 
+                                "offLabel": { 
+                                    "lcId": "2D23328A3B4F80462E7AB2F8CD3996B20665", 
+                                    "defaultText": "Off" 
+                                }, 
+                                "group": "confirmation", 
+                                "write": $(v => $dataFields.settings.confirmation = v),
+                                "read": $(() => $dataFields.settings.confirmation)
+                            } 
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "ui.ConfirmationButton",
+            "frame": [gs.UIConstants.LAYOUT_SETTINGS_WINDOW_X - 310, Graphics.height - 45, 300, 45],
+            "params": { 
+                "confirmationMessage": { "lcId": "92D58F0C1B58A94ADF791B81E9479CF2A27D", "defaultText": "Do you really want to reset global data?" }, 
+                "text": { "lcId": "4272A0BC5880A64DA49AEBD4D60905347726", "defaultText": "Reset Global Data" }, 
+                "acceptActions": [{ "name": "resetGlobalData", "params": { "name": "titleLayout" } }, {"name":"disposeControl","params":($(() => 'confirmationDialog'))}], 
+                "rejectActions": [{ "name":"disposeControl","params":($(() => 'confirmationDialog'))}] }
+        }  
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_LanguageMenu
+ * Edits to the original Layouts\Layout_LanguageMenu
+ */
+ 
+ui.UiFactory.layouts.languageMenuLayout = {
+    "type": "ui.FreeLayout",
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "music": ($(() => $dataFields.database.system.languageMusic)),
+    "preload": {
+        "sounds": [
+            () => $dataFields.database.system.menuSelectSound,
+            () => $dataFields.database.system.menuCancelSound,
+            () => $dataFields.database.system.menuQuitSound,
+            () => $dataFields.database.system.menuLoadSound,
+            () => $dataFields.database.system.menuSaveSound
+        ]
+    },
+    "controls": [
+        {
+            "type": "ui.Image",
+            "image"() { return $dataFields.database.system.languageScreen.name || 'bg-generic'; },
+            "frame": [0, 0, Graphics.width, Graphics.height]
+        },
+        {
+            "type": "ui.StackLayout",
+            "orientation": "horizontal",
+            "frame": [0, Graphics.height - 45, Graphics.width, Graphics.height],
+            "sizeToFit": true,
+            "dataField": $(() => $dataFields.languages),
+            "template": {
+                "type": "ui.FreeLayout",
+                "resizable": false,
+                "anchor": [0.5, 0.5],
+                "animations2": [
+                    {
+                        "event": "onTerminate",
+                        "condition": ($(() => s.index > o.index)),  //{ "if": ($ -> o.index > t.index), "target": ($ -> o.parent.subObjects) },
+                        "flow": [
+                            { "type": "disappear", "animation": { "type": 0, "movement": 1 }, "duration": 30, "easing": "cubic_in", "wait": true }
+                        ]
+                    },
+                    {
+                        "event": "onTerminate",
+                        "condition": { "if": ($(() => o.index < t.index)), "target": ($(() => o.parent.subObjects)) },
+                        "flow": [
+                            { "type": "disappear", "animation": { "type": 1, "movement": 3 }, "duration": 30, "easing": "cubic_in", "wait": true }
+                        ]
+                    },
+                    {
+                        "event": "onTerminate",
+                        "condition": { "if": ($(() => o === t)), "target": ($(() => o.parent.subObjects)) },
+                        "flow": [
+                            { "type": "zoomTo", "zoom": [150, 150], "duration": 30, "wait": false },
+                            { "type": "disappear", "animation": { "type": 1 }, "duration": 30, "easing": "cubic_in", "wait": true }
+                        ]
+                    }
+                ],
+                "frame": [0, 0, 300, 50],
+                "margin": [0, 0, 0, 15],
+                "controls":[
+                    {
+                        "type": "ui.SelectableWindow",
+                        "frame": [0, 0, "100%", "100%"],
+                        "inheritProperties": true,
+                        "margin": [0, 0, 0, 0],
+                        "params": {
+                            "actions": [
+                                { "name": "selectLanguage", "params": ($(() => o.parent.parent.index)) },
+                                { "name": "switchLayout", "params": { "name": "titleLayout" } }
+                             ]
+                        },
+                        "zIndex": 4999
+                    },
+                    {
+                        "type": "ui.Image",
+                        "imageFolder": "Graphics/Icons",
+                        "formulas": [$(() => o.image = $dataFields.languages[o.parent.index].icon.name)],
+                        "alignmentX": "right",
+                        "alignmentY": "center",
+                        "frame": [10, 0],
+                        "zIndex": "5100",
+                        "anchor": [0.5, 0.5],
+                        "sizeToFit": true
+                    },
+                    {
+                        "type": "ui.Text",
+                        "sizeToFit": true,
+                        "styles": ["regularUIText"],
+                        "alignmentX": "center",
+                        "alignmentY": "center",
+                        "frame": [0, 0],
+                        "inheritProperties": true,
+                        "margin": [0, 0, 0, 0],
+                        "formulas": [$(() => o.text = $dataFields.languages[o.parent.index].name)],
+                        "zIndex": 5100
+                    }
+                ]
+            }
+
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_CGGalleryEntry
+ * Edits to the original Layouts\Layout_CGGalleryEntry
+ */
+ 
+ ui.UiFactory.layouts.cgGalleryImageLayout = {
+    "type": "ui.FreeLayout",
+    "orientation": "vertical",
+    "preload": {
+        "graphics": [
+            { "path": ($(() => [$tempFields.selectedImage])), "image": ($(() => o))},
+            { "path": ["locked"], "image": ($(() => o))}
+        ]
+    },
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "controls": [
+        {
+            "type": "ui.Image",
+            "frame": [0, 0],
+            "formulas": [$(() => o.image = $tempFields.selectedImage)],
+            "action": { "name": "executeFormulas", "params": [$(() => $backButton.visible = !$backButton.visible)] }
+        },
+        {
+            "type": "ui.Button",
+            "id": "backButton",
+            "params": { "text": { "lcId": "B0FD4BF121D9E44E7589CDD35869F86F2227", "defaultText": "Back" }, "action": { "name": "previousLayout" } },
+            "frame": [Graphics.width - 170, 10, 150, 45],
+            "order": 1
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Layout_SaveMenu
+ * Edits to the original Layouts\Layout_SaveMenu
+ */
+ 
+ ui.UiFactory.layouts.saveMenuLayout = {
+    "type": "ui.FreeLayout",
+    "frame": [0, 0, Graphics.width, Graphics.height],
+    "preload": { graphics: [{name: $(() => $dataFields.database.system.menuBackground.name || 'bg-generic')}] },
+    "controls": [
+        {
+            "executeFieldFormulas": true,
+            "type": "ui.Image",
+            "image"() { return $dataFields.database.system.menuBackground.name || 'bg-generic'; },
+            "frame": [0, 0, Graphics.width, Graphics.height],
+            "action": { "event": "onCancel", "name": "previousLayout", "params": {}},
+            "zIndex": 5000,
+        },
+        {
+            "type": "ui.BackButton",
+            "frame": [Graphics.width - 170, Graphics.height - 45, 150, 45]
+        },
+        {
+            "type": "ui.TitledWindow",
+            "frame": [Graphics.width - 180 - Math.floor((Graphics.width-200)/420)*420, 0, Math.floor((Graphics.width-200)/420)*420, Graphics.height],
+            "params": { "title": { "lcId": "17B8950C477FA042C418D7A591445017623C", "defaultText": "Save Game" } },
+            "zIndex": 5000,
+        },
+        {
+            "type": "ui.DataScrollView",
+            "frame": [Graphics.width - 170 - Math.floor((Graphics.width-200)/420)*420, 45, Math.floor((Graphics.width-200)/420)*420, Graphics.height - 45],
+            "params": { 
+                "spacing": [10, 10],
+                "columns": Math.floor((Graphics.width-200)/420),
+                "dataSource": ($(() => $dataFields.saveGameSlots)), 
+                "template": {
+                    "descriptor": {
+                        "type": "ui.SaveGameSlot",
+                        "params": {
+                            "actions": [
+                                { "name": "saveGame", "params": { "slot": ($(() => o.parent.index)) } },
+                                { "name": "fullRefreshObject", "params": ($(() => o.parent)) }
+                            ]
+                        }
+                    }
+                }
+            },
+            "zIndex": 4999
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Templates\Template_MessageBox
+ * Edits to the original Templates\Template_MessageBox
+ */
+ 
+ ui.UiFactory.customTypes["ui.MessageBox"] = {
+    "type": "ui.FreeLayout",
+    "controls": [
+        {
+           "type": "ui.Window",
+           "frame": [0, "100% - 220", "100%", 220],
+           "zIndex": 5000
+        },
+        {
+            "type": "ui.MessageBoxMenu",
+            "params": { "messageBox": ($(() => $messageBox)) },
+            "order": 81000,
+            "frame": ["100% - 140", "100% - 270"]
+        },
+        {
+            "type": "ui.Text",
+            "updateBehavior": "continuous",
+            "text": "",
+            "style": "messageBoxNameText",  
+            "formulas": [
+                $(() => o.text = $dataFields.scene.currentCharacter.name),
+                $(function() { if (this.onTextChange($dataFields.scene.currentCharacter.name)) { return o.font.color.setFromObject($dataFields.scene.currentCharacter.textColor || Color.WHITE); } })
+            ],
+            "zIndex": 5005,
+            "sizeToFit": true,
+            "frame": [148, "100% - 210", 128, 30]
+        }
+    ]
+};
+
+ui.UiFactory.customTypes["ui.CustomGameMessage"] = {
+    "type": "ui.FreeLayout",
+    "controls": [
+        {
+            "type": "ui.Message",
+            "zIndex": 10000,
+            "id"() { return p.id + "_message"; },
+            "style": "customMessageText",
+            "frame": [0, 0, "100%", "100%"]
+        },
+        {
+            "type": "ui.Image",
+            "formulas": [
+                $(() => o.dstRect.x = o.parent.controls[0].message.caretPosition.x),
+                $(() => o.dstRect.y = o.parent.controls[0].message.caretPosition.y - 20),
+                $(() => o.visible = o.parent.controls[0].visible && (o.parent.controls[0].message.isRunning || o.parent.controls[0].message.isWaiting))
+            ],
+            "animations": [
+                {
+                    "event": "onAlways",
+                    "flow": [
+                        { "type": "playAnimation", "repeat": false, "animationId": "40133382KC7B4A4C97S81F0E7D539A513261" }
+                    ]
+                }
+            ],
+            "image": "message_caret",
+            "zIndex": 10000,
+            "frame": [0, 0, 0, 0]
+        }
+    ]
+};
+
+ui.UiFactory.customTypes["ui.GameMessage"] = {
+    "type": "ui.FreeLayout",
+    "sizeToFit": true,
+    "controls": [
+        {
+            "type": "ui.Message",
+            "zIndex": 10000,
+            "id"() { return p.id + "_message"; },
+            "frame": [0, 10, Graphics.width - 136 - 220, 200],
+            "style": "advMessageText"
+        },
+        {
+            "type": "ui.Image",
+            "formulas": [
+                $(() => o.dstRect.x = o.parent.controls[0].message.caretPosition.x),
+                $(() => o.dstRect.y = o.parent.controls[0].message.caretPosition.y - 10),
+                $(() => o.visible = o.parent.controls[0].visible && (o.parent.controls[0].message.isRunning || o.parent.controls[0].message.isWaiting))
+            ],
+            "animations": [
+                {
+                    "event": "onAlways",
+                    "flow": [
+                        { "type": "playAnimation", "repeat": false, "animationId": "40133382KC7B4A4C97S81F0E7D539A513261" }
+                    ]
+                }
+            ],
+            "image": "message_caret",
+            "zIndex": 10000,
+            "frame": [0, 0]
+        }
+    ]
+};
+
+ui.UiFactory.customTypes["ui.GameMessageNVL"] = {
+    "type": "ui.FreeLayout",
+    "sizeToFit": true,
+    "controls": [
+        {
+            "type": "ui.Message",
+            "zIndex": 10000,
+            "id"() { return p.id + "_message"; },
+            "style": "nvlMessageText",
+            "frame": [((Graphics.width / 100) * 12.5) + 8, 8, ((Graphics.width / 100) * 75) - 16, Graphics.height - 16]
+        }
+    ]
+};
+
+ui.UiFactory.customTypes["ui.MessageBoxNVL"] = {
+    "type": "ui.FreeLayout",
+    "sizeToFit": true,
+    "controls": [
+        {
+            "type": "ui.MessageBoxMenu",
+            "params": { "messageBox": ($(() => $nvlMessageBox)) },
+            "order": 81000,
+            "frame": [0, Graphics.height - 270]
+        },
+        {
+            "type": "ui.Window",
+            "params": { "backgroundOpacity": 128
+            },
+            "frame": [(Graphics.width / 100) * 12.5, 0, (Graphics.width / 100) * 75, Graphics.height],
+            "zIndex": 4999
+        }
+    ]
+};
+
+ui.UiFactory.customTypes["ui.MessageMenu"] = {
+    "type": "ui.FreeLayout",
+    "sizeToFit": true,
+    "controls": [
+        {
+            "type": "ui.MessageBoxMenu",
+            "params": { "messageBox": ($(() => $messageMenu)) },
+            "order": 81000,
+            "frame": [0, Graphics.height - 270]
+        }
+    ]
+};
+
+
+/**
+ * [FS] Cell Phone UI\Templates\Template_MessageBoxMenu
+ * Edits to the original Templates\Template_MessageBoxMenu
+ */
+ 
+ ui.UiFactory.customTypes["ui.MessageBoxMenu"] = {
+    "type": "ui.FreeLayout",
+    "order": 85000,
+    "id": "msgmenu",
+    "sizeToFit": true,
+    "controls": [
+        {
+           "type": "ui.Window",
+           "color": [0, 0, 0, 128],
+           "frame": [0, 0, 140, 270],
+           "order": 0,
+           "params": { "zIndex": 5000 },
+           "zIndex": 85000
+        },
+        {
+            "type": "ui.StackLayout",
+            "orientation": "vertical",
+            "order": 10,
+            "frame": [0, 20, 128, 230],
+            "controls": [
+                {
+                   "type": "ui.MessageOptionButton",
+                   "formulas": [$(() => o.ui.enabled = $dataFields.settings.allowSkip)],
+                   "params": { "label": { "lcId": "3A58B0DB84DB0549FD09EDF6F0FF0730D8DE", "defaultText": "Skip" }, "write": $(() => $dataFields.tempSettings.skip = !$dataFields.tempSettings.skip) },
+                   "margin": [10, 5, 0, 0],
+                   "order": 80001,
+                },
+                {
+                   "type": "ui.MessageOptionButton",
+                   "formulas": [$(() => o.ui.enabled = $dataFields.tempSettings.backlogAccess)],
+                   "id": "logButton",
+                   "margin": [10, 10, 0, 0],
+                   "params": { 
+                        "label": { "lcId": "BF92F3296C66164227197FB3BF1E1B09E0D8", "defaultText": "Log" }, 
+                        "write": $(() => $dataFields.tempSettings.logOpened = !$dataFields.tempSettings.logOpened),
+                        "action2": { 
+                           "condition": { "field": ($(() => !$dataFields.tempSettings.logOpened)), "equalTo": true }, "name": "disposeControl", "params": ($(() => 'backlog')) 
+                        }, 
+                        "action1":  { 
+                           "condition": { "field": ($(() => $dataFields.tempSettings.logOpened)), "equalTo": true },
+                           "name": "createControl", 
+                           "params": { 
+                               "parent"() { return p.messageBox.parent; },
+                               "descriptor": "ui.MessageBacklogBox"
+                            }
+                        }
+                    }
+                },
+                {
+                   "type": "ui.Text",
+                   "formulas": [$(() => o.ui.enabled = $dataFields.tempSettings.saveMenuAccess)],
+                   "id": "saveButton",
+                   //"components": [{ "type": "Component_HotspotBehavior", "params": {"sound": "$dataFields.database.system.menuSelectSound"} }],
+                   "style": "regularUIText",
+                   "actions": [
+                       { "name": "prepareSaveGame", "params": { "snapshot": true } },
+                       { "name": "switchLayout", "params": { "name": "saveMenuLayout", "savePrevious": true } }
+                    ],
+                   "text": { "lcId": "5316D6C90CB9924AE64A39889235D22D5FEE", "defaultText": "Save" },
+                   "sizeToFit": true,
+                   "margin": [60, 16, 0, 0]
+                },
+                {
+                   "type": "ui.Text",
+                   "formulas": [$(() => o.ui.enabled = $dataFields.tempSettings.loadMenuAccess)],
+                   "styles": ["regularUIText"],
+                   "action": { "name": "switchLayout", "params": { "name": "loadMenuLayout", "savePrevious": true }},
+                   "text": { "lcId": "9622E9805409534DB8381610238C95564F30", "defaultText": "Load" },
+                   "sizeToFit": true,
+                   "margin": [60, 16, 0, 0]
+                },
+                {
+                   "type": "ui.Text",
+                   "styles": ["regularUIText"],
+                   "text": { "lcId": "D2632CD54402D8462F597DD75E51050ED0C3", "defaultText": "Title" },
+                   "sizeToFit": true,
+                   "actions": [
+                       { "name": "createControl", "params": { "descriptor": { 
+                            "id": "confirmationDialog",
+                            "type": "ui.ConfirmationDialog",
+                            "zIndex": 90000,
+                            "params": { 
+                                "message": { "lcId": "ABC85CC3669B83481309BDF44B98EF11B59B", "defaultText": "Do you really want to exit?" },
+                                "acceptActions": [{"name":"exitGame"},{"name": "switchLayout", "params": { "name": "titleLayout" } }] , 
+                                "rejectActions": [{"name":"disposeControl","params":($(() => 'confirmationDialog'))}]}
+                        } } }
+                   ],    
+                   "margin": [60, 16, 0, 0]
+                }
+            ],
+            "zIndex": 86000
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Templates\Template_Slider
+ * Edits to the original Templates\Template_Slider
+ */
+ 
+ ui.UiFactory.customTypes["ui.Slider"] = {
+    "type": "ui.FreeLayout",
+    "sizeToFit": true,
+    "controls": [
+        {
+            "color": [131, 131, 131, 131],
+            "type": "ui.Panel",
+            "frame": [0, 0, "100% - 50", gs.UIConstants.SLIDER_TRACK_H],
+            "alignmentY": "center"
+        },
+        {
+            "style": "sliderKnob",
+            "focusable": true,
+            "type": "ui.Image",
+            "frame": [0, 0],
+            "alignmentY": "center",
+            "draggable": { "rect": [0, 0, 100, gs.UIConstants.OPTION_BUTTON_H], "axisX": true, "axisY": false },
+            "formulas": [
+                ($(() => o.draggable.rect.width = o.parent.subObjects[0].dstRect.width)),
+                ($(function() { if (this.onChange(o.parent.params.read.exec())) { return o.parent.controls[1].dstRect.x = Math.round((((o.parent.controls[1].draggable.rect.width-o.parent.controls[1].dstRect.width) / o.parent.params.max) * o.parent.params.read.exec()) + o.parent.controls[1].draggable.rect.x); } })),
+                ($(function() { if (this.onChange(o.parent.controls[1].dstRect.x)) { return o.parent.params.write.exec(Math.round((o.parent.params.max / (o.parent.controls[1].draggable.rect.width-o.parent.controls[1].dstRect.width)) * (o.parent.controls[1].dstRect.x-o.parent.controls[1].draggable.rect.x))); } })),
+                ($((() => o.parent.subObjects[2].text = o.parent.params.read.exec())))
+            ]
+        },
+        {
+            "type": "ui.Text",
+            //"color": [255, 255, 255],
+            "frame": [0, 0],
+            "style": "smallUIText",
+            "alignmentX": "right",
+            "alignmentY": "center",
+            "format": "%s%",
+            "text": "Hello",
+            "sizeToFit": true
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Templates\Template_OptionButton
+ * Edits to the original Templates\Template_OptionButton
+ */
+
+ui.UiFactory.customTypes["ui.OptionButton"] = {
+    "type": "ui.StackLayout",
+    "sizeToFit": true,
+    "controls": [
+        {
+            "type": "ui.Image",
+            "imageHandling": 0,
+            "selectable": true,
+            "group"() { return p.group; },
+            "style": "optionButton",
+            "action"() { return p.action; },
+            "formulas": [
+                $((function() { if (this.onInitialize) { return o.ui.selected = this.data.read.exec(); } }), {read() { return p.read; }}),
+                $((function() { 
+                    return this.data.write.exec(o.ui.selected);
+                }), {write() { return p.write; }})//, "onAction"
+            ],
+            "margin": [0, 0, 10, 0]
+        },
+        {
+            "type": "ui.Text",
+            "id": "mybtn",
+            //"color": [255, 255, 255],
+            "formatting": true,
+            "style": "smallUIText",
+            "alignmentY": "center",
+            "text"() { return p.label; },
+            "frame": [0, 0],
+            "sizeToFit": true
+        }
+    ]
+};
+/**
+ * [FS] Cell Phone UI\Layouts\Styles\Style_Default
+ * Edits to the original Layouts\Styles\Style_Default
+ */
+
+/*
+ * Category name which is displayed on the left side in some settings menus like the audio
+ * settings.
+ */
+ui.UIManager.styles.windowCategoryUIText = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": gs.UIConstants.TEXT_SIZE_SMALL,
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    }
+};
+
+/*
+ * Title Screen text used for the big game title
+ */
+ui.UIManager.styles.gameTitle = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 180,
+        "smallCaps": true,
+        "italic": false,
+        "bold": true,
+        "color": gs.UIConstants.TEXT_COLOR_SPECIAL, 
+        "outline": {
+            "color": gs.UIConstants.TEXT_COLOR_NORMAL,
+            "size": 8
+        } 
+    },
+};
+
+/*
+ * Title Screen text used for the title screen options like "New Game", etc.
+ */
+ui.UIManager.styles.titleText = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 45,
+        "smallCaps": true,
+        "italic": false,
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL, 
+    },
+    "anchor": [0.5, 0.5],
+    "animations": [ 
+        {
+            "event": "onMouseEnter",
+            "flow": [
+                { "type": "zoomTo", "zoom": [110, 110], "duration": 10, "easing": "linear_inout", "wait": true }
+            ]
+        },
+        {
+            "event": "onMouseLeave",
+            "clear": false,
+            "flow": [
+                { "type": "zoomTo", "zoom": [100, 100], "duration": 10, "easing": "linear_inout" }
+            ]
+        }
+    ]
+};
+
+ui.UIManager.styles["titleText:hover"] = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 45,
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_SPECIAL,
+    }
+};
+
+ui.UIManager.styles["titleText:focused"] = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 45, 
+        "smallCaps": true, 
+        "italic": false,
+        "color": gs.UIConstants.TEXT_COLOR_SPECIAL, 
+        "outline": { "color": gs.UIConstants.TEXT_COLOR_NORMAL, "size": 4 } 
+    }
+};
+
+ui.UIManager.styles.choiceBoxEntry = {
+    "opacity": 180
+};
+
+ui.UIManager.styles["choiceBoxEntry:enabled"] = {
+    "opacity": 255
+};
+
+ui.UIManager.styles.messageOptionButton = {
+    "image": gs.UIConstants.OPTION_BUTTON_MSG_IMAGE_OFF,
+    "opacity": 100
+};
+
+ui.UIManager.styles["messageOptionButton:selected"] = {
+    "image": gs.UIConstants.OPTION_BUTTON_MSG_IMAGE_ON,
+    "opacity": 255
+};
+
+ui.UIManager.styles["messageOptionButton:enabled"] = {
+    "opacity": 255
+};
+
+ui.UIManager.styles.optionButton = {
+    "image": gs.UIConstants.OPTION_BUTTON_L_IMAGE_OFF
+};
+
+ui.UIManager.styles["optionButton:selected"] = {
+    "image": gs.UIConstants.OPTION_BUTTON_L_IMAGE_ON
+};
+
+ui.UIManager.styles.sliderTrack = {
+    "color": gs.UIConstants.TEXT_COLOR_NORMAL
+};
+
+ui.UIManager.styles.sliderKnob = {
+    "image": gs.UIConstants.OPTION_BUTTON_L_IMAGE_OFF
+};
+
+ui.UIManager.styles["sliderKnob:hover"] = {
+    "image": gs.UIConstants.OPTION_BUTTON_L_IMAGE_ON
+};
+
+ui.UIManager.styles.galleryImageFrame = {
+    "image": "pixeldropshadow"
+};
+
+ui.UIManager.styles["galleryImageFrame:hover"] = {
+    "image": "pixelselection"
+};
+
+ui.UIManager.styles["galleryImageFrame:selected"] = {
+    "image": "pixelselection"
+};
+
+ui.UIManager.styles.windowFrame = {
+    "image": "pixelskin-frame"
+};
+
+ui.UIManager.styles.windowTilePattern = {
+    "image": "pixelskin-tile",
+    "looping": { "vertical": true, "horizontal": true }
+};
+
+ui.UIManager.styles.windowStretchPattern = {
+    "image": "pixelskin-stretch"
+};
+
+ui.UIManager.styles.windowShadow = {
+    "image": "pixeldropshadow",
+    "frameCornerSize": 30,
+    "frameThickness": 30,
+    "padding": [-16, -16, -16, -16],
+};
+
+ui.UIManager.styles.selectableWindowShadow = {
+    "image": "pixeldropshadow"
+};
+
+
+ui.UIManager.styles["selectableWindowShadow:hover"] = {
+    "image": "pixelselection"
+};
+
+ui.UIManager.styles.buttonText = {
+    "alignmentX": "center",
+    "alignmentY": "bottom",
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 25, 
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    }
+};
+
+ui.UIManager.styles.cgGalleryImage = {
+};
+
+ui.UIManager.styles["cgGalleryImageFrame"] = {
+    "image": "pixeldropshadow"
+};
+
+ui.UIManager.styles["selectableText"] = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 30, 
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    }
+};
+
+ui.UIManager.styles["selectableText:selected"] = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": 30, 
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_SPECIAL
+    }
+};
+
+//ui.UIManager.styles["button:hover windowShadow"] =
+//{
+//    "image": "pixelselection"
+//}
+
+ui.UIManager.styles["button"] =
+{
+};
+
+ui.UIManager.styles["button:focused selectableWindowShadow"] =
+{
+    "image": "pixelselection"
+};
+
+
+
+ui.UIManager.styles["cgGalleryImage:hover cgGalleryImageFrame"] = {
+    "image": "pixelselection"
+};
+
+//ui.UIManager.styles["cgGalleryImage cgGalleryImageFrame"] = {
+//    "image": "pixeldropshadow"
+//}
+
+//ui.UIManager.styles["cgGalleryImageFrame:hover"] = {
+//    "image": "pixelselection"
+//}
+
+//ui.UIManager.styles["cgGalleryImageFrame:selected"] = {
+//    "image": "pixelselection"
+//}
+
+/*
+ * Choice Timer text displayed if "Choice Timer" command is used to show a count-down
+ * until the choice-selection is done automatically.
+ */
+ui.UIManager.styles.choiceTimerText = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 30, 
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL,
+        "border": true
+    }
+};
+
+/*
+ * Regular Size UI text used in all places for normal-size text / labels.
+ */
+ui.UIManager.styles.regularUIText = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 30, 
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    }
+};
+
+ui.UIManager.styles["regularUIText:enabled"] = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 30, 
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    },
+    "opacity": 255
+};
+
+
+/*
+ * Small Size UI text used in all places for small-size text / labels.
+ */
+ui.UIManager.styles.smallUIText = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 22, 
+        "smallCaps": true, 
+        "italic": false, 
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    }
+};
+
+/*
+ * Small Size text used for save-game slot descriptions.
+ */
+ui.UIManager.styles.saveGameUIText = {
+    "font": { 
+        "name": gs.UIConstants.TEXT_FONT, 
+        "size": 20, 
+        "smallCaps": true, 
+        "italic": false,
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    }
+};
+
+/*
+ * Regular message text style for use in backlog, etc.
+ */
+ui.UIManager.styles.messageText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": gs.UIConstants.TEXT_SIZE_MESSAGE,
+        "smallCaps": false,
+        "italic": false,
+        "border": true,
+        "borderSize": 4
+    }
+};
+
+/*
+ * Ruby text style. 
+ * If size-property is not present, the half of the current font-size is used.
+ * If color-property is not present, the current font-color is used.
+ */
+ui.UIManager.styles.rubyText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "smallCaps": false,
+        "italic": false, "border": true,
+        "borderSize": 4
+    }
+};
+
+/*
+ * Text for ADV game messages.
+ */
+ui.UIManager.styles.advMessageText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": gs.UIConstants.TEXT_SIZE_MESSAGE,
+        "smallCaps": false,
+        "italic": false,
+        "outline": {
+            "size": 4,
+            "color": gs.UIConstants.TEXT_COLOR_NORMAL
+        }
+    }
+};
+
+/*
+ * Text for NVL game messages.
+ */
+ui.UIManager.styles.nvlMessageText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": gs.UIConstants.TEXT_SIZE_MESSAGE,
+        "smallCaps": false,
+        "italic": false,
+        "border": true,
+        "borderSize": 4
+    }
+};
+
+/*
+ * Text for custom message areas.
+ */
+ui.UIManager.styles.customMessageText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": gs.UIConstants.TEXT_SIZE_MESSAGE_NAME,
+        "smallCaps": false,
+        "italic": false,
+        "border": true
+    },
+};
+
+/*
+ * Used to display the current character's name.
+ */
+ui.UIManager.styles.messageBoxNameText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": gs.UIConstants.TEXT_SIZE_MESSAGE_NAME,
+        "smallCaps": false,
+        "italic": false,
+        "border": true, "borderSize": 4
+    }
+};
+
+/*
+ * Used for number-input entries showing you the current number you have entered so far.
+ */
+ui.UIManager.styles.numberInputEntryText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": 90,
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    }
+};
+
+/*
+ * Used for number-input for each single digit.
+ */
+ui.UIManager.styles.numberInputDigitText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": 35
+    }
+};
+
+/*
+ * Used for text-input entries showing you the current text you have entered so far.
+ */
+ui.UIManager.styles.textInputEntryText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": 90,
+        "color": gs.UIConstants.TEXT_COLOR_NORMAL
+    }
+};
+
+/*
+ * Used for text-input for each single letter.
+ */
+ui.UIManager.styles.textInputLetterText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": 25
+    }
+};
+
+/*
+ * Defines the color used for the name-column of the message backlog.
+ */
+ui.UIManager.styles.backlogNamePanel = {
+    "color": gs.UIConstants.TEXT_COLOR_SPECIAL
+};
+
+/*
+ * Defines the color used for the message-column of the message backlog.
+ */
+ui.UIManager.styles.backlogMessagePanel = {
+    "color": [255, 255, 255, 160]
+};
+
+/*
+ * Defines the font used for the name-column of the message backlog.
+ */
+ui.UIManager.styles.backlogNameText = {
+    "font": {
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": gs.UIConstants.TEXT_SIZE_MESSAGE_NAME,
+        "smallCaps": false,
+        "italic": false,
+        "border": true,
+        "borderSize": 4
+    }
+};
+
+/*
+ * Defines the color used for sub-areas on a window a category-column,etc.
+ */
+ui.UIManager.styles["hyperlink"] = {
+    "font": {
+        "color": gs.UIConstants.TEXT_COLOR_SPECIAL,
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": gs.UIConstants.TEXT_SIZE_MESSAGE,
+        "smallCaps": false,
+        "italic": false,
+        "outline": {
+            "size": 4,
+            "color": gs.UIConstants.TEXT_COLOR_NORMAL
+        }
+    }
+};
+
+ui.UIManager.styles["hyperlink:hover"] = {
+    "font": {
+        "color": gs.UIConstants.TEXT_COLOR_SPECIAL,
+        "name": gs.UIConstants.TEXT_FONT,
+        "size": gs.UIConstants.TEXT_SIZE_MESSAGE,
+        "smallCaps": false,
+        "italic": false,
+        "outline": {
+            "size": 4,
+            "color": gs.UIConstants.TEXT_COLOR_NORMAL
+        }
+    }
+};
+
+/*
+ * Defines the color used for sub-areas on a window a category-column,etc.
+ */
+ui.UIManager.styles.windowSubPanel = {
+    "color": [0, 0, 0, 20]
+};
+
+/*
+ * Defines the color used for the separator-line to separate a window's title-area from its actual content.
+ */
+ui.UIManager.styles.windowContentSeparator = {
+    "color": [0, 0, 0]
+};
+/**
+ * FoxySeta - Cell Phone UI 1.0.0
+ * 
+ * Description:
+ *  This extension provides a simple User Interface designed to resemble a cell
+ *  phone. All of its scripts are inside this folder, except for
+ *  Layouts\[FS] CellPhoneUI_Constants.
+ * 
+ * Patron:
+ *  DodokaJet
+ * 
+ * Changelog:
+ *  #1.0.0
+ *      -First Release
+ * 
+ * License:
+ *  MIT License (in short, free for all kind of uses, but give credit)
+ */
+window.MOE = {};
+window.MOE.CoreEngine = {};
+window.MOE.CoreEngine.Config = {};
+(function() {
+    let config = window.MOE.CoreEngine.Config;
+    let loadConfig = function () {
+        let configRecord = RecordManager.moeCoreEngine[0];
+    };
+    
+    class RecordManagerCoreEngineConfig extends window.RecordManager.constructor {
+        initialize() {
+            super.initialize();
+            loadConfig();
+        }
+    }
+    
+    window.RecordManager = new RecordManagerCoreEngineConfig();
+}());
+(function() {
+    class MessageTextRendererCoreEngine extends gs.Component_MessageTextRenderer {
+        processControlToken(token, formattingOnly) {
+            if (formattingOnly) {
+                return super.processControlToken(token, formattingOnly);
+            }
+            let result = null;
+            
+            if (token.code === "SLK") {
+                if (token.value === 'E') {
+                    this.currentSprite.bitmap.clearRect(this.customData.linkData.cx,
+                                                    this.customData.linkData.cy,
+                                                    this.currentX - this.customData.linkData.cx + this.object.font.borderSize*2,
+                                                    this.currentLineHeight);
+                    let line = this.lines[this.line].content;
+                    let linkStart = this.findToken(this.tokenIndex - 1, "SLK", -1, line);
+                    let textTokens = this.findTokensBetween(this.customData.linkData.tokenIndex, this.tokenIndex, null, line);
+                    
+                    let object = new ui.Object_Text();
+                    object.text = textTokens.select(function(x) { return x.value; }).join("");
+                    object.sizeToFit = true;
+                    object.formatting = true;
+                    object.wordWrap = false;
+                    object.ui = new ui.Component_UIBehavior();
+                    object.enabled = true;
+                    object.addComponent(new gs.Component_HotspotBehavior());
+                    object.addComponent(object.ui);
+                  
+                    if (this.customData.linkData.styleIndex === -1) {
+                        ui.UIManager.addControlStyles(object, ["hyperlink"]);
+                    } else {
+                        ui.UIManager.addControlStyles(object, ["hyperlink-" + this.customData.linkData.styleIndex]);
+                    }
+                    
+                    object.setup();
+                    
+                    this.addCustomObject(object);
+                    
+                    object.dstRect.x = this.object.dstRect.x + this.object.origin.x + this.customData.linkData.cx;
+                    object.dstRect.y = this.object.dstRect.y + this.object.origin.y + this.customData.linkData.cy;
+
+                    object.events.on("click", gs.CallBack("onLinkClick", this), { linkData: this.customData.linkData }, this);
+                    
+                    console.log(object)
+                } else {
+                    let value = token.value.toString();
+                    if (value.contains(",")) {
+                        let values = value.split(",");
+                        this.customData.linkData = { cx: this.currentX, cy: this.currentY, commonEventId: values[0], styleIndex: parseInt(values[1]), tokenIndex: this.tokenIndex };
+                    } else {
+                        this.customData.linkData = { cx: this.currentX, cy: this.currentY, commonEventId: token.value, tokenIndex: this.tokenIndex, styleIndex: -1 };
+                    }
+                }
+            } else {
+                result = super.processControlToken(token, formattingOnly);
+            }
+                
+            
+            return result;
+        }
+    }
+    
+    gs.Component_MessageTextRenderer = MessageTextRendererCoreEngine;
+}());
+/**
+ * Yami Engine Moe - Core Engine
+ * 
+ * This extension is required by all Moe Engine Extensions. It includes all
+ * user experience improvements and fixes some problems in VNM engine. The
+ * fixes and improvements are able to toggle on/off easily.
+ * 
+ * ============================================================================
+ * Bugfixes
+ * 
+ * > Stylable clickable link (SLK):
+ *   | Fixed game crash when style id is omitted from text code
+ *   | Fixed hover style not applied to SLK
+ * 
+ */
 
 
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiIiLCJzb3VyY2VzQ29udGVudCI6WyIiXX0=
@@ -44602,6 +46802,416 @@ ui.UiFactory.customTypes["ui.StepSlider"] = {
 
 }).call(this);
 
+(function () {
+    class GameManagerQuickSave extends GameManager.constructor {
+        constructor() {
+            super();
+            this.quickSaveSlot = {};
+        }
+        
+        initialize() {
+            super.initialize();
+            this.createQuickSaveHeader();
+        }
+        
+        get quickSaveFilename() {
+            return "SaveGame_Quick";
+        }
+        
+        createQuickSaveHeader() {
+            let headerFile = `${this.quickSaveFilename}_Header`;
+            let header = {};
+            this.quickSaveSlot = {};
+            if (GameStorage.exists(headerFile)) {
+                header = GameStorage.getObject(headerFile);
+            }
+            this.quickSaveSlot.date = header.date;
+            return this.quickSaveSlot;
+        }
+        
+        quickSave() {
+            this.prepareSaveGame(true);
+            if (this.saveGame) {
+                let header = this.createSaveGameHeader();
+                this.quickSaveSlot = this.createSaveGameSlot(header);
+                this.storeSaveGame(this.quickSaveFilename, this.saveGame, header);
+                this.sceneData = {};
+            }
+            return this.saveGame;
+        }
+        
+        quickLoad() {
+            if (!this.quickSaveSlot || this.quickSaveSlot.date.trim().length === 0) {
+                return;
+            }
+        
+            this.prepareLoadGame();
+            this.loadedSaveGame = this.loadSaveGame(this.quickSaveFilename);
+            
+            SceneManager.switchTo(new vn.Object_Scene());
+            SceneManager.clear();
+        }
+    } 
+    
+    window.GameManager = new GameManagerQuickSave();
+    gs.GameManager = window.GameManager;
+}());
+(function() {
+    gs.Component_LayoutSceneBehavior.prototype.quickSave = function(sender, params) {
+        GameManager.quickSave();
+    };
+    
+    gs.Component_LayoutSceneBehavior.prototype.quickLoad = function(sender, params) {
+        GameManager.quickLoad();
+    };
+    
+    gs.Component_LayoutSceneBehavior = LayoutSceneBehaviorQuickSave;
+}());
+(function() {
+    class CommandInterpreterQuickSave extends gs.Component_CommandInterpreter {
+        assignCommand (command) {
+            switch (command.id) {
+                case "moe.QuickSave":
+                    command.execute = this.commandQuickSave;
+                    break;
+                case "moe.QuickLoad":
+                    command.execute = this.commandQuickLoad;
+                    break;
+                default:
+                    super.assignCommand(command);
+            }   
+        }
+        
+        commandQuickSave() {
+            GameManager.quickSave();
+        }
+        
+        commandQuickLoad() {
+            GameManager.quickLoad();
+        }
+    }
+    
+    window.CommandInterpreter = CommandInterpreterQuickSave;
+    gs.Component_CommandInterpreter = CommandInterpreterQuickSave;
+}());
+ui.UiFactory.customTypes["ui.MessageBox"].controls[2].frame = [0, "100% - 350"];
+ui.UiFactory.customTypes["ui.MessageBox"].controls[3].frame[0] = 186;
+
+ui.UiFactory.customTypes["ui.MessageBoxNVL"].controls[0].frame[1] = "100% - 350";
+
+ui.UiFactory.customTypes["ui.MessageMenu"].controls[0].frame[1] = "100% - 350";
+(function() {
+    let boxBackground = ui.UiFactory.customTypes["ui.MessageBoxMenu"].controls[0];
+    let boxControl = ui.UiFactory.customTypes["ui.MessageBoxMenu"].controls[1];
+    let commands = boxControl.controls;
+    
+    // make the box auto resizes base on number of commands
+    boxControl.sizeToFit = {"horizontal": false, "vertical": true};
+    boxBackground.frame = [0, 0, 172, 350]
+    
+    // add more commands to the box
+    commands.push(
+        {
+           "type": "ui.Text",
+           "styles": ["regularUIText"],
+           "action": { "name": "quickSave" },
+           "text": "Q.Save",
+           "sizeToFit": true,
+           "margin": [60, 16, 0, 0]
+        },
+        {
+           "type": "ui.Text",
+           "styles": ["regularUIText"],
+           "action": { "name": "quickLoad" },
+           "text": "Q.Load",
+           "sizeToFit": true,
+           "margin": [60, 16, 0, 0]
+        }
+    );
+}());
+/**
+ * Yami Engine Moe - Quick Save
+ * 
+ * This extension provides Quick Save and Quick Load functions to the engine,
+ * which allows users to either quick save and quick load by using Commands
+ * or using Script Call in UI.
+ * 
+ * ============================================================================
+ * Added Commands:
+ * 
+ * System
+ *  | Save & Load
+ *      | Quick Save
+ *      | Quick Load
+ * 
+ * ============================================================================
+ * Layout Actions:
+ * 
+ * > { "name": "quickSave" }
+ * > { "name": "quickLoad" }
+ * 
+ * ============================================================================
+ * Modified Layouts:
+ * 
+ * These layouts and templates are modified. Certain layouts and templates can be
+ * deleted for the uses of custom layouts or templates.
+ *
+ * > Template_MessageBox (Can be deleted) 
+ * > Template_MessageBoxMenu (Can be deleted)
+ * 
+ */
+/*************************************************
+ *
+ * Super Message Editor
+ * 
+ * VNM Game JavaScript File
+ *
+ * by Robert Borghese (SumRndmDde)
+ *
+ *************************************************/
+
+var SRD = SRD || {};
+SRD.SuperMessageEditor = SRD.SuperMessageEditor || {};
+SRD.SuperMessageEditor._version = '1.0.0';
+
+(function(_) {
+
+// Credit: https://stackoverflow.com/a/5624139/8139481
+_.hexToColObj = function(source) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(source);
+    if(result) {
+        return {
+            red: parseInt(result[1], 16),
+            green: parseInt(result[2], 16),
+            blue: parseInt(result[3], 16),
+            alpha: 255
+        };
+    } else {
+        return null;
+    }
+};
+
+_.rgbToColObj = function(source) {
+    var result = /^(?:rgb)?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i.exec(source);
+    if(result) {
+        return {
+            red: parseInt(result[1]),
+            green: parseInt(result[2]),
+            blue: parseInt(result[3]),
+            alpha: 255
+        };
+    } else {
+        return null;
+    }
+};
+
+_.rgbaToColObj = function(source) {
+    var result = /^(?:rgba)?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i.exec(source);
+    if(result) {
+        return {
+            red: parseInt(result[1]),
+            green: parseInt(result[2]),
+            blue: parseInt(result[3]),
+            alpha: parseInt(result[4])
+        };
+    } else {
+        return null;
+    }
+};
+
+var _Component_TextRenderer_createToken = gs.Component_TextRenderer.prototype.createToken;
+gs.Component_TextRenderer.prototype.createToken = function(code, value) {
+    var tokenObject = _Component_TextRenderer_createToken.apply(this, arguments);
+    if(this.font._defaultBorderColor === undefined) {
+        this.font._defaultBorderColor = this.font.borderColor;
+    }
+    if(code === "CC") {
+        tokenObject = new gs.RendererToken(code, value);
+        if(value === "0") {
+            this.font.color = gs.Color.fromObject(Font.defaultColor);
+        } else {
+            value = String(value).trim();
+            var color;
+            if(value.substring(0, 4) === "rgba") {
+                color = gs.Color.fromObject(_.rgbaToColObj(value));
+            } else if(value.substring(0, 3) === "rgb") {
+                color = gs.Color.fromObject(_.rgbToColObj(value));
+            } else {
+                color = gs.Color.fromObject(_.hexToColObj(value));
+            }
+            if(color) {
+                this.font.color = color;
+            }
+        }
+    } else if(code === "BC") {
+        tokenObject = new gs.RendererToken(code, value);
+        if(value === "0") {
+            this.font.borderColor = this.font._defaultBorderColor;
+        } else {
+            value = String(value).trim();
+            var color;
+            if(value.substring(0, 4) === "rgba") {
+                color = gs.Color.fromObject(_.rgbaToColObj(value));
+            } else if(value.substring(0, 3) === "rgb") {
+                color = gs.Color.fromObject(_.rgbToColObj(value));
+            } else {
+                color = gs.Color.fromObject(_.hexToColObj(value));
+            }
+            if(color) {
+                this.font.borderColor = color;
+            }
+        }
+    }
+    return tokenObject;
+};
+
+var _Component_TextRenderer_processControlToken = gs.Component_TextRenderer.prototype.processControlToken;
+gs.Component_TextRenderer.prototype.processControlToken = function(token) {
+    var result = _Component_TextRenderer_processControlToken.apply(this, arguments);
+    if(this.font._defaultBorderColor === undefined) {
+        this.font._defaultBorderColor = this.font.borderColor;
+    }
+    if(token.code === "CC") {
+        var value = token.value;
+        if(value === "0") {
+            this.font.color = gs.Color.fromObject(Font.defaultColor);
+        } else {
+            value = String(value).trim();
+            var color;
+            if(value.substring(0, 4) === "rgba") {
+                color = gs.Color.fromObject(_.rgbaToColObj(value));
+            } else if(value.substring(0, 3) === "rgb") {
+                color = gs.Color.fromObject(_.rgbToColObj(value));
+            } else {
+                color = gs.Color.fromObject(_.hexToColObj(value));
+            }
+            if(color) {
+                this.font.color = color;
+            }
+        }
+    } else if(token.code === "BC") {
+        var value = token.value;
+        if(value === "0") {
+            this.font.borderColor = this.font._defaultBorderColor;
+        } else {
+            value = String(value).trim();
+            var color;
+            if(value.substring(0, 4) === "rgba") {
+                color = gs.Color.fromObject(_.rgbaToColObj(value));
+            } else if(value.substring(0, 3) === "rgb") {
+                color = gs.Color.fromObject(_.rgbToColObj(value));
+            } else {
+                color = gs.Color.fromObject(_.hexToColObj(value));
+            }
+            if(color) {
+                this.font.borderColor = color;
+            }
+        }
+    }
+    return result;
+};
+
+var _Component_CommandInterpreter_assignCommand = gs.Component_CommandInterpreter.prototype.assignCommand;
+gs.Component_CommandInterpreter.prototype.assignCommand = function(command) {
+    _Component_CommandInterpreter_assignCommand.apply(this, arguments);
+    if(command.id === "gs.ShowMessageEditor") {
+        command.execute = this.commandShowMessage;
+    }
+};
+
+})(SRD.SuperMessageEditor);
+/**
+ * Yami Engine Moe - Camera Extension
+ * 
+ * This extension adds more functions to game camera, such as manipulate camera
+ * for each layer (backgrounds, pictures or characters) instead of the whole screen.
+ * 
+ * ============================================================================
+ * Added Commands:
+ * 
+ * Screen
+ *  | Camera
+ *      | Pan Layer
+ *      | Zoom Layer
+ *      | Rotate Layer
+ */
+(function() {
+    let getCameraLayer = function () {
+        let scene = SceneManager.scene;
+        let objects;
+        
+        switch (this.params.layer) {
+            case 'backgrounds':
+                objects = scene.backgrounds;
+                break;
+            case 'pictures':
+                objects = scene.pictures;
+                break;
+            case 'characters':
+                objects = scene.characters;
+                break;
+        }
+        
+        return objects;
+    }
+    
+    class CommandInterpreterCameraExtension extends gs.Component_CommandInterpreter {
+        assignCommand(command) {
+            switch (command.id) {
+                case "moe.PanLayer":
+                    command.execute = this.commandPanLayer;
+                    break;
+                case "moe.ZoomLayer":
+                    command.execute = this.commandZoomLayer;
+                    break;
+                case "moe.RotateLayer":
+                    command.execute = this.commandRotateLayer;
+                    break;
+                default:
+                    super.assignCommand(command);
+            }   
+        }
+        
+        commandPanLayer() {
+            let objects = getCameraLayer.call(this);
+            
+            for (let i = 0; i < objects.length; i++) {
+                let object = objects[i];
+                if (!object) continue;
+                this.interpreter.moveObject(object, this.params.position, this.params);
+            }
+            
+            gs.GameNotifier.postMinorChange();
+        }
+        
+        commandZoomLayer() {
+            let objects = getCameraLayer.call(this);
+            
+            for (let i = 0; i < objects.length; i++) {
+                let object = objects[i];
+                if (!object) continue;
+                this.interpreter.zoomObject(object, this.params);
+            }
+            
+            gs.GameNotifier.postMinorChange();
+        }
+        
+        commandRotateLayer() {
+            let objects = getCameraLayer.call(this);
+            
+            for (let i = 0; i < objects.length; i++) {
+                let object = objects[i];
+                if (!object) continue;
+                this.interpreter.rotateObject(object, this.params);
+            }
+            
+            gs.GameNotifier.postMinorChange();
+        }
+    }
+    
+    window.CommandInterpreter = CommandInterpreterCameraExtension;
+    gs.Component_CommandInterpreter = CommandInterpreterCameraExtension;
+}());
 var Main;
 
 Main = (function() {
@@ -45039,3 +47649,221 @@ gs.Application.onReady = function() {
 
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVNBLElBQUE7O0FBQU07O0FBQ0Y7Ozs7Ozs7O0VBUWEsY0FBQTtJQUNULE1BQU0sQ0FBQyxDQUFQLEdBQVcsTUFBTSxDQUFDLFVBQVAsQ0FBQTtJQUVYLElBQUMsQ0FBQSxlQUFELEdBQW1CO0lBQ25CLElBQUMsQ0FBQSxhQUFELEdBQWlCO0VBSlI7OztBQU1iOzs7Ozs7aUJBS0EsV0FBQSxHQUFhLFNBQUE7SUFDVCxJQUFHLE9BQU8sQ0FBQyxhQUFYO01BQ0ksTUFBTSxDQUFDLFNBQVAsR0FBc0IsMEJBQUgsR0FBNEIsTUFBTSxDQUFDLFdBQVcsQ0FBQyxHQUFuQixDQUFBLENBQTVCLEdBQTBELElBQUksQ0FBQyxHQUFMLENBQUEsRUFEakY7O0lBR0EsWUFBWSxDQUFDLE1BQWIsQ0FBQTtJQUNBLFFBQVEsQ0FBQyxVQUFUO0lBRUEsSUFBRyxPQUFPLENBQUMsYUFBWDtNQUNJLElBQU8sd0JBQVA7UUFBMEIsSUFBQyxDQUFBLFdBQUQsR0FBbUIsSUFBQSxZQUFBLENBQUEsRUFBN0M7O01BRUEsTUFBTSxDQUFDLE9BQVAsR0FBb0IsMEJBQUgsR0FBNEIsTUFBTSxDQUFDLFdBQVcsQ0FBQyxHQUFuQixDQUFBLENBQTVCLEdBQTBELElBQUksQ0FBQyxHQUFMLENBQUE7TUFDM0UsSUFBRyxRQUFRLENBQUMsVUFBVCxHQUFzQixFQUF0QixLQUE0QixDQUEvQjtRQUNJLElBQUMsQ0FBQSxXQUFXLENBQUMsU0FBYixHQUEwQixPQUFBLEdBQVU7ZUFDcEMsSUFBQyxDQUFBLFdBQVcsQ0FBQyxNQUFiLENBQUEsRUFGSjtPQUpKOztFQVBTOzs7QUFlYjs7Ozs7O2lCQUtBLFFBQUEsR0FBVSxTQUFBO0lBQ04sYUFBYSxDQUFDLElBQWQsQ0FBQTtJQUNBLFdBQVcsQ0FBQyxrQkFBWixDQUErQixrQkFBL0I7SUFDQSxXQUFXLENBQUMsa0JBQVosQ0FBK0Isa0JBQS9CO1dBQ0Es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QUMsQ0FBQSxJQUFELENBQU0sQ0FBQSxTQUFBLEtBQUE7YUFBQSxTQUFBO2VBQUcsWUFBWSxDQUFDLFFBQWIsQ0FBc0IsS0FBQyxDQUFBLGdCQUFELENBQUEsQ0FBdEI7TUFBSDtJQUFBLENBQUEsQ0FBQSxDQUFBLElBQUEsQ0FBTjtFQVBHOzs7Ozs7QUFXWCxFQUFFLENBQUMsSUFBSCxHQUFjLElBQUEsSUFBQSxDQUFBOztBQUNkLEVBQUUsQ0FBQyxXQUFXLENBQUMsVUFBZixDQUFBOztBQUNBLEVBQUUsQ0FBQyxXQUFXLENBQUMsT0FBZixHQUF5QixTQUFBO0VBRXJCLE1BQU0sQ0FBQyxJQUFQLENBQVksRUFBWixDQUFlLENBQUMsT0FBaEIsQ0FBd0IsU0FBQyxDQUFEO0lBQU8sRUFBRyxDQUFBLENBQUEsQ0FBRSxDQUFDLFVBQU4sR0FBbUI7V0FBTSxFQUFHLENBQUEsQ0FBQSxDQUFFLENBQUMsS0FBTixHQUFjO0VBQTlDLENBQXhCO0VBQ0EsTUFBTSxDQUFDLElBQVAsQ0FBWSxFQUFaLENBQWUsQ0FBQyxPQUFoQixDQUF3QixTQUFDLENBQUQ7SUFBTyxFQUFHLENBQUEsQ0FBQSxDQUFFLENBQUMsVUFBTixHQUFtQjtXQUFNLEVBQUcsQ0FBQSxDQUFBLENBQUUsQ0FBQyxLQUFOLEdBQWM7RUFBOUMsQ0FBeEI7RUFDQSxNQUFNLENBQUMsSUFBUCxDQUFZLEVBQVosQ0FBZSxDQUFDLE9BQWhCLENBQXdCLFNBQUMsQ0FBRDtJQUFPLEVBQUcsQ0FBQSxDQUFBLENBQUUsQ0FBQyxVQUFOLEdBQW1CO1dBQU0sRUFBRyxDQUFBLENBQUEsQ0FBRSxDQUFDLEtBQU4sR0FBYztFQUE5QyxDQUF4QjtTQUVBLEVBQUUsQ0FBQyxJQUFJLENBQUMsS0FBUixDQUFBO0FBTnFCIiwic291cmNlc0NvbnRlbnQiOlsiIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4jXG4jICAgU2NyaXB0OiBNYWluXG4jXG4jID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiNcbiMgICBFbnRyeSBwb2ludCBvZiB5b3VyIGdhbWUuXG4jXG4jID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmNsYXNzIE1haW5cbiAgICAjIyMqXG4gICAgKiBDb250cm9scyB0aGUgYm9vdC1wcm9jZXNzIG9mIHRoZSBnYW1lLlxuICAgICpcbiAgICAqIEBtb2R1bGUgZ3NcbiAgICAqIEBjbGFzcyBNYWluXG4gICAgKiBAbWVtYmVyb2YgZ3NcbiAgICAqIEBjb25zdHJ1Y3RvclxuICAgICMjI1xuICAgIGNvbnN0cnVjdG9yOiAtPlxuICAgICAgICB3aW5kb3cuJCA9IGpRdWVyeS5ub0NvbmZsaWN0KClcblxuICAgICAgICBAbGFuZ3VhZ2VzTG9hZGVkID0gbm9cbiAgICAgICAgQGZyYW1lQ2FsbGJhY2sgPSBudWxsXG5cbiAgICAjIyMqXG4gICAgKiBVcGRhdGVzIHRoZSBjdXJyZW50IGZyYW1lLlxuICAgICpcbiAgICAqIEBtZXRob2QgdXBkYXRlRnJhbWVcbiAgICAjIyNcbiAgICB1cGRhdGVGcmFtZTogLT5cbiAgICAgICAgaWYgJFBBUkFNUy5zaG93RGVidWdJbmZvXG4gICAgICAgICAgICB3aW5kb3cuc3RhcnRUaW1lID0gaWYgd2luZG93LnBlcmZvcm1hbmNlPyB0aGVuIHdpbmRvdy5wZXJmb3JtYW5jZS5ub3coKSBlbHNlIERhdGUubm93KClcblxuICAgICAgICBTY2VuZU1hbmFnZXIudXBkYXRlKClcbiAgICAgICAgR3JhcGhpY3MuZnJhbWVDb3VudCsrXG5cbiAgICAgICAgaWYgJFBBUkFNUy5zaG93RGVidWdJbmZvXG4gICAgICAgICAgICBpZiBub3QgQGRlYnVnU3ByaXRlPyB0aGVuIEBkZWJ1Z1Nwcml0ZSA9IG5ldyBTcHJpdGVfRGVidWcoKVxuXG4gICAgICAgICAgICB3aW5kb3cuZW5kVGltZSA9IGlmIHdpbmRvdy5wZXJmb3JtYW5jZT8gdGhlbiB3aW5kb3cucGVyZm9ybWFuY2Uubm93KCkgZWxzZSBEYXRlLm5vdygpXG4gICAgICAgICAgICBpZiBHcmFwaGljcy5mcmFtZUNvdW50ICUgMzAgPT0gMFxuICAgICAgICAgICAgICAgIEBkZWJ1Z1Nwcml0ZS5mcmFtZVRpbWUgPSAoZW5kVGltZSAtIHN0YXJ0VGltZSlcbiAgICAgICAgICAgICAgICBAZGVidWdTcHJpdGUucmVkcmF3KClcblxuICAgICMjIypcbiAgICAqIExvYWRzIGdhbWUgZGF0YS5cbiAgICAqXG4gICAgKiBAbWV0aG9kIGxvYWREYXRhXG4gICAgIyMjXG4gICAgbG9hZERhdGE6IC0+XG4gICAgICAgIFJlY29yZE1hbmFnZXIubG9hZCgpXG4gICAgICAgIERhdGFNYW5hZ2VyLmdldERvY3VtZW50c0J5VHlwZShcImdsb2JhbF92YXJpYWJsZXNcIilcbiAgICAgICAgRGF0YU1hbmFnZXIuZ2V0RG9jdW1lbnRzQnlUeXBlKFwibGFuZ3VhZ2VfcHJvZmlsZVwiKVxuICAgICAgICBEYXRhTWFuYWdlci5nZXREb2N1bWVudHNCeVR5cGUoXCJ2bi5jaGFwdGVyXCIpXG5cbiAgICAjIyMqXG4gICAgKiBMb2FkcyBzeXN0ZW0gZGF0YS5cbiAgICAqXG4gICAgKiBAbWV0aG9kIGxvYWRTeXN0ZW1EYXRhXG4gICAgIyMjXG4gICAgbG9hZFN5c3RlbURhdGE6IC0+XG4gICAgICAgIERhdGFNYW5hZ2VyLmdldERvY3VtZW50KFwiUkVTT1VSQ0VTXCIpXG4gICAgICAgIERhdGFNYW5hZ2VyLmdldERvY3VtZW50KFwiU1VNTUFSSUVTXCIpXG5cbiAgICAjIyMqXG4gICAgKiBMb2FkcyBzeXN0ZW0gcmVzb3VyY2VzIHN1Y2ggYXMgZ3JhcGhpY3MsIHNvdW5kcywgZm9udHMsIGV0Yy5cbiAgICAqXG4gICAgKiBAbWV0aG9kIGxvYWRTeXN0ZW1SZXNvdXJjZXNcbiAgICAjIyNcbiAgICBsb2FkU3lzdGVtUmVzb3VyY2VzOiAtPlxuICAgICAgICBSZXNvdXJjZU1hbmFnZXIubG9hZEZvbnRzKClcbiAgICAgICAgUmVzb3VyY2VMb2FkZXIubG9hZFN5c3RlbVNvdW5kcyhSZWNvcmRNYW5hZ2VyLnN5c3RlbSlcbiAgICAgICAgUmVzb3VyY2VMb2FkZXIubG9hZFN5c3RlbUdyYXBoaWNzKFJlY29yZE1hbmFnZXIuc3lzdGVtKVxuXG4gICAgICAgIGZvciBsYW5ndWFnZSBpbiBMYW5ndWFnZU1hbmFnZXIubGFuZ3VhZ2VzXG4gICAgICAgICAgICBpZiBsYW5ndWFnZS5pY29uPy5uYW1lPy5sZW5ndGggPiAwXG4gICAgICAgICAgICAgICAgUmVzb3VyY2VNYW5hZ2VyLmdldEJpdG1hcChcIkdyYXBoaWNzL0ljb25zLyN7bGFuZ3VhZ2UuaWNvbi5uYW1lfVwiKVxuXG4gICAgICAgIGdzLkZvbnRzLmluaXRpYWxpemUoKVxuXG4gICAgIyMjKlxuICAgICogR2V0cyBnYW1lIHNldHRpbmdzLlxuICAgICpcbiAgICAqIEBtZXRob2QgZ2V0U2V0dGluZ3NcbiAgICAjIyNcbiAgICBnZXRTZXR0aW5nczogLT5cbiAgICAgICAgc2V0dGluZ3MgPSBHYW1lU3RvcmFnZS5nZXRPYmplY3QoXCJzZXR0aW5nc1wiKVxuXG4gICAgICAgIGlmIG5vdCBzZXR0aW5ncz8gb3Igc2V0dGluZ3MudmVyc2lvbiAhPSAzNDJcbiAgICAgICAgICAgIEdhbWVNYW5hZ2VyLnJlc2V0U2V0dGluZ3MoKVxuICAgICAgICAgICAgc2V0dGluZ3MgPSBHYW1lTWFuYWdlci5zZXR0aW5nc1xuXG4gICAgICAgIHJldHVybiBzZXR0aW5nc1xuXG4gICAgIyMjKlxuICAgICogU2V0cyB1cCB0aGUgZ2FtZSdzIGdsb2JhbCBkYXRhLiBJZiBpdCBpcyBvdXRkYXRlZCwgdGhpcyBtZXRob2Qgd2lsbFxuICAgICogcmVzZXQgdGhlIGdsb2JhbCBnYW1lIGRhdGEuXG4gICAgKlxuICAgICogQG1ldGhvZCBzZXR1cEdsb2JhbERhdGFcbiAgICAjIyNcbiAgICBzZXR1cEdsb2JhbERhdGE6IC0+XG4gICAgICAgIGdsb2JhbERhdGEgPSBHYW1lU3RvcmFnZS5nZXRPYmplY3QoXCJnbG9iYWxEYXRhXCIpXG4gICAgICAgIEdhbWVNYW5hZ2VyLmdsb2JhbERhdGEgPSBnbG9iYWxEYXRhXG5cbiAgICAgICAgaWYgIWdsb2JhbERhdGEgfHwgZ2xvYmFsRGF0YS52ZXJzaW9uICE9IDM0MlxuICAgICAgICAgICAgR2FtZU1hbmFnZXIucmVzZXRHbG9iYWxEYXRhKClcblxuICAgICMjIypcbiAgICAqIFNldHMgdXAgZ2FtZSBzZXR0aW5ncy5cbiAgICAqXG4gICAgKiBAbWV0aG9kIHNldHVwR2FtZVNldHRpbmdzXG4gICAgKiBAcGFyYW0ge09iamVjdH0gc2V0dGluZ3MgLSBDdXJyZW50IGdhbWUgc2V0dGluZ3MuXG4gICAgIyMjXG4gICAgc2V0dXBHYW1lU2V0dGluZ3M6IChzZXR0aW5ncykgLT5cbiAgICAgICAgR2FtZU1hbmFnZXIuc2V0dGluZ3MgPSBzZXR0aW5nc1xuICAgICAgICBHYW1lTWFuYWdlci5zZXR0aW5ncy5mdWxsU2NyZWVuID0gR3JhcGhpY3MuaXNGdWxsc2NyZWVuKClcblxuICAgICAgICBmb3IgY2hhcmFjdGVyLCBpIGluIFJlY29yZE1hbmFnZXIuY2hhcmFjdGVyc0FycmF5XG4gICAgICAgICAgICBpZiBjaGFyYWN0ZXIgYW5kICFHYW1lTWFuYWdlci5zZXR0aW5ncy52b2ljZXNCeUNoYXJhY3RlcltjaGFyYWN0ZXIuaW5kZXhdXG4gICAgICAgICAgICAgICAgR2FtZU1hbmFnZXIuc2V0dGluZ3Mudm9pY2VzQnlDaGFyYWN0ZXJbY2hhcmFjdGVyLmluZGV4XSA9IDEwMFxuICAgICAgICBmb3IgY2csIGkgaW4gUmVjb3JkTWFuYWdlci5jZ0dhbGxlcnlBcnJheVxuICAgICAgICAgICAgaWYgY2c/IGFuZCAhR2FtZU1hbmFnZXIuZ2xvYmFsRGF0YS5jZ0dhbGxlcnlbY2cuaW5kZXhdXG4gICAgICAgICAgICAgICAgR2FtZU1hbmFnZXIuZ2xvYmFsRGF0YS5jZ0dhbGxlcnlbY2cuaW5kZXhdID0geyB1bmxvY2tlZDogbm8gfVxuXG4gICAgIyMjKlxuICAgICogU2V0cyB1cCBhdWRpbyBzZXR0aW5ncy5cbiAgICAqXG4gICAgKiBAbWV0aG9kIHNldHVwQXVkaW9TZXR0aW5nc1xuICAgICogQHBhcmFtIHtPYmplY3R9IHNldHRpbmdzIC0gQ3VycmVudCBnYW1lIHNldHRpbmdzLlxuICAgICMjI1xuICAgIHNldHVwQXVkaW9TZXR0aW5nczogKHNldHRpbmdzKSAtPlxuICAgICAgICBBdWRpb01hbmFnZXIuZ2VuZXJhbFNvdW5kVm9sdW1lID0gc2V0dGluZ3Muc2VWb2x1bWVcbiAgICAgICAgQXVkaW9NYW5hZ2VyLmdlbmVyYWxNdXNpY1ZvbHVtZSA9IHNldHRpbmdzLmJnbVZvbHVtZVxuICAgICAgICBBdWRpb01hbmFnZXIuZ2VuZXJhbFZvaWNlVm9sdW1lID0gc2V0dGluZ3Mudm9pY2VWb2x1bWVcblxuICAgICMjIypcbiAgICAqIFNldHMgdXAgdmlkZW8gc2V0dGluZ3MuXG4gICAgKlxuICAgICogQG1ldGhvZCBzZXR1cFZpZGVvU2V0dGluZ3NcbiAgICAqIEBwYXJhbSB7T2JqZWN0fSBzZXR0aW5ncyAtIEN1cnJlbnQgZ2FtZSBzZXR0aW5ncy5cbiAgICAjIyNcbiAgICBzZXR1cFZpZGVvU2V0dGluZ3M6IChzZXR0aW5ncykgLT5cbiAgICAgICAgc2V0dGluZ3MucmVuZGVyZXIgPSAxXG4gICAgICAgIEdyYXBoaWNzLmtlZXBSYXRpbyA9ICFzZXR0aW5ncy5hZGp1c3RBc3BlY3RSYXRpb1xuICAgICAgICBHcmFwaGljcy5vblJlc2l6ZSgpXG5cbiAgICAjIyMqXG4gICAgKiBTZXRzIHVwIHNldHRpbmdzLlxuICAgICpcbiAgICAqIEBtZXRob2Qgc2V0dXBTZXR0aW5nc1xuICAgICMjI1xuICAgIHNldHVwU2V0dGluZ3M6IC0+XG4gICAgICAgIHNldHRpbmdzID0gQGdldFNldHRpbmdzKClcblxuICAgICAgICBAc2V0dXBHbG9iYWxEYXRhKClcbiAgICAgICAgQHNldHVwR2FtZVNldHRpbmdzKHNldHRpbmdzKVxuICAgICAgICBAc2V0dXBBdWRpb1NldHRpbmdzKHNldHRpbmdzKVxuICAgICAgICBAc2V0dXBWaWRlb1NldHRpbmdzKHNldHRpbmdzKVxuXG5cbiAgICAgICAgR2FtZVN0b3JhZ2Uuc2V0T2JqZWN0KFwic2V0dGluZ3NcIiwgc2V0dGluZ3MpXG5cbiAgICAjIyMqXG4gICAgKiBMb2FkcyBhbGwgc3lzdGVtIHJlc291cmNlcyBuZWVkZWQgdG8gc3RhcnQgdGhlIGFjdHVhbCBnYW1lLlxuICAgICpcbiAgICAqIEBtZXRob2QgbG9hZFxuICAgICogQHBhcmFtIHtGdW5jdGlvbn0gY2FsbGJhY2sgLSBDYWxsZWQgd2hlbiBhbGwgc3lzdGVtIHJlc291cmNlcyBhcmUgbG9hZGVkLlxuICAgICMjI1xuICAgIGxvYWQ6IChjYWxsYmFjaykgLT5cbiAgICAgICAgQGxvYWRTeXN0ZW1EYXRhKClcblxuICAgICAgICBEYXRhTWFuYWdlci5ldmVudHMub24gXCJsb2FkZWRcIiwgPT5cbiAgICAgICAgICAgIEdhbWVNYW5hZ2VyLnRlbXBGaWVsZHMgPSBuZXcgZ3MuR2FtZVRlbXAoKVxuICAgICAgICAgICAgd2luZG93LiR0ZW1wRmllbGRzID0gR2FtZU1hbmFnZXIudGVtcEZpZWxkc1xuXG4gICAgICAgICAgICBpZiBAbGFuZ3VhZ2VzTG9hZGVkXG4gICAgICAgICAgICAgICAgUmVjb3JkTWFuYWdlci5pbml0aWFsaXplKClcbiAgICAgICAgICAgICAgICBMYW5ndWFnZU1hbmFnZXIuaW5pdGlhbGl6ZSgpXG4gICAgICAgICAgICAgICAgU2NlbmVNYW5hZ2VyLmluaXRpYWxpemUoKVxuICAgICAgICAgICAgICAgIEBzZXR1cFNldHRpbmdzKClcbiAgICAgICAgICAgIGVsc2VcbiAgICAgICAgICAgICAgICBAbG9hZERhdGEoKVxuXG4gICAgICAgICAgICBpZiBAbGFuZ3VhZ2VzTG9hZGVkXG4gICAgICAgICAgICAgICAgQGxvYWRTeXN0ZW1SZXNvdXJjZXMoKVxuICAgICAgICAgICAgICAgIERhdGFNYW5hZ2VyLmV2ZW50cy5vZmYgXCJsb2FkZWRcIlxuICAgICAgICAgICAgICAgIFJlc291cmNlTWFuYWdlci5ldmVudHMub24gXCJsb2FkZWRcIiwgPT5cbiAgICAgICAgICAgICAgICAgICAgR2FtZU1hbmFnZXIuc2V0dXBDdXJzb3IoKVxuICAgICAgICAgICAgICAgICAgICBSZXNvdXJjZU1hbmFnZXIuZXZlbnRzLm9mZiBcImxvYWRlZFwiXG4gICAgICAgICAgICAgICAgICAgIHVpLlVJTWFuYWdlci5zZXR1cCgpXG4gICAgICAgICAgICAgICAgICAgIGNhbGxiYWNrKClcblxuICAgICAgICAgICAgQGxhbmd1YWdlc0xvYWRlZCA9IHllc1xuXG5cbiAgICAjIyMqXG4gICAgKiBTZXRzIHVwIHRoZSBhcHBsaWNhdGlvbi5cbiAgICAqXG4gICAgKiBAbWV0aG9kIHNldHVwQXBwbGljYXRpb25cbiAgICAjIyNcbiAgICBzZXR1cEFwcGxpY2F0aW9uOiAtPlxuICAgICAgICAkUEFSQU1TLnNob3dEZWJ1Z0luZm8gPSBub1xuICAgICAgICB3aW5kb3cuUmVzb3VyY2VNYW5hZ2VyID0gbmV3IHdpbmRvdy5SZXNvdXJjZU1hbmFnZXIoKVxuICAgICAgICB3aW5kb3cuRGF0YU1hbmFnZXIgPSBuZXcgd2luZG93LkRhdGFNYW5hZ2VyKClcblxuICAgICAgICAjIEZvcmNlIE9wZW5HTCByZW5kZXJlclxuICAgICAgICB3aW5kb3cuR3JhcGhpY3MgPSBuZXcgR3JhcGhpY3NfT3BlbkdMKClcbiAgICAgICAgd2luZG93LmdzLkdyYXBoaWNzID0gd2luZG93LkdyYXBoaWNzXG4gICAgICAgIHdpbmRvdy5SZW5kZXJlciA9IHdpbmRvdy5SZW5kZXJlcl9PcGVuR0xcblxuICAgICAgICAjIEZvcmNlIGxpbmVhciBmaWx0ZXJpbmdcbiAgICAgICAgVGV4dHVyZTJELmZpbHRlciA9IDFcblxuICAgICMjIypcbiAgICAqIEluaXRpYWxpemVzIHRoZSBpbnB1dCBzeXN0ZW0gdG8gZW5hYmxlIHN1cHBvcnQgZm9yIGtleWJvYXJkLCBtb3VzZSwgdG91Y2gsIGV0Yy5cbiAgICAqXG4gICAgKiBAbWV0aG9kIHNldHVwSW5wdXRcbiAgICAjIyNcbiAgICBzZXR1cElucHV0OiAtPlxuICAgICAgICBJbnB1dC5pbml0aWFsaXplKClcbiAgICAgICAgSW5wdXQuTW91c2UuaW5pdGlhbGl6ZSgpXG5cbiAgICAjIyMqXG4gICAgKiBJbml0aWFsaXplcyB0aGUgdmlkZW8gc3lzdGVtIHdpdGggdGhlIGdhbWUncyByZXNvbHV0aW9uLiBJdCBpcyBuZWNlc3NhcnkgdG9cbiAgICAqIGNhbGwgdGhpcyBtZXRob2QgYmVmb3JlIHVzaW5nIGdyYXBoaWMgb2JqZWN0IHN1Y2ggYXMgYml0bWFwcywgc3ByaXRlcywgZXRjLlxuICAgICpcbiAgICAqIEBtZXRob2Qgc2V0dXBWaWRlb1xuICAgICMjI1xuICAgIHNldHVwVmlkZW86IC0+XG4gICAgICAgIEBmcmFtZUNhbGxiYWNrID0gQGNyZWF0ZUZyYW1lQ2FsbGJhY2soKVxuXG4gICAgICAgIEdyYXBoaWNzLmluaXRpYWxpemUoJFBBUkFNUy5yZXNvbHV0aW9uLndpZHRoLCAkUEFSQU1TLnJlc29sdXRpb24uaGVpZ2h0KVxuICAgICAgICAjR3JhcGhpY3Mub25Gb2N1c1JlY2VpdmUgPSA9PiBHYW1lTWFuYWdlci50ZW1wU2V0dGluZ3Muc2tpcCA9IG5vXG4gICAgICAgIEdyYXBoaWNzLm9uRGlzcG9zZSA9ID0+IFJlc291cmNlTWFuYWdlci5kaXNwb3NlKClcbiAgICAgICAgR3JhcGhpY3MuZm9ybWF0cyA9IFszMjAsIDM4NCwgNDI3XVxuICAgICAgICBHcmFwaGljcy5zY2FsZSA9IDAuNSAvIDI0MCAqIEdyYXBoaWNzLmhlaWdodFxuICAgICAgICBGb250LmRlZmF1bHRTaXplID0gTWF0aC5yb3VuZCg5IC8gMjQwICogR3JhcGhpY3MuaGVpZ2h0KVxuXG4gICAgICAgIEdyYXBoaWNzLm9uRWFjaEZyYW1lKEBmcmFtZUNhbGxiYWNrKVxuXG4gICAgIyMjKlxuICAgICogUmVnaXN0ZXJzIHNoYWRlci1iYXNlZCBlZmZlY3RzLiBJdCBpcyBpbXBvcnRhbnQgdG8gcmVnaXN0ZXIgYWxsIGVmZmVjdHNcbiAgICAqIGJlZm9yZSB0aGUgZ3JhcGhpY3Mgc3lzdGVtIGlzIGluaXRpYWxpemVkLlxuICAgICpcbiAgICAqIEBtZXRob2Qgc2V0dXBFZmZlY3RzXG4gICAgIyMjXG4gICAgc2V0dXBFZmZlY3RzOiAtPlxuICAgICAgICAjIFJlZ2lzdGVyIGJ1aWx0LWluIExPRC9Cb3ggQmx1ciBlZmZlY3RcbiAgICAgICAgZ3MuRWZmZWN0LnJlZ2lzdGVyRWZmZWN0KGdzLkVmZmVjdC5mcmFnbWVudFNoYWRlckluZm9zLmxvZF9ibHVyKVxuICAgICAgICAjIFJlZ2lzdGVyIGJ1aWx0LWluIHBpeGVsYXRlIGVmZmVjdFxuICAgICAgICBncy5FZmZlY3QucmVnaXN0ZXJFZmZlY3QoZ3MuRWZmZWN0LmZyYWdtZW50U2hhZGVySW5mb3MucGl4ZWxhdGUpXG5cbiAgICAgICAgIyBUaGlzIGlzIGFuIGV4YW1wbGUgb2YgaG93IHRvIHJlZ2lzdGVyIHlvdXIgb3duIHNoYWRlci1lZmZlY3QuXG4gICAgICAgICMgU2VlIEVmZmVjdHMgPiBDaXJjdWxhckRpc3RvcnRpb25FZmZlY3Qgc2NyaXB0IGZvciBtb3JlIGluZm8uXG4gICAgICAgICMgZ3MuQ2lyY3VsYXJEaXN0b3J0aW9uRWZmZWN0LnJlZ2lzdGVyKClcbiAgICAjIyMqXG4gICAgKiBJbml0aWFsaXplcyB0aGUgTGl2ZTJELiBJZiBMaXZlMkQgaXMgbm90IGF2YWlsYWJsZSwgaXQgZG9lcyBub3RoaW5nLiBOZWVkcyB0byBiZVxuICAgICogY2FsbGVkIGJlZm9yZSB1c2luZyBMaXZlMkQuXG4gICAgKlxuICAgICogQG1ldGhvZCBzZXR1cExpdmUyRFxuICAgICMjI1xuICAgIHNldHVwTGl2ZTJEOiAtPlxuICAgICAgICBMaXZlMkQuaW5pdCgpXG4gICAgICAgIExpdmUyRC5zZXRHTCgkZ2wpXG4gICAgICAgIExpdmUyREZyYW1ld29yay5zZXRQbGF0Zm9ybU1hbmFnZXIobmV3IEwyRFBsYXRmb3JtTWFuYWdlcigpKVxuXG4gICAgIyMjKlxuICAgICogQ3JlYXRlcyB0aGUgZnJhbWUtY2FsbGJhY2sgZnVuY3Rpb24gY2FsbGVkIG9uY2UgcGVyIGZyYW1lIHRvIHVwZGF0ZSBhbmQgcmVuZGVyXG4gICAgKiB0aGUgZ2FtZS5cbiAgICAqXG4gICAgKiBAbWV0aG9kIHNldHVwTGl2ZTJEXG4gICAgKiBAcmV0dXJuIHtGdW5jdGlvbn0gVGhlIGZyYW1lLWNhbGxiYWNrIGZ1bmN0aW9uLlxuICAgICMjI1xuICAgIGNyZWF0ZUZyYW1lQ2FsbGJhY2s6IC0+XG4gICAgICAgIGNhbGxiYWNrID0gbnVsbFxuXG4gICAgICAgIGlmICRQQVJBTVMucHJldmlldz8gb3IgKCRQQVJBTVMudGVzdE9mZmxpbmUgJiYgd2luZG93LnBhcmVudCAhPSB3aW5kb3cpXG4gICAgICAgICAgICBjYWxsYmFjayA9ICh0aW1lKSA9PlxuICAgICAgICAgICAgICAgIHRyeVxuICAgICAgICAgICAgICAgICAgICBpZiAkUEFSQU1TLnByZXZpZXcgJiYgISRQQVJBTVMucHJldmlldy5lcnJvclxuICAgICAgICAgICAgICAgICAgICAgICAgQHVwZGF0ZUZyYW1lKClcbiAgICAgICAgICAgICAgICBjYXRjaCBleFxuICAgICAgICAgICAgICAgICAgICBpZiAkUEFSQU1TLnByZXZpZXcgb3IgR2FtZU1hbmFnZXIuaW5MaXZlUHJldmlld1xuICAgICAgICAgICAgICAgICAgICAgICAgJFBBUkFNUy5wcmV2aWV3ID0gZXJyb3I6IGV4XG4gICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKGV4KVxuICAgICAgICBlbHNlXG4gICAgICAgICAgICBjYWxsYmFjayA9ICh0aW1lKSA9PiBAdXBkYXRlRnJhbWUoKVxuXG4gICAgICAgIHJldHVybiBjYWxsYmFja1xuXG4gICAgIyMjKlxuICAgICogQ3JlYXRlcyB0aGUgc3RhcnQgc2NlbmUgb2JqZWN0LiBJZiBhbiBpbnRyby1zY2VuZSBpcyBzZXQsIHRoaXMgbWV0aG9kIHJldHVybnMgdGhlXG4gICAgKiBpbnRyby1zY2VuZS4gSWYgdGhlIGdhbWUgcnVucyBpbiBMaXZlLVByZXZpZXcsIHRoaXMgbWV0aG9kIHJldHVybnMgdGhlIHNlbGVjdGVkXG4gICAgKiBzY2VuZSBpbiBlZGl0b3IuXG4gICAgKlxuICAgICogQG1ldGhvZCBjcmVhdGVTdGFydFNjZW5lXG4gICAgKiBAcmV0dXJuIHtncy5PYmplY3RfQmFzZX0gVGhlIHN0YXJ0LXNjZW5lLlxuICAgICMjI1xuICAgIGNyZWF0ZVN0YXJ0U2NlbmU6IC0+XG4gICAgICAgIHNjZW5lID0gbnVsbFxuICAgICAgICBpbnRyb1NjZW5lID0gbnVsbFxuXG4gICAgICAgIGlmIFJlY29yZE1hbmFnZXIuc3lzdGVtLnVzZUludHJvU2NlbmVcbiAgICAgICAgICAgIGludHJvU2NlbmUgPSBEYXRhTWFuYWdlci5nZXREb2N1bWVudFN1bW1hcnkoUmVjb3JkTWFuYWdlci5zeXN0ZW0uaW50cm9JbmZvPy5zY2VuZT8udWlkKVxuXG4gICAgICAgIGlmICRQQVJBTVMucHJldmlldyBvciBpbnRyb1NjZW5lXG4gICAgICAgICAgICBzY2VuZSA9IG5ldyB2bi5PYmplY3RfU2NlbmUoKVxuICAgICAgICAgICAgc2NlbmUuc2NlbmVEYXRhLnVpZCA9ICRQQVJBTVMucHJldmlldz8uc2NlbmUudWlkIHx8IFJlY29yZE1hbmFnZXIuc3lzdGVtLmludHJvSW5mbz8uc2NlbmU/LnVpZFxuICAgICAgICAgICAgc2NlbmUuZXZlbnRzLm9uIFwiZGlzcG9zZVwiLCAoZSkgLT4gR2FtZU1hbmFnZXIuc2NlbmVEYXRhLnVpZCA9IG51bGxcbiAgICAgICAgZWxzZSBpZiBMYW5ndWFnZU1hbmFnZXIubGFuZ3VhZ2VzLmxlbmd0aCA+IDFcbiAgICAgICAgICAgIHNjZW5lID0gbmV3IGdzLk9iamVjdF9MYXlvdXQoXCJsYW5ndWFnZU1lbnVMYXlvdXRcIilcbiAgICAgICAgZWxzZVxuICAgICAgICAgICAgc2NlbmUgPSBuZXcgZ3MuT2JqZWN0X0xheW91dChcInRpdGxlTGF5b3V0XCIpXG5cbiAgICAgICAgcmV0dXJuIHNjZW5lXG5cbiAgICAjIyMqXG4gICAgKiBCb290cyB0aGUgZ2FtZSBieSBzZXR0aW5nIHVwIHRoZSBhcHBsaWNhdGlvbiB3aW5kb3cgYXMgd2VsbCBhcyB0aGUgdmlkZW8sIGF1ZGlvIGFuZCBpbnB1dCBzeXN0ZW0uXG4gICAgKlxuICAgICogQG1ldGhvZCBzdGFydFxuICAgICMjI1xuICAgIHN0YXJ0OiAtPlxuICAgICAgICBAc2V0dXBBcHBsaWNhdGlvbigpXG4gICAgICAgIEBzZXR1cEVmZmVjdHMoKVxuICAgICAgICBAc2V0dXBWaWRlbygpXG4gICAgICAgIEBzZXR1cExpdmUyRCgpXG4gICAgICAgIEBzZXR1cElucHV0KClcblxuICAgICAgICBAbG9hZCA9PiBTY2VuZU1hbmFnZXIuc3dpdGNoVG8oQGNyZWF0ZVN0YXJ0U2NlbmUoKSlcblxuXG4jIFRoZSBlbnRyeSBwb2ludCBvZiB0aGUgZ2FtZS5cbmdzLk1haW4gPSBuZXcgTWFpbigpXG5ncy5BcHBsaWNhdGlvbi5pbml0aWFsaXplKClcbmdzLkFwcGxpY2F0aW9uLm9uUmVhZHkgPSAtPlxuICAgICMgQWRkIG1ldGEgZGF0YSB0byBhbGwgY2xhc3Mgb2JqZWN0cyBuZWNlc3NhcnkgZm9yIG9iamVjdCBzZXJpYWxpemF0aW9uLlxuICAgIE9iamVjdC5rZXlzKGdzKS5mb3JFYWNoIChrKSAtPiBnc1trXS4kbmFtZXNwYWNlID0gXCJnc1wiOyBnc1trXS4kbmFtZSA9IGtcbiAgICBPYmplY3Qua2V5cyh2bikuZm9yRWFjaCAoaykgLT4gdm5ba10uJG5hbWVzcGFjZSA9IFwidm5cIjsgdm5ba10uJG5hbWUgPSBrXG4gICAgT2JqZWN0LmtleXModWkpLmZvckVhY2ggKGspIC0+IHVpW2tdLiRuYW1lc3BhY2UgPSBcInVpXCI7IHVpW2tdLiRuYW1lID0ga1xuXG4gICAgZ3MuTWFpbi5zdGFydCgpXG5cblxuXG5cblxuIl19
 //# sourceURL=Main_107.js
+window.MOE = window.MOE || {};
+window.MOE.MessageTokens = {};
+(function() {
+    class MessageTextRendererMessageTokens extends gs.Component_MessageTextRenderer {
+        constructor() {
+            super();
+            
+            let that = this;
+            this.onLinkLabelClick = function(e) {
+                that.clear();
+                SceneManager.scene.interpreter.jumpToLabel(e.data.linkData.labelName);
+            };
+        }
+        
+        processControlToken(token, formattingOnly) {
+            if (formattingOnly) {
+                return super.processControlToken(token, formattingOnly);
+            }
+            let result = null;
+            
+            if (token.code === "LabelLK") {
+                if (token.value == 'E') {
+                    let object = new ui.Object_Hotspot();
+                    object.enabled = true;
+                    object.setup();
+                    
+                    this.addCustomObject(object);
+                    
+                    object.dstRect.x = this.object.dstRect.x + this.object.origin.x + this.customData.linkData.cx;
+                    object.dstRect.y = this.object.dstRect.y + this.object.origin.y + this.customData.linkData.cy;
+                    object.dstRect.width = this.currentX - this.customData.linkData.cx;
+                    object.dstRect.height = this.currentLineHeight;
+
+                    object.events.on("click", gs.CallBack("onLinkLabelClick", this), {linkData: this.customData.linkData}, this);
+                }
+                else {
+                    this.customData.linkData = { cx: this.currentX, cy: this.currentY, labelName: token.value.toString(), tokenIndex: this.tokenIndex };
+                }
+            } else if (token.code === "LabelSLK") {
+                if (token.value === 'E') {
+                    this.currentSprite.bitmap.clearRect(this.customData.linkData.cx,
+                                                    this.customData.linkData.cy,
+                                                    this.currentX - this.customData.linkData.cx + this.object.font.borderSize*2,
+                                                    this.currentLineHeight);
+                    let line = this.lines[this.line].content;
+                    let linkStart = this.findToken(this.tokenIndex - 1, "LabelSLK", -1, line);
+                    let textTokens = this.findTokensBetween(this.customData.linkData.tokenIndex, this.tokenIndex, null, line);
+                    
+                    let object = new ui.Object_Text();
+                    object.text = textTokens.select(function(x) { return x.value; }).join("");
+                    object.sizeToFit = true;
+                    object.formatting = true;
+                    object.wordWrap = false;
+                    object.ui = new ui.Component_UIBehavior();
+                    object.enabled = true;
+                    object.addComponent(new gs.Component_HotspotBehavior());
+                    object.addComponent(object.ui);
+                  
+                    if (this.customData.linkData.styleIndex === -1) {
+                        ui.UIManager.addControlStyles(object, ["hyperlink"]);
+                    } else {
+                        ui.UIManager.addControlStyles(object, ["hyperlink-" + this.customData.linkData.styleIndex]);
+                    }
+                    
+                    object.setup();
+                    
+                    this.addCustomObject(object);
+                    
+                    object.dstRect.x = this.object.dstRect.x + this.object.origin.x + this.customData.linkData.cx;
+                    object.dstRect.y = this.object.dstRect.y + this.object.origin.y + this.customData.linkData.cy;
+
+                    object.events.on("click", gs.CallBack("onLinkLabelClick", this), { linkData: this.customData.linkData }, this);
+                } else {
+                    let value = token.value.toString();
+                    if (value.contains(",")) {
+                        let values = value.split(",");
+                        this.customData.linkData = { cx: this.currentX, cy: this.currentY, labelName: values[0].toString(), styleIndex: parseInt(values[1]), tokenIndex: this.tokenIndex };
+                    } else {
+                        this.customData.linkData = { cx: this.currentX, cy: this.currentY, labelName: value, tokenIndex: this.tokenIndex, styleIndex: -1 };
+                    }
+                }
+            } else {
+                result = super.processControlToken(token, formattingOnly);
+            }
+                
+            
+            return result;
+        }
+    }
+    
+    gs.Component_MessageTextRenderer = MessageTextRendererMessageTokens;
+}());
+/**
+ * Yami Engine Moe - Message Extension
+ * 
+ * This extension provides more tokens/code for message, allows users customizing 
+ * the messages and interactions with text.
+ * 
+ * ============================================================================
+ * Added Message Tokens:
+ * 
+ * {LabelLK:LabelName}Link Text{LabelLK:E}
+ *   - Click the `Link Text` will Jump To Label `LabelName`
+ * 
+ * {LabelSLK:LabelName,id}Link Text{LabelSLK:E}
+ *   - Click the `Link Text` will Jump To Label `LabelName`
+ *   - Styled with style `hyperlink-id`, or `hyperlink` if id is not defined
+ * 
+ */
+(function() {
+    ui.UIManager.styles["hyperlink-10000"] = Object.assign({}, ui.UIManager.styles.advMessageText, {
+        "font": Object.assign({}, ui.UIManager.styles.advMessageText.font, {
+            // Start Font Settings
+            "underline": true
+            // End Font Settings
+        })
+    });
+    
+    ui.UIManager.styles["hyperlink-20000"] = Object.assign({}, ui.UIManager.styles.nvlMessageText, {
+        "font": Object.assign({}, ui.UIManager.styles.nvlMessageText.font, {
+            // Start Font Settings
+            "underline": true
+            // End Font Settings
+        })
+    });
+    
+    ui.UIManager.styles["hyperlink-10001"] = Object.assign({}, ui.UIManager.styles.advMessageText);
+    ui.UIManager.styles["hyperlink-10001:hover"] = Object.assign({}, ui.UIManager.styles["hyperlink-10001"], {
+        "font": Object.assign({}, ui.UIManager.styles["hyperlink-10001"].font, {
+            // Start Font Settings
+            "underline": true
+            // End Font Settings
+        })
+    });
+    
+    ui.UIManager.styles["hyperlink-20001"] = Object.assign({}, ui.UIManager.styles.nvlMessageText);
+    ui.UIManager.styles["hyperlink-20001:hover"] = Object.assign({}, ui.UIManager.styles["hyperlink-20001"], {
+        "font": Object.assign({}, ui.UIManager.styles["hyperlink-20001"].font, {
+            // Start Font Settings
+            "underline": true
+            // End Font Settings
+        })
+    });
+    
+    ui.UIManager.styles["hyperlink-10002"] = Object.assign({}, ui.UIManager.styles.advMessageText);
+    ui.UIManager.styles["hyperlink-10002:hover"] = Object.assign({}, ui.UIManager.styles["hyperlink-10002"], {
+        "font": Object.assign({}, ui.UIManager.styles["hyperlink-10002"].font, {
+            // Start Font Settings
+            "outline": { "color": [231, 76, 60, 255], "size": 4 }
+            // End Font Settings
+        })
+    });
+    
+    ui.UIManager.styles["hyperlink-20002"] = Object.assign({}, ui.UIManager.styles.nvlMessageText);
+    ui.UIManager.styles["hyperlink-20002:hover"] = Object.assign({}, ui.UIManager.styles["hyperlink-20002"], {
+        "font": Object.assign({}, ui.UIManager.styles["hyperlink-20002"].font, {
+            // Start Font Settings
+            "outline": { "color": [231, 76, 60, 255], "size": 4 }
+            // End Font Settings
+        })
+    });
+    
+    ui.UIManager.styles["hyperlink-10003"] = Object.assign({}, ui.UIManager.styles.advMessageText, {
+        "font": Object.assign({}, ui.UIManager.styles.advMessageText.font, {
+            // Start Font Settings
+            "underline": true
+            // End Font Settings
+        })
+    });
+    ui.UIManager.styles["hyperlink-10003:hover"] = Object.assign({}, ui.UIManager.styles["hyperlink-10003"], {
+        "font": Object.assign({}, ui.UIManager.styles["hyperlink-10003"].font, {
+            // Start Font Settings
+            "outline": { "color": [231, 76, 60, 255], "size": 4 }
+            // End Font Settings
+        })
+    });
+    
+    ui.UIManager.styles["hyperlink-20003"] = Object.assign({}, ui.UIManager.styles.nvlMessageText, {
+        "font": Object.assign({}, ui.UIManager.styles.nvlMessageText.font, {
+            // Start Font Settings
+            "underline": true
+            // End Font Settings
+        })
+    });
+    ui.UIManager.styles["hyperlink-20003:hover"] = Object.assign({}, ui.UIManager.styles["hyperlink-20003"], {
+        "font": Object.assign({}, ui.UIManager.styles["hyperlink-20003"].font, {
+            // Start Font Settings
+            "outline": { "color": [231, 76, 60, 255], "size": 4 }
+            // End Font Settings
+        })
+    });
+}());
+
+/**
+ * Yami Engine Moe - Message Styles
+ * 
+ * This extension provides more message styles and visuals. Should be placed under
+ * any message layout/style script.
+
+ * ============================================================================
+ * Added Link Styles:
+ * 
+ * These styles are used for Stylable Link, such as SLK and LabelSLK. See the
+ * Styles and config things between Start Font Setting and End Font Setting.
+ * 
+ * For ADV (Default Message Style)
+ *  10000 - Underlined link
+ *  10001 - Secret Link (Hover to underlined)
+ *  10002 - Secret Link (Hover to glow)
+ *  10003 - Underlined link with Hover Glow
+ * 
+ * For NVL (Novel Message Style)
+ *  20000 - Underlined link
+ *  20001 - Secret Link (Hover to underlined)
+ *  20002 - Secret Link (Hover to glow)
+ *  20003 - Underlined link with Hover Glow
+ * 
+ */
