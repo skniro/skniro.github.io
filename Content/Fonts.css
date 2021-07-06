@@ -1,0 +1,12 @@
+﻿@font-face {
+    font-family: 'SourceHanSansCN';
+    src: url('../assets/SourceHanSansCN-Light.otf')format('opentype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'SourceHanSansJP';
+    src: url('../assets/SourceHanSansJP-Light.otf')format('opentype'), /* Safari, Android, iOS */
+}
+
+body {
+    font-family: 'SourceHanSansJP','SourceHanSansCN'
+}
