@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="zxx" class="no-js">
 <head>
-    <script src="assets/jquery.min.js?v=3.3.1"></script>
+    <script src="assets/jquery-3.5.1.min.js"></script>
     <title>skniro tech team</title>
     <style>
         .page .intro .intro-swiper .intro-swiper-box {
@@ -22,12 +22,21 @@
             $("#new-header").load("master.html");
         </script>
     </div>
+    <div id="visualNav" class="visual__nav">
+        <ul>
+            <li><a href="/index.html" class="insite"><span>INDEX</span></a></li>
+            <li><a href="/project.html" class="insite"><span>PROJECT</span></a></li>
+            <li><a href="/amWiki/index.html?file=home-首页" class="insite"><span>DOCS</span></a></li>
+            <li><a href="../music/character.htm" class="insite"><span>MUSIC</span></a></li>
+            <li><a href="About.html" class="insite"><span>CAST/STAFF</span></a></li>
+        </ul>
+    </div>
     <div align="center">
         <div>
             <img width=100% src="img/web.jpg" alt="stg">
         </div>
     </div>
-    <div class="page web-container;" style="background-color:white">
+    <div class="page web-container ms-bgColor-themeLighter" >
         <div class="top-news">
             <div class="top-news-wrapper">
                 <div class="swiper-container swiper-container-horizontal" align="center">
@@ -116,22 +125,20 @@
         <div align="center">
             <div class="container">
                 <div class="text" style=" text-align:center;">
-                    <h2>STT团队2018年度作品汇总展示</h2>
-                    <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=179587218&aid=795274571&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
-                    <h2>STT&GCBT团队2019年度作品汇总展示</h2>
-                    <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=179587218&aid=795274571&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                    <p>【小钳子/PV付】中文版《未闻花名》片尾曲翻唱</p>
+                    <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=274329899&aid=543467730&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                    <p>【STG三周年/4K】STG新版官方网站</p>
+                    <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=274292028&aid=543423732&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                    <p>【STG三周年/4K】STG新版官方网站</p>
+                    <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=274262391&aid=928424590&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        <ContentPlaceHolder ID="MainContent" runat="server">
-            <ContentPlaceHolder>
-                <hr />
-
-                <footer>
-                    <p class="text-right"><strong>&copy; 2020- skniro teah team</strong></p>
-                </footer>
+    <div id="new-footer">
+        <script>
+            $("#new-footer").load("master2.html");
+        </script>
     </div>
 </body>
 </html>
