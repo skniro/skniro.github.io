@@ -29,9 +29,9 @@ GCBT部长：Blackhold黑洞
 音乐部部长：GPAsuna  
 游戏部部长：Blackhold黑洞  
 附录：成员名单   
-音乐部：音乐人-小钳子、GPAsuna、ฅ˒˒Hero啪啪
+音乐部：音乐人-小钳子、GPAsuna
 GCBT：Blackhold黑洞、是晓帅吖、创世方块、蒂洁修特利尼、GuitarC_、很傻の小杰 、コマエダ ユー、四喜.
-美术组：淼淼莉莉娅·阿琳
+美术组：淼淼、莉莉娅·阿琳
 文案组：零
 
 ## 成员&官方账号
@@ -39,9 +39,7 @@ Bilibili
 躺在垃圾堆
 https://space.bilibili.com/396861163/
 收破烂的隐世者
-https://space.bilibili.com/255084052/
-啪大壮
-https://space.bilibili.com/392622/
+https://space.bilibili.com/255084052/  
 可甜可盐小钳子
 https://space.bilibili.com/12131318/
 skniro  
@@ -65,6 +63,3 @@ https://space.bilibili.com/386440722
 
 ## 官方服务器
 我的世界服务器：  
-PC（java 1.14.X-1.16.X）:dc3.lankodata.com:10842
-1.14.X-1.16.X
-ip1：dc3.lankodata.com:10842

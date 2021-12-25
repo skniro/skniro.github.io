@@ -10,48 +10,47 @@
     <link rel="stylesheet" type="text/css" href="amWiki/css/lhjs.github-gist.css" />
     <link rel="stylesheet" type="text/css" href="amWiki/css/amWiki.css" />
     <link rel="stylesheet" href="amWiki/assets/basic.css">
-    <link href="amWiki/assets/fabric.components.css" rel="stylesheet" />
-    <link href="amWiki/assets/fabric.css" rel="stylesheet" />
-    <script src="amWiki/assets/jquery.min.js?v=3.3.1"></script>
-
+    <link href="../Content/fabric.components.css" rel="stylesheet" />
+    <link href="../Content/fabric.css" rel="stylesheet" />
+    <script src="../assets/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
     <!-- 头部 -->
-    <header class="header">
-        <div class="header-inner">
-            <a class="logo" href="?file=首页">
+    <header class="ms-Grid ms-bgColor-themeLighterAlt header">
+        <div class="ms-font-xs ms-fontColor-black header-inner">
+            <a class="logo ms-Fabric" href="?file=首页">
                 <img src="https://www.sttsakara.top/STG.png" /><i></i>
-                <b>STG</b>
-                <span>v3.5B</span>
+                <b class="ms-font-xs ms-fontColor-black">STG</b>
+                <span>v3.6</span>
             </a>
                 <div class="mini-header__content mini-header--login">
-                    <div class="nav-link">
+                    <div class="ms-font-xs ms-fontColor-black nav-link">
                         <ul class="nav-link-ul mini">
                             <li class="nav-link-item">
                                 <span>
-                                    <a href="/index.html" class="link van-popover__reference" aria-describedby="van-popover-4657" tabindex="0">
-                                        主站
+                                    <a href="/index.html" class="ms-font-m ms-fontColor-black" tabindex="0">
+                                        INDEX
                                     </a>
                                 </span>
                             </li>
                             <li class="nav-link-item">
                                 <span>
-                                    <a href="/project.html" target="_blank" class="link van-popover__reference" aria-describedby="van-popover-5264" tabindex="0">Blessing Software</a>
+                                    <a href="/project.html" target="_blank" class="ms-font-m ms-fontColor-black" tabindex="0">PROJECT</a>
                                 </span>
                             </li>
                             <li class="nav-link-item">
                                 <span>
-                                    <a href="/amWiki/index.html?file=home-首页" target="_blank" class="link van-popover__reference" tabindex="0">技术文档</a>
+                                    <a href="/amWiki/index.html?file=home-首页" target="_blank" class="ms-font-m ms-fontColor-black" tabindex="0">DOCS</a>
                                 </span>
                             </li>
                             <li class="nav-link-item">
                                 <span>
-                                    <a href="/music.html" target="_blank" class="link van-popover__reference" tabindex="0">音乐部</a>
+                                    <a href="/music.html" target="_blank" class="ms-font-m ms-fontColor-black" tabindex="0">MUSIC</a>
                                 </span>
                             </li>
                             <li class="nav-link-item">
-                                <a href="About.html" target="_blank" class="link">关于STG</a>
+                                <a href="About.html" target="_blank" class="ms-font-m ms-fontColor-black">CAST/STAFF</a>
                             </li>
                         </ul>
                     </div>
@@ -64,7 +63,7 @@
             </div>
 </header>
     <!-- 页面 -->
-    <div class="container" id="container">
+    <div class="ms-Grid container" id="container">
         <div class="nav" id="nav">
             <div class="menu-filter">
                 <svg>
@@ -72,11 +71,6 @@
                 </svg>
                 <input type="text" id="menuFilter" value="" placeholder="请输入筛选条件" title="请输入筛选条件" />
                 <i class="off" title="清空筛选">&times;</i>
-            </div>
-            <div class="menu-search" id="searchShow" title="全库搜索">
-                <svg>
-                    <use xlink:href="#icon:search"></use>
-                </svg>
             </div>
             <nav class="menubar scroller" id="menuBar" data-x-rolling="true">
                 <div class="scroller-inner">
@@ -197,7 +191,7 @@
     </footer>
     <!-- mounts -->
     <div class="hidden" aw-include="mountLinks">
-        <script>AWConfig = { "name": "STG", "ver": "v3.5B", "logo": "https://www.sttsakara.top/STG.png", "version": "v3.5B", "testing": false, "colour": "#4296eb", "pageMounts": false, "githubUrl": "", "libraryPrefix": "" }</script>
+        <script>AWConfig = { "name": "STG", "ver": "v3.6", "logo": "https://www.sttsakara.top/STG.png", "version": "v3.6", "testing": false, "colour": "#4296eb", "pageMounts": false, "githubUrl": "", "libraryPrefix": "" }</script>
     </div>
     <!-- js -->
     <div class="hidden">
