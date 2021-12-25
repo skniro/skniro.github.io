@@ -22,24 +22,18 @@ GCBT：实况主（UP主）美术绘画。
 音乐部：音乐，表达出声音的美好。  
 游戏部：QQ飞车车队 Hypixel KoB公会 材质 地图 BGM包制作 服务器Project Alice游戏项目  
 
-## STG人员  
-执行代理：暂缺
-行政顾问：GPAsuna 、Blackhold黑洞、四喜.
-GCBT部长：Blackhold黑洞  
+## STG管理组  
+执行代理：Blackhold黑洞
+行政顾问：GPAsuna 、Blackhold黑洞
+GCBT部长：很傻の小杰    
 音乐部部长：GPAsuna  
-游戏部部长：Blackhold黑洞  
-附录：成员名单   
-音乐部：音乐人-小钳子、GPAsuna
-GCBT：Blackhold黑洞、是晓帅吖、创世方块、蒂洁修特利尼、GuitarC_、很傻の小杰 、コマエダ ユー、四喜.
-美术组：淼淼、莉莉娅·阿琳
-文案组：零
 
 ## 成员&官方账号
 Bilibili  
 躺在垃圾堆
-https://space.bilibili.com/396861163/
+https://space.bilibili.com/396861163/  
 收破烂的隐世者
-https://space.bilibili.com/255084052/  
+https://space.bilibili.com/255084052/    
 可甜可盐小钳子
 https://space.bilibili.com/12131318/
 skniro  
@@ -59,7 +53,15 @@ https://space.bilibili.com/382932215
 创世方块
 https://space.bilibili.com/233061123/
 STG团队    
-https://space.bilibili.com/386440722
+https://space.bilibili.com/386440722  
+雾雨妮沙子  
+https://space.bilibili.com/344789  
+HuaJiTuan-幻龙菌  
+https://space.bilibili.com/383053958   
+极光没有醒  
+https://space.bilibili.com/501696571  
+Airally
+https://space.bilibili.com/17060268  
 
 ## 官方服务器
 我的世界服务器：  
