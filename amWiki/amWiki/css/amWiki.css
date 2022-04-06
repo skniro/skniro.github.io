@@ -40,17 +40,17 @@ body{position:relative;height:100%;background:#e7e8eb;}
 .hidden{display:none !important;}
 
 /* ---------- header ---------- */
-.header{width:100%;height:70px;font-family:Microsoft YaHei,STXihei,STHeiti,Verdana,Arial,Helvetica,sans-serif;;background:#fff;border-top:#0373e4 6px solid;border-bottom:#c3c4c6 1px solid;}
-.header .header-inner{margin:0 30px;}
-.header .logo{float:left;padding-top:15px;}
-.header .logo img{float:left;margin-left:5px;max-height:32px;}
-.header .logo i{float:left;display:block;width:5px;height:5px;margin:16px 0 0 3px;background:#666666;border-radius:50%;}
-.header .logo b{float:left;max-width:470px;height:32px;padding-left:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:24px;font-weight:normal;color:#666;}
-.header .logo span{float:left;padding:0 3px;margin:1px 0 0 2px;font-size:xx-small;color:#fff;background:#bbbbbb;}
-.header .menu-icon{display:none;}
+.header2{width:100%;height:70px;font-family:Microsoft YaHei,STXihei,STHeiti,Verdana,Arial,Helvetica,sans-serif;;background:#fff;border-top:#0373e4 6px solid;border-bottom:#c3c4c6 1px solid;}
+.header2 .header-inner2{margin:0 30px;}
+.header2 .logo{float:left;padding-top:15px;}
+.header2 .logo img{float:left;margin-left:5px;max-height:32px;}
+.header2 .logo i{float:left;display:block;width:5px;height:5px;margin:16px 0 0 3px;background:#666666;border-radius:50%;}
+.header2 .logo b{float:left;max-width:470px;height:32px;padding-left:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:24px;font-weight:normal;color:#666;}
+.header2 .logo span{float:left;padding:0 3px;margin:1px 0 0 2px;font-size:xx-small;color:#fff;background:#bbbbbb;}
+.header2 .menu-icon{display:none;}
 
 /* ---------- container ---------- */
-.container{position:relative;margin:20px 18px 0;background:url(../images/menubar_bg.png) repeat-y #fff;border:#c3c4c6 1px solid;border-top:#4296eb 2px solid;}
+.container2{position:relative;margin:20px 18px 0;background:url(../images/menubar_bg.png) repeat-y #fff;border:#c3c4c6 1px solid;border-top:#4296eb 2px solid;}
 
 /* ---------- menu ---------- */
 .container .nav{position:absolute;left:0px;top:0px;width:250px;height:100%;}
