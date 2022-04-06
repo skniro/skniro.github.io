@@ -10,3 +10,33 @@
 body {
     font-family: 'SourceHanSansJP','SourceHanSansCN'
 }
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    width: 1208px;
+}
+
+.jumbotron {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    background-color: #eeeeee;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
