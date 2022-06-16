@@ -10,7 +10,7 @@ abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite
 }
 
 body {
-    background-image: url(https://api.xygeng.cn/Bing/);
+    background-image: url(https://api.dujin.org/bing/1920.php);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -1644,7 +1644,7 @@ img {
         }
 
     body {
-        background-image: url(https://api.xygeng.cn/Bing/);
+        background-image: url(https://api.dujin.org/bing/1920.php);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-attachment: fixed;
