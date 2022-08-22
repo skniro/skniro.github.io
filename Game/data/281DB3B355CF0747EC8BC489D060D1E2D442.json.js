@@ -5,7 +5,7 @@ GS.dataCache['281DB3B355CF0747EC8BC489D060D1E2D442'] = {
     "items": {
         "name": "Toggle Auto Message",
         "type": "data_record",
-        "order": 9,
+        "order": 8,
         "category": "commonEvents",
         "id": "281DB3B355CF0747EC8BC489D060D1E2D442",
         "isFolder": false,

@@ -1,10 +1,11 @@
 GS.dataCache['55A4F79B22FE6741EB6B2DB2F74BFF8651E1'] = {
     "uid": "55A4F79B22FE6741EB6B2DB2F74BFF8651E1",
-    "isLoaded": false,
-    "lastModificationTime": null,
+    "isLoaded": true,
+    "lastModificationTime": 0,
     "items": {
         "name": "Yui_05",
         "type": "data_record",
+        "order": 4,
         "category": "characterExpressions",
         "isFolder": false,
         "data": {
@@ -17,11 +18,12 @@ GS.dataCache['55A4F79B22FE6741EB6B2DB2F74BFF8651E1'] = {
             "idle": [
                 {
                     "resource": {
-                        "name": "Yui01",
+                        "name": "Yui01.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
-                        "tone": null
+                        "tone": null,
+                        "folderPath": "Graphics/Characters/Yui"
                     }
                 }
             ],
@@ -31,7 +33,6 @@ GS.dataCache['55A4F79B22FE6741EB6B2DB2F74BFF8651E1'] = {
         },
         "id": "55A4F79B22FE6741EB6B2DB2F74BFF8651E1",
         "localizableStrings": {},
-        "order": 12,
         "parentId": "9E6AC3B4110348468A39FC07FA2AD06E8708"
     },
     "summary": [

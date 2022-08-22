@@ -35,7 +35,7 @@ GS.dataCache['07DDA0716161F104'] = {
         "idCounter": 954,
         "code": "en_US",
         "icon": {
-            "name": "United-Kingdom",
+            "name": "United-Kingdom.png",
             "hue": 0,
             "opacity": 255,
             "blending": 0,
@@ -43,7 +43,8 @@ GS.dataCache['07DDA0716161F104'] = {
                 "red": 0,
                 "green": 0,
                 "blue": 0
-            }
+            },
+            "folderPath": "Graphics/Icons"
         },
         "bundleUid": "EA69DA63K0929A40BCSA42DE3A02853789EF",
         "writingDirection": 0,
@@ -52,5 +53,6 @@ GS.dataCache['07DDA0716161F104'] = {
     "summary": [
         "name",
         "type"
-    ]
+    ],
+    "externalItems": []
 }

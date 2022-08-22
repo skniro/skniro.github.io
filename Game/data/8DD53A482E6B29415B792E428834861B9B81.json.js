@@ -1,10 +1,11 @@
 GS.dataCache['8DD53A482E6B29415B792E428834861B9B81'] = {
     "uid": "8DD53A482E6B29415B792E428834861B9B81",
     "isLoaded": true,
-    "lastModificationTime": null,
+    "lastModificationTime": 0,
     "items": {
         "name": "新記錄",
         "type": "data_record",
+        "order": 12,
         "category": "commonEvents",
         "id": "8DD53A482E6B29415B792E428834861B9B81",
         "isFolder": false,
@@ -569,7 +570,6 @@ GS.dataCache['8DD53A482E6B29415B792E428834861B9B81'] = {
                 }
             ]
         },
-        "order": 12,
         "localizableStrings": {}
     },
     "summary": [

@@ -1,10 +1,11 @@
 GS.dataCache['9B4BA59543AC9044C5588AF1F3F29AAE8E08'] = {
     "uid": "9B4BA59543AC9044C5588AF1F3F29AAE8E08",
     "isLoaded": true,
-    "lastModificationTime": null,
+    "lastModificationTime": 0,
     "items": {
         "name": "CG",
         "type": "data_record",
+        "order": 4,
         "category": "cgGallery",
         "id": "9B4BA59543AC9044C5588AF1F3F29AAE8E08",
         "isFolder": false,
@@ -14,7 +15,7 @@ GS.dataCache['9B4BA59543AC9044C5588AF1F3F29AAE8E08'] = {
             "listed": true,
             "slot": 4,
             "graphic": {
-                "name": "01_phone",
+                "name": "01_phone.png",
                 "hue": 0,
                 "opacity": 255,
                 "blending": 0,
@@ -22,7 +23,8 @@ GS.dataCache['9B4BA59543AC9044C5588AF1F3F29AAE8E08'] = {
                     "red": 0,
                     "green": 0,
                     "blue": 0
-                }
+                },
+                "folderPath": "Graphics/Pictures/Items"
             },
             "thumb": {
                 "name": ""
@@ -34,8 +36,7 @@ GS.dataCache['9B4BA59543AC9044C5588AF1F3F29AAE8E08'] = {
                     "name": "Chapter 1"
                 }
             }
-        },
-        "order": 4
+        }
     },
     "summary": [
         "name",

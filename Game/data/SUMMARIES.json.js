@@ -3,9 +3,9 @@ GS.dataCache['SUMMARIES'] = {
     "items": {
         "07DD30D15041E0DE": {
             "items": {
-                "name": "In-Game UI Example 1080p",
+                "name": "ProjectAlice 1080p",
                 "type": "project",
-                "version": "1.0.1093"
+                "version": "1.0.1111"
             }
         },
         "07DD714151A3B2EA": {
@@ -413,7 +413,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Component_Timer",
                 "type": "game_script",
-                "order": 20
+                "order": 18
             }
         },
         "9D2D1D14K49FAA43CBS8582E7937AF84F3A2": {
@@ -427,14 +427,14 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Component_CommandInterpreter",
                 "type": "game_script",
-                "order": 18
+                "order": 0
             }
         },
         "056C3A1FK171FA46C3SAD66E3F715367DB7C": {
             "items": {
                 "name": "Main",
                 "type": "game_script",
-                "order": 15
+                "order": 7
             }
         },
         "EA69DA63K0929A40BCSA42DE3A02853789EF": {
@@ -466,35 +466,35 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Sprites",
                 "type": "game_script",
-                "order": 2
+                "order": 1
             }
         },
         "0C1D8BE8KDB63A469AS9782EB90E63254DB3": {
             "items": {
                 "name": "Scene",
                 "type": "game_script",
-                "order": 24
+                "order": 23
             }
         },
         "C0268943K60B3A42B7SA6F1EDDCF2F642FD7": {
             "items": {
                 "name": "Managers",
                 "type": "game_script",
-                "order": 3
+                "order": 2
             }
         },
         "C2F9A7C9K48FFA4390S9F39E2E3A8A1D7221": {
             "items": {
                 "name": "Constants",
                 "type": "game_script",
-                "order": 1
+                "order": 0
             }
         },
         "2EC9F946K6417A4973S8308E368608E89B8B": {
             "items": {
                 "name": "Helpers",
                 "type": "game_script",
-                "order": 11
+                "order": 9
             }
         },
         "206B9F77K691EA41C9S92ADE3DC60464A57F": {
@@ -691,7 +691,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "UI",
                 "type": "game_script",
-                "order": 23
+                "order": 22
             }
         },
         "87BE6898K0E78A48FCSB889E1DAAB10BF84B": {
@@ -705,7 +705,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Components",
                 "type": "game_script",
-                "order": 4
+                "order": 3
             }
         },
         "B333A615K38FAA45B8SA13EE1AADAF98EFAF": {
@@ -719,7 +719,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Objects",
                 "type": "game_script",
-                "order": 5
+                "order": 4
             }
         },
         "19D5B266K1082A4D01S85D0E17BE2BBA69F8": {
@@ -892,7 +892,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Layouts",
                 "type": "game_script",
-                "order": 7
+                "order": 6
             }
         },
         "469AC05AK5413A4BBFSBB84ED1385A919FC4": {
@@ -1347,7 +1347,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Animation",
                 "type": "game_script",
-                "order": 25
+                "order": 24
             }
         },
         "C8BBDC08K70C4A4302S9DFBE9A4F740CE150": {
@@ -1944,7 +1944,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Component_InputHandler",
                 "type": "game_script",
-                "order": 22
+                "order": 21
             }
         },
         "411F0100K70CBA4D74S9182EB6723B90632E": {
@@ -2449,7 +2449,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Wait for Input",
                 "type": "event_command",
-                "order": 23
+                "order": 24
             }
         },
         "8F6E1EF43F2154476C6BD7C4254DB6BF42EA": {
@@ -2673,13 +2673,6 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Tint Background",
                 "type": "event_command"
-            }
-        },
-        "BF7CB12110894142C299D341A545C910AA86": {
-            "items": {
-                "name": "None",
-                "type": "data_record",
-                "order": 0
             }
         },
         "FA9F813562EFB84B431961F3FAA000921ED2": {
@@ -4069,7 +4062,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Update Pages",
                 "type": "data_record",
-                "order": 0
+                "order": 1
             }
         },
         "D8E05EB72661774C22191695989A9A5A66FA": {
@@ -4133,7 +4126,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "CG Gallery",
                 "type": "data_record",
-                "order": 0
+                "order": 1
             }
         },
         "FABC971758BBE84B008B76966E726CE87EAE": {
@@ -4351,7 +4344,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Effects",
                 "type": "game_script",
-                "order": 6
+                "order": 5
             }
         },
         "D3A4011838BF80460B58F607AF6563D9221E": {
@@ -4370,7 +4363,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "In-Game UI",
                 "type": "game_script",
-                "order": 8
+                "order": 7
             }
         },
         "C0BC8A06491A63453559E6282D9822554834": {
@@ -4420,7 +4413,7 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Component_IntervalTimer",
                 "type": "game_script",
-                "order": 21
+                "order": 19
             }
         },
         "C49891BD5F4028431468E0A4176B6D7CFE92": {
@@ -4639,13 +4632,6 @@ GS.dataCache['SUMMARIES'] = {
                 "order": 11
             }
         },
-        "469A263B577390473C69B1A564943205E6A0": {
-            "items": {
-                "name": "高崎",
-                "type": "data_record",
-                "order": 0
-            }
-        },
         "63B4221C8209614A6E78B522710A34FC26B7": {
             "items": {
                 "name": "skniro",
@@ -4653,25 +4639,11 @@ GS.dataCache['SUMMARIES'] = {
                 "order": 2
             }
         },
-        "6CF6578B11BCE24FCD8A6A52E1B668CD1BDB": {
-            "items": {
-                "name": "千代凛子",
-                "type": "data_record",
-                "order": 3
-            }
-        },
         "27F79B566C2E884DD75971C8CD0254D060D8": {
             "items": {
                 "name": "yukishiro",
                 "type": "data_record",
                 "order": 4
-            }
-        },
-        "830C3CD38BF7B3462E8A18F5E8697575157C": {
-            "items": {
-                "name": "Yui",
-                "type": "data_record",
-                "order": 5
             }
         },
         "3804EB7A86DDD748C81B5EB7B625B346F0D2": {
@@ -4741,31 +4713,6 @@ GS.dataCache['SUMMARIES'] = {
                 "order": 4
             }
         },
-        "256893463F87944CE09919B0CF2A7E11860E": {
-            "items": {
-                "name": "2.1start",
-                "type": "vn.scene",
-                "parentId": "C8DCCA6901ADA840FB5B64A9E25209B714D5",
-                "chapterUid": "C8DCCA6901ADA840FB5B64A9E25209B714D5",
-                "order": 0
-            }
-        },
-        "C8DCCA6901ADA840FB5B64A9E25209B714D5": {
-            "items": {
-                "name": "章节 1 异世界-拉米普斯帝国",
-                "type": "vn.chapter",
-                "order": 4
-            }
-        },
-        "E02785F09739E1421B0A00E6D55BD055D617": {
-            "items": {
-                "name": "2.1",
-                "type": "vn.scene",
-                "parentId": "C8DCCA6901ADA840FB5B64A9E25209B714D5",
-                "chapterUid": "C8DCCA6901ADA840FB5B64A9E25209B714D5",
-                "order": 2
-            }
-        },
         "607FBBB2340F8945F528C22595824342C86D": {
             "items": {
                 "name": "后记",
@@ -4807,31 +4754,6 @@ GS.dataCache['SUMMARIES'] = {
                 "order": 2
             }
         },
-        "A84878F06665724F8E1AAA302E89E8D60070": {
-            "items": {
-                "name": "2.1.1",
-                "type": "vn.scene",
-                "parentId": "E02785F09739E1421B0A00E6D55BD055D617",
-                "chapterUid": "C8DCCA6901ADA840FB5B64A9E25209B714D5",
-                "order": 0
-            }
-        },
-        "6116D98F4878E740834BE656ECF3B2938487": {
-            "items": {
-                "name": "校长 id:003",
-                "type": "data_record",
-                "order": 7
-            }
-        },
-        "D20B8B6A48260444968B9A54316944EE9AF8": {
-            "items": {
-                "name": "2.1.2",
-                "type": "vn.scene",
-                "parentId": "E02785F09739E1421B0A00E6D55BD055D617",
-                "chapterUid": "C8DCCA6901ADA840FB5B64A9E25209B714D5",
-                "order": 1
-            }
-        },
         "569A70B818B29147F81AC071F952FB87485A": {
             "items": {
                 "name": "id：004                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ",
@@ -4849,20 +4771,6 @@ GS.dataCache['SUMMARIES'] = {
         "CA6F68AB7103414CCC3A6A04AB3768F3F916": {
             "items": {
                 "name": "Angry",
-                "type": "data_record",
-                "order": 0
-            }
-        },
-        "17ECD2D9194F68433058DDF53B8F98E3038D": {
-            "items": {
-                "name": "Chiyo_Rinko",
-                "type": "data_record",
-                "order": 9
-            }
-        },
-        "B027F0BA99EAA04E145A90116DF600C605E6": {
-            "items": {
-                "name": "Chiyo_Rinko",
                 "type": "data_record",
                 "order": 0
             }
@@ -4902,57 +4810,6 @@ GS.dataCache['SUMMARIES'] = {
                 "order": 4
             }
         },
-        "6C4F9FAE7CB6C24D274ACCF24337693DE8BA": {
-            "items": {
-                "name": "1.1",
-                "type": "vn.scene",
-                "parentId": "49DC3EE6267197419859C9E4D23776294B50",
-                "chapterUid": "49DC3EE6267197419859C9E4D23776294B50",
-                "order": 2
-            }
-        },
-        "C3D823B70992E34C051960561B0F5D650999": {
-            "items": {
-                "name": "高崎",
-                "type": "data_record",
-                "order": 2
-            }
-        },
-        "6581B8278B9094495F2B3E52EAFD9351E3DA": {
-            "items": {
-                "name": "Default",
-                "type": "data_record",
-                "order": 0
-            }
-        },
-        "CCDDEA5D4C825346EC1B7D28F1F43F2C35E2": {
-            "items": {
-                "name": "Angry",
-                "type": "data_record",
-                "order": 0
-            }
-        },
-        "989E7358427A304AB6698903C8D369A18352": {
-            "items": {
-                "name": "Embarassed",
-                "type": "data_record",
-                "order": 1
-            }
-        },
-        "06E6F9636F7B834A1619F4E5052850CEC636": {
-            "items": {
-                "name": "Happy",
-                "type": "data_record",
-                "order": 2
-            }
-        },
-        "7A3F0A3F3C76C74DEE2AB8F6A4E3B615D4DD": {
-            "items": {
-                "name": "Normal",
-                "type": "data_record",
-                "order": 3
-            }
-        },
         "CBC53D7E86AB14459E696B39619D3E076E74": {
             "items": {
                 "name": "CG",
@@ -4988,48 +4845,6 @@ GS.dataCache['SUMMARIES'] = {
                 "order": 3
             }
         },
-        "DB79DD4155F80749D8598CC98AC63DDE0754": {
-            "items": {
-                "name": "Sad",
-                "type": "data_record",
-                "order": 4
-            }
-        },
-        "4AC8EBB37D18934C4588DD62DD85DBCA3BB3": {
-            "items": {
-                "name": "Surprised",
-                "type": "data_record",
-                "order": 6
-            }
-        },
-        "1B799CF130FA8145461B4DC8887BB023B24B": {
-            "items": {
-                "name": "Shadow",
-                "type": "data_record",
-                "order": 5
-            }
-        },
-        "BF8F4A4E8908B54B984A0E847E3336544C53": {
-            "items": {
-                "name": "章节 2 A.L.I.C.E.",
-                "type": "vn.chapter",
-                "order": 5
-            }
-        },
-        "A4685865547A13475E4B76B0D19FDFE9628E": {
-            "items": {
-                "name": "章节 3 华风夏韵 China!",
-                "type": "vn.chapter",
-                "order": 6
-            }
-        },
-        "E6777D65301D444F3A6828F262F168327AA7": {
-            "items": {
-                "name": "桐谷薇(Kirigaya wila)",
-                "type": "data_record",
-                "order": 8
-            }
-        },
         "C53B746D309B814B9A6B91C7CDD0A0D4F6C1": {
             "items": {
                 "name": "STG logo",
@@ -5046,13 +4861,6 @@ GS.dataCache['SUMMARIES'] = {
                 "parentId": "162D231FKB332A48FCS9A94E205403CA352B"
             }
         },
-        "D0B9A0D42E18054ED44828A42BA3152B3B45": {
-            "items": {
-                "name": "LEDA_Better_Auto_Screen_Scaling",
-                "type": "game_script",
-                "order": 0
-            }
-        },
         "8DD53A482E6B29415B792E428834861B9B81": {
             "items": {
                 "name": "新記錄",
@@ -5064,12 +4872,6 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Cell Phone UI",
                 "type": "extension"
-            }
-        },
-        "02A34AFF71655741431B7D85C2E8C49ECC08": {
-            "items": {
-                "name": "Layout_Title",
-                "type": "game_script"
             }
         },
         "236DC7CD862F424D897950956E37D4F6E7D2": {
@@ -5084,21 +4886,9 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "persistent_variables"
             }
         },
-        "2FCC0E1F2250064F58792FB86FC570946AAF": {
-            "items": {
-                "name": "Layout_SaveMenu",
-                "type": "game_script"
-            }
-        },
         "38DF9394685D034B2A2961342F70659023F3": {
             "items": {
                 "name": "Template_MessageBox",
-                "type": "game_script"
-            }
-        },
-        "489C3A544FB8E14DE63BE718FA94A56784DD": {
-            "items": {
-                "name": "Layout_CGGallery",
                 "type": "game_script"
             }
         },
@@ -5117,12 +4907,6 @@ GS.dataCache['SUMMARIES'] = {
         "6C64DB7E8358C540B35B0D32B2EF0417E3BA": {
             "items": {
                 "name": "Layout_SettingsAudio",
-                "type": "game_script"
-            }
-        },
-        "8FA6A85D89B70843CC4B1E7648C1E698BFED": {
-            "items": {
-                "name": "Styles",
                 "type": "game_script"
             }
         },
@@ -5150,28 +4934,9 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "game_script"
             }
         },
-        "B5A0EC558D2C79446E6AD6A8E4DE982875A6": {
-            "items": {
-                "name": "Layout_SettingsMenu",
-                "type": "game_script"
-            }
-        },
-        "B9DB12F668CB83473A395CC307F64FA3D213": {
-            "items": {
-                "name": "[FS] Cell Phone UI",
-                "type": "game_script",
-                "order": 9
-            }
-        },
         "BA7D7CFC499A6242824B7BE7E84FA194D45A": {
             "items": {
                 "name": "Layout_CGGalleryEntry",
-                "type": "game_script"
-            }
-        },
-        "BD6634BB31A3A848AC4882002DEE09566841": {
-            "items": {
-                "name": "Layout_LanguageMenu",
                 "type": "game_script"
             }
         },
@@ -5181,27 +4946,9 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "game_script"
             }
         },
-        "CC2ABB6E28AFB345556B1ED6912E91138477": {
-            "items": {
-                "name": "Layouts",
-                "type": "game_script"
-            }
-        },
-        "D4E8F7B8334A044A55797222E5CB36CE6BDD": {
-            "items": {
-                "name": "Style_Default",
-                "type": "game_script"
-            }
-        },
         "E096FFF13B5179435A092AF17BB3D33DC52C": {
             "items": {
                 "name": "Layout_SettingsGeneral",
-                "type": "game_script"
-            }
-        },
-        "E2FD8BC584124942224ACAD45737D054CFBC": {
-            "items": {
-                "name": "Layout_LoadMenu",
                 "type": "game_script"
             }
         },
@@ -5229,52 +4976,16 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "persistent_variables"
             }
         },
-        "0A90532D6EDE6640F68ADE843896B575B866": {
-            "items": {
-                "name": "Components",
-                "type": "game_script"
-            }
-        },
         "0C06FD6A5434334A808A4DB6A0C5A28C6231": {
             "items": {
                 "name": "Global Variables",
                 "type": "global_variables"
             }
         },
-        "21FEA5E0582E564CA68ACF55CC5C4A5ECA55": {
-            "items": {
-                "name": "Constants",
-                "type": "game_script"
-            }
-        },
-        "3A98217D6EC49241223817B97CC4668B526F": {
-            "items": {
-                "name": "Moe - Core Engine",
-                "type": "document_folder"
-            }
-        },
         "45D2838F2613B24239582BA4F1A78EE2AEB5": {
             "items": {
                 "name": "Core Engine",
                 "type": "data_record"
-            }
-        },
-        "7D04354E2809364AFB592258A6D5A9D83FAE": {
-            "items": {
-                "name": "Data Record Views",
-                "type": "document_folder"
-            }
-        },
-        "A5CC5A825AE5F94DE77A42821B754018616D": {
-            "items": {
-                "name": "Namespace",
-                "type": "game_script"
-            }
-        },
-        "BBE2F18D7752A541702B4F448766D05ABC98": {
-            "items": {
-                "name": "MessageTextRenderer",
-                "type": "game_script"
             }
         },
         "C45AD75B463B46457F58DDA730F97021C7B6": {
@@ -5289,29 +5000,10 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "persistent_variables"
             }
         },
-        "DACBCCC46B602444D22964A7638E7E30B546": {
-            "items": {
-                "name": "MoeCoreEngine",
-                "type": "application_language_bundle"
-            }
-        },
-        "E1629B442CB8A34E54994F161F82A4182D06": {
-            "items": {
-                "name": "Moe - Core Engine",
-                "type": "game_script",
-                "order": 10
-            }
-        },
         "E2B852353F6D2749603ADE63E3B4C2AE732E": {
             "items": {
                 "name": "Loaders",
                 "type": "game_script"
-            }
-        },
-        "FAB5D19B79A9684F5928364388C272348EC6": {
-            "items": {
-                "name": "Moe - Core Engine",
-                "type": "DataRecordView"
             }
         },
         "FFC6E1B13A90B844A87AD183D36D0EB678BF": {
@@ -5368,19 +5060,6 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "application_language_bundle"
             }
         },
-        "D94DB100743D3041A36BDD9710A7C3C37DE2": {
-            "items": {
-                "name": "SRD_SuperMessageEditor",
-                "type": "game_script"
-            }
-        },
-        "DD4FD1821620B747AC39A05179085474F201": {
-            "items": {
-                "name": "SumRndmDde Extensions",
-                "type": "game_script",
-                "order": 13
-            }
-        },
         "EF63ADAE72ACC74E583B2482206C3A64349B": {
             "items": {
                 "name": "Global Variables",
@@ -5399,41 +5078,10 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "extension"
             }
         },
-        "023256DD7033974A410A0C219C107C0A068C": {
-            "items": {
-                "name": "Pan Layer",
-                "type": "event_command"
-            }
-        },
         "07E3E485494C79415B68DB96D8372BD817F7": {
             "items": {
                 "name": "Rotate Layer",
                 "type": "event_command"
-            }
-        },
-        "0A0BCE29546CA449FC48BBF524FF801E76C0": {
-            "items": {
-                "name": "Scripts",
-                "type": "document_folder"
-            }
-        },
-        "1900CA371A37B54A04298FA265606C24F026": {
-            "items": {
-                "name": "Scene Commands",
-                "type": "document_folder"
-            }
-        },
-        "50DE4D0B954E174C1589EAC1E43C092A061D": {
-            "items": {
-                "name": "MoeCameraExtension",
-                "type": "application_language_bundle"
-            }
-        },
-        "57D148DC75E0A84B3E586723B5420BBD3D81": {
-            "items": {
-                "name": "Moe - Camera Extension",
-                "type": "game_script",
-                "order": 14
             }
         },
         "5A3CD9DB232B1741D41B1F088E789C37A1D7": {
@@ -5466,12 +5114,6 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "global_variables"
             }
         },
-        "D08274143F3307442148A7710AACA018FF15": {
-            "items": {
-                "name": "Moe - Camera Extension",
-                "type": "document_folder"
-            }
-        },
         "D9C918BE4B2BD0470A2BE73110D4E31D1898": {
             "items": {
                 "name": "Format Helpers",
@@ -5484,35 +5126,10 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "game_script"
             }
         },
-        "DF61FFA61FFE084E623858E1BCF8AA21296E": {
-            "items": {
-                "name": "README",
-                "type": "game_script"
-            }
-        },
         "1F3D452B44169942CE9A68B4EA38669E8A99": {
             "items": {
                 "name": "Message Extension",
                 "type": "extension"
-            }
-        },
-        "2F501F3D88195240E46A5D976F155D0461DE": {
-            "items": {
-                "name": "Constants",
-                "type": "game_script"
-            }
-        },
-        "36E5ED176C0AF64D292870E19370863A5A01": {
-            "items": {
-                "name": "README",
-                "type": "game_script"
-            }
-        },
-        "45436B783DBE45420368274395F824838391": {
-            "items": {
-                "name": "Moe - Message Extension",
-                "type": "game_script",
-                "order": 16
             }
         },
         "6E2FCD1369EFC5465D39D5D20AF6E3677A06": {
@@ -5525,12 +5142,6 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Global Variables",
                 "type": "global_variables"
-            }
-        },
-        "86BCAC778F371542A85BD3642AAD7302A645": {
-            "items": {
-                "name": "Namespace",
-                "type": "game_script"
             }
         },
         "876BC0BB59041842133B7B6731F16649F88C": {
@@ -5549,12 +5160,6 @@ GS.dataCache['SUMMARIES'] = {
             "items": {
                 "name": "Message Styles",
                 "type": "extension"
-            }
-        },
-        "2705BAFD361C3840D46A75F63DA66BA37969": {
-            "items": {
-                "name": "Link Styles",
-                "type": "game_script"
             }
         },
         "44B1B9596AF64549911829214E197CE4575F": {
@@ -5576,20 +5181,6 @@ GS.dataCache['SUMMARIES'] = {
                 "order": 1
             }
         },
-        "78FE48744708B242636BC6235A85921A6FDD": {
-            "items": {
-                "name": "Moe - Message Styles",
-                "type": "game_script",
-                "order": 17
-            }
-        },
-        "F117250E536F9245AB19CFD15219CF333950": {
-            "items": {
-                "name": "Styles",
-                "type": "game_script",
-                "order": 0
-            }
-        },
         "273A68385015B84EC87AD1E618C04EBE3DDA": {
             "items": {
                 "name": "Quick Save",
@@ -5608,34 +5199,15 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "document_folder"
             }
         },
-        "2F0C102681B1334D6A4874E4994286CDEC95": {
-            "items": {
-                "name": "Moe - Quick Save",
-                "type": "game_script",
-                "order": 12
-            }
-        },
         "467A76D5523748454E88C477863709F16C74": {
             "items": {
                 "name": "Persistent Variables",
                 "type": "persistent_variables"
             }
         },
-        "7AEF2C941E3CB249D6687FF0AA06AD0F4861": {
-            "items": {
-                "name": "Moe - Quick Save",
-                "type": "document_folder"
-            }
-        },
         "7B2E13826126B34CB08BD033960FD439074C": {
             "items": {
                 "name": "README",
-                "type": "game_script"
-            }
-        },
-        "7C9EBEE855A0984AD4299128EC8418AE4415": {
-            "items": {
-                "name": "Layout",
                 "type": "game_script"
             }
         },
@@ -5651,40 +5223,16 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "game_script"
             }
         },
-        "97C30FA30375C7420E4901C84E9A5CD7551A": {
-            "items": {
-                "name": "GameManager",
-                "type": "game_script"
-            }
-        },
-        "9A396F0A85AA4341396A50C7076C86C753B8": {
-            "items": {
-                "name": "MoeQuickSave",
-                "type": "application_language_bundle"
-            }
-        },
         "B06626A177D7334AF1785408EC0A8A138465": {
             "items": {
                 "name": "Global Variables",
                 "type": "global_variables"
             }
         },
-        "B327618846A98640BC780177F7F7A442D5D0": {
-            "items": {
-                "name": "Template_MessageBox",
-                "type": "game_script"
-            }
-        },
         "C2873D54882B4049398957252A7CFD67D448": {
             "items": {
                 "name": "System",
                 "type": "document_folder"
-            }
-        },
-        "D3B964D832703441554BEB343976CBE57F45": {
-            "items": {
-                "name": "Manager",
-                "type": "game_script"
             }
         },
         "EE9E60F71EF6644B1E9A1EE5119EA69C88D0": {
@@ -5705,18 +5253,40 @@ GS.dataCache['SUMMARIES'] = {
                 "type": "game_script"
             }
         },
-        "C151D67D6BB55748DB4812F9FAEE03710E1D": {
+        "7ACD60D1033E294CE98A475612A690730E28": {
             "items": {
-                "name": "button",
-                "type": "script",
-                "parentId": "3A98217D6EC49241223817B97CC4668B526F"
+                "name": "Interpreter",
+                "type": "game_script"
             }
         },
-        "37214FBE5FB75649212BCE05F281079D3AE5": {
+        "729B97E42865A14F1C289E04259EC1CEFDF0": {
             "items": {
-                "name": "button",
-                "type": "script",
-                "parentId": "41E2CB852A75C4434D6B6FC4D46948394CC6"
+                "name": "LivePreviewInfo",
+                "type": "game_script"
+            }
+        },
+        "DED209F868E4174D568A58D8CCF9F60B7BBD": {
+            "items": {
+                "name": "InterpreterContext",
+                "type": "game_script"
+            }
+        },
+        "B6300C2E0557E34AAC2BB1F7B4B3C052F3D1": {
+            "items": {
+                "name": "ForLoopCommand",
+                "type": "game_script"
+            }
+        },
+        "8A87F241399A58443D8AD795FFB2FCB81D72": {
+            "items": {
+                "name": "Loop For",
+                "type": "event_command"
+            }
+        },
+        "54E91A9C5BB739406B5B0B83D0A538F5CF58": {
+            "items": {
+                "name": "Set Input Session",
+                "type": "event_command"
             }
         }
     }

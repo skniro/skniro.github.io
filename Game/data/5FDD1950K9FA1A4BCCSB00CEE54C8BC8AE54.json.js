@@ -5,7 +5,7 @@ GS.dataCache['5FDD1950K9FA1A4BCCSB00CEE54C8BC8AE54'] = {
     "items": {
         "name": "Show Save Game Image",
         "type": "data_record",
-        "order": 4,
+        "order": 3,
         "category": "commonEvents",
         "data": {
             "name": "Show Save Game Image",

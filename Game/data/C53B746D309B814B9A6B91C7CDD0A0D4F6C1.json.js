@@ -84,7 +84,7 @@ GS.dataCache['C53B746D309B814B9A6B91C7CDD0A0D4F6C1'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "STG",
+                        "name": "STG.jpg",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -93,7 +93,8 @@ GS.dataCache['C53B746D309B814B9A6B91C7CDD0A0D4F6C1'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures"
                     }
                 },
                 "uid": "76900FB7655FA14D473935E808C215B7DDE7",

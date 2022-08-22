@@ -861,7 +861,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         }
                     ],
                     "ground": {
-                        "name": "SaveGame_Idle",
+                        "name": "SaveGame_Idle.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -870,10 +870,11 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "hover": {
-                        "name": "SaveGame_Hover",
+                        "name": "SaveGame_Hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -882,11 +883,12 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "unselected": null,
                     "selected": {
-                        "name": "SaveGame_Selected",
+                        "name": "SaveGame_Selected.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -895,10 +897,11 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "selectedHover": {
-                        "name": "SaveGame_Selected",
+                        "name": "SaveGame_Selected.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -907,7 +910,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "duration": 0,
                     "origin": 0,
@@ -1040,7 +1044,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1049,7 +1053,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1149,7 +1154,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1158,7 +1163,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1258,7 +1264,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1267,7 +1273,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1367,7 +1374,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1376,7 +1383,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1476,7 +1484,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1485,7 +1493,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1585,7 +1594,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1594,7 +1603,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1686,7 +1696,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1695,7 +1705,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1787,7 +1798,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1796,7 +1807,8 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -2184,7 +2196,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "72DC67C9738B56423838B340BBA4BA7E0024"
@@ -2222,7 +2234,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "940C688D1E48C04EB05B14C8B15921DCB07D"
@@ -2260,7 +2272,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "D0A027D526784649278BED81DFB4CBD5F2BE"
@@ -2298,7 +2310,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "621527C8383580464C0B48657434F9DA562E"
@@ -2336,7 +2348,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "C20996BA645AE348F53B66667F31011AFD75"
@@ -2374,7 +2386,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "FB82409D61F3F14FAB794D4502C1736B1887"
@@ -2412,7 +2424,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "37E6F4508A75534F3D8B4588061A8D420763"
@@ -2450,7 +2462,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "284C82ED5A118645113B9B35FB0BC3619A5D"
@@ -2527,7 +2539,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "B5EE01D608FF9943FE2806D8F6CB82327973"
@@ -2604,7 +2616,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "632A108623F17244A72AE912877297920AED"
@@ -2681,7 +2693,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "A7210F6B585054477918FBA1E46530274A33"
@@ -2758,7 +2770,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "8F7485B827DEF1459339FC364F3015CF465F"
@@ -2835,7 +2847,7 @@ GS.dataCache['788F76F4231BE442882AEDA37BCF0AE6556B'] = {
                 "id": "gs.JumpToLabel",
                 "params": {
                     "name": "Refresh Pictures",
-                    "target": 0
+                    "target": "activeContext"
                 },
                 "indent": 0,
                 "uid": "804A2F4F109A16464D6AE226423DDFA6B170"

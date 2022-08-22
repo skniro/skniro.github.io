@@ -14,7 +14,7 @@ GS.dataCache['D57FE083K6CB3A442ASA89FE801CDE46C44A'] = {
             "name": "Metis",
             "index": "D57FE083K6CB3A442ASA89FE801CDE46C44A",
             "graphic": {
-                "name": "Metis_CG",
+                "name": "Metis_CG.png",
                 "hue": 0,
                 "opacity": 255,
                 "blending": 0,
@@ -22,10 +22,11 @@ GS.dataCache['D57FE083K6CB3A442ASA89FE801CDE46C44A'] = {
                     "red": 0,
                     "green": 0,
                     "blue": 0
-                }
+                },
+                "folderPath": "Graphics/Pictures/CG Gallery"
             },
             "thumb": {
-                "name": "Metis_CG_Thumb",
+                "name": "Metis_CG_Thumb.png",
                 "hue": 0,
                 "opacity": 255,
                 "blending": 0,
@@ -33,7 +34,8 @@ GS.dataCache['D57FE083K6CB3A442ASA89FE801CDE46C44A'] = {
                     "red": 0,
                     "green": 0,
                     "blue": 0
-                }
+                },
+                "folderPath": "Graphics/Pictures/CG Gallery"
             },
             "listed": true,
             "locked": false,
@@ -51,5 +53,6 @@ GS.dataCache['D57FE083K6CB3A442ASA89FE801CDE46C44A'] = {
         "name",
         "type",
         "order"
-    ]
+    ],
+    "externalItems": []
 }

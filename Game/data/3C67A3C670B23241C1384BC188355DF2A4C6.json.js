@@ -2176,7 +2176,7 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                         ],
                         "predefinedPositionId": 0,
                         "ground": {
-                            "name": "nameentry_sym_ground",
+                            "name": "nameentry_sym_ground.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -2185,10 +2185,11 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "hover": {
-                            "name": "nameentry_sym_selected",
+                            "name": "nameentry_sym_selected.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -2197,11 +2198,12 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "unselected": null,
                         "selected": {
-                            "name": "nameentry_sym_selected",
+                            "name": "nameentry_sym_selected.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -2210,10 +2212,11 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "selectedHover": {
-                            "name": "nameentry_sym_selected",
+                            "name": "nameentry_sym_selected.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -2222,7 +2225,8 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "duration": 0,
                         "origin": 0,
@@ -4388,7 +4392,7 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                         ],
                         "predefinedPositionId": 0,
                         "ground": {
-                            "name": "nameentry_abc_ground",
+                            "name": "nameentry_abc_ground.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -4397,10 +4401,11 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "hover": {
-                            "name": "nameentry_abc_selected",
+                            "name": "nameentry_abc_selected.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -4409,11 +4414,12 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "unselected": null,
                         "selected": {
-                            "name": "nameentry_abc_selected",
+                            "name": "nameentry_abc_selected.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -4422,10 +4428,11 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "selectedHover": {
-                            "name": "nameentry_abc_selected",
+                            "name": "nameentry_abc_selected.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -4434,7 +4441,8 @@ GS.dataCache['3C67A3C670B23241C1384BC188355DF2A4C6'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "duration": 30,
                         "origin": 0,

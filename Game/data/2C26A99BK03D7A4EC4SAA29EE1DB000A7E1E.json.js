@@ -292,7 +292,7 @@ GS.dataCache['2C26A99BK03D7A4EC4SAA29EE1DB000A7E1E'] = {
             "resolutionType": 1,
             "startInfo": {
                 "scene": {
-                    "uid": "6C4F9FAE7CB6C24D274ACCF24337693DE8BA",
+                    "uid": "C5A8743F068DC3416B5AC444DD926BD3F597",
                     "name": "Sample Scene"
                 }
             },
@@ -302,13 +302,16 @@ GS.dataCache['2C26A99BK03D7A4EC4SAA29EE1DB000A7E1E'] = {
                 "hy": 0
             },
             "titleScreen": {
-                "name": "bg-generic"
+                "name": "bg-generic.png",
+                "folderPath": "Graphics/Pictures/UI"
             },
             "languageScreen": {
-                "name": "bg-generic"
+                "name": "bg-generic.png",
+                "folderPath": "Graphics/Pictures/UI"
             },
             "menuBackground": {
-                "name": "bg-generic"
+                "name": "bg-generic.png",
+                "folderPath": "Graphics/Pictures/UI"
             },
             "colors": [
                 {
@@ -326,9 +329,10 @@ GS.dataCache['2C26A99BK03D7A4EC4SAA29EE1DB000A7E1E'] = {
             ],
             "sounds": [
                 {
-                    "name": "door_open_creaky",
+                    "name": "door_open_creaky.ogg",
                     "volume": 100,
-                    "playbackRate": 100
+                    "playbackRate": 100,
+                    "folderPath": "Audio/Sounds/Sound Effects"
                 }
             ],
             "useIntroScene": true,

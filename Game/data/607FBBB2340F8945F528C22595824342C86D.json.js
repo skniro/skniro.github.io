@@ -165,7 +165,7 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                         "type": "scene"
                     },
                     "graphic": {
-                        "name": "Beach_Morning",
+                        "name": "Beach_Morning.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -174,7 +174,8 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Backgrounds/Date Locations"
                     },
                     "layer": 0,
                     "duration": 0,
@@ -268,7 +269,7 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     },
                     "message": {
                         "lcId": null,
-                        "defaultText": "我是这个游戏的作者之一，我是Yuuki Skniro。"
+                        "defaultText": "我是这个游戏的作者之一。"
                     },
                     "position": 0,
                     "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
@@ -301,7 +302,7 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     },
                     "message": {
                         "lcId": null,
-                        "defaultText": "如果你看到了这里，恭喜你，你通关了这个角色介绍的测试版，"
+                        "defaultText": "如果你看到了这里，恭喜你，你通关了这个技术测试的测试版。"
                     },
                     "position": 0,
                     "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
@@ -334,40 +335,7 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                     },
                     "message": {
                         "lcId": null,
-                        "defaultText": "Project Alice正如其名，Alice会是这个游戏的主角，但至于会如何发展？"
-                    },
-                    "position": 0,
-                    "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
-                    "partial": 0,
-                    "fieldFlags": {
-                        "duration": 1
-                    },
-                    "expressions": [],
-                    "animations": []
-                },
-                "uid": "5613F12627880744E4880A996CA4CB93359A",
-                "indent": 0,
-                "expanded": true
-            },
-            {
-                "id": "gs.ShowMessage",
-                "params": {
-                    "waitForCompletion": 1,
-                    "duration": 15,
-                    "expressionId": null,
-                    "custom": {
-                        "object": {
-                            "x": 0,
-                            "y": 0,
-                            "size": {
-                                "width": 300,
-                                "height": 100
-                            }
-                        }
-                    },
-                    "message": {
-                        "lcId": null,
-                        "defaultText": "请各位期待下一个测试版本揭晓吧（笑）"
+                        "defaultText": "请各位期待下一个测试版本吧（笑）"
                     },
                     "position": 0,
                     "characterId": "63B4221C8209614A6E78B522710A34FC26B7",
@@ -509,8 +477,8 @@ GS.dataCache['607FBBB2340F8945F528C22595824342C86D'] = {
                 "id": "vn.ChangeScene",
                 "params": {
                     "scene": {
-                        "uid": "4B28387985C6F144615927926E09092086A3",
-                        "name": "The End"
+                        "uid": "96EB6CA99CCFF94DE04917C216F085E8E747",
+                        "name": "Title Screen"
                     },
                     "savePrevious": 0,
                     "erasePictures": 0,

@@ -848,7 +848,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         }
                     ],
                     "ground": {
-                        "name": "LoadGame_Idle",
+                        "name": "LoadGame_Idle.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -857,10 +857,11 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "hover": {
-                        "name": "LoadGame_Hover",
+                        "name": "LoadGame_Hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -869,11 +870,12 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "unselected": null,
                     "selected": {
-                        "name": "LoadGame_Selected",
+                        "name": "LoadGame_Selected.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -882,10 +884,11 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "selectedHover": {
-                        "name": "LoadGame_Selected",
+                        "name": "LoadGame_Selected.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -894,7 +897,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "duration": 0,
                     "origin": 0,
@@ -1019,7 +1023,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1028,7 +1032,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1128,7 +1133,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1137,7 +1142,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1237,7 +1243,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1246,7 +1252,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1346,7 +1353,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1355,7 +1362,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1455,7 +1463,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1464,7 +1472,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1564,7 +1573,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1573,7 +1582,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1665,7 +1675,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1674,7 +1684,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1766,7 +1777,7 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "HomeThumb",
+                        "name": "HomeThumb.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1775,7 +1786,8 @@ GS.dataCache['E8023FF12DF3024AE35A80B7D3690BED05F3'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/CG Gallery"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },

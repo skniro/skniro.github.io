@@ -141,7 +141,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "name": "$live_preview_snapshot"
                         },
                         "graphic": {
-                            "name": "prompt_confirm_saveload",
+                            "name": "prompt_confirm_saveload.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -150,7 +150,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "numberDomain": "com.degica.vnm.default"
                     },
@@ -232,7 +233,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "name": "$live_preview_snapshot"
                         },
                         "graphic": {
-                            "name": "prompt_quit",
+                            "name": "prompt_quit.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -241,7 +242,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "numberDomain": "com.degica.vnm.default"
                     },
@@ -554,7 +556,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "name": "$live_preview_snapshot"
                         },
                         "graphic": {
-                            "name": "Prompt_yes_idle",
+                            "name": "Prompt_yes_idle.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -563,7 +565,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "numberDomain": "com.degica.vnm.default"
                     },
@@ -749,7 +752,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "name": "$live_preview_snapshot"
                         },
                         "graphic": {
-                            "name": "prompt_no_idle",
+                            "name": "prompt_no_idle.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -758,7 +761,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "numberDomain": "com.degica.vnm.default"
                     },
@@ -909,7 +913,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "name": "$live_preview_snapshot"
                         },
                         "hoverGraphic": {
-                            "name": "Prompt_yes_Hover",
+                            "name": "Prompt_yes_Hover.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -918,7 +922,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "pictureNumber": 12,
                         "number": 10,
@@ -1072,7 +1077,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                             "name": "$live_preview_snapshot"
                         },
                         "hoverGraphic": {
-                            "name": "Prompt_No_Hover",
+                            "name": "Prompt_No_Hover.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -1081,7 +1086,8 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "pictureNumber": 13,
                         "numberDomain": "com.degica.vnm.default"
@@ -1176,7 +1182,7 @@ GS.dataCache['2379347586025344D738BEE5A39A37A44990'] = {
                     "id": "gs.JumpToLabel",
                     "params": {
                         "name": "erase",
-                        "target": 0
+                        "target": "activeContext"
                     },
                     "indent": 0,
                     "uid": "AFCA440C12E34147660AD4A12BC2B5875689"

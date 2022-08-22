@@ -5,7 +5,7 @@ GS.dataCache['E9DD44587AF7B3469C18397718E39434C2A0'] = {
     "items": {
         "name": "Hide UI",
         "type": "data_record",
-        "order": 11,
+        "order": 10,
         "category": "commonEvents",
         "id": "E9DD44587AF7B3469C18397718E39434C2A0",
         "isFolder": false,

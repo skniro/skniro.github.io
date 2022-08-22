@@ -634,7 +634,7 @@ GS.dataCache['22A5A7AE2C72B9435918DC88483794127490'] = {
                         ],
                         "predefinedPositionId": 0,
                         "ground": {
-                            "name": "ne_idle_stf",
+                            "name": "ne_idle_stf.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -643,10 +643,11 @@ GS.dataCache['22A5A7AE2C72B9435918DC88483794127490'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "hover": {
-                            "name": "ne_active_stf",
+                            "name": "ne_active_stf.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -655,7 +656,8 @@ GS.dataCache['22A5A7AE2C72B9435918DC88483794127490'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "unselected": null,
                         "selected": null,

@@ -14,7 +14,7 @@ GS.dataCache['40133382KC7B4A4C97S81F0E7D539A513261'] = {
             },
             "name": "Message Caret",
             "graphic": {
-                "name": "message_caret",
+                "name": "message_caret.png",
                 "hue": 0,
                 "opacity": 255,
                 "blending": 0,
@@ -22,7 +22,8 @@ GS.dataCache['40133382KC7B4A4C97S81F0E7D539A513261'] = {
                     "red": 0,
                     "green": 0,
                     "blue": 0
-                }
+                },
+                "folderPath": "Graphics/Pictures/UI"
             },
             "framesX": 30,
             "framesY": 1,

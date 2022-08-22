@@ -98,7 +98,8 @@ GS.dataCache['788DF6BF5D09F548196B6529F41881A2BCE9'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "hover": {
                         "name": "languagescreen_hover",
@@ -110,7 +111,8 @@ GS.dataCache['788DF6BF5D09F548196B6529F41881A2BCE9'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "unselected": null,
                     "selected": null,

@@ -1,10 +1,11 @@
 GS.dataCache['2DD313F8594FE146CB282B35D470369960F3'] = {
     "uid": "2DD313F8594FE146CB282B35D470369960F3",
     "isLoaded": true,
-    "lastModificationTime": null,
+    "lastModificationTime": 0,
     "items": {
         "name": "CG",
         "type": "data_record",
+        "order": 3,
         "category": "cgGallery",
         "id": "2DD313F8594FE146CB282B35D470369960F3",
         "isFolder": false,
@@ -14,7 +15,7 @@ GS.dataCache['2DD313F8594FE146CB282B35D470369960F3'] = {
             "listed": true,
             "slot": 3,
             "graphic": {
-                "name": "CGGallery_Hover",
+                "name": "CGGallery_Hover.png",
                 "hue": 0,
                 "opacity": 255,
                 "blending": 0,
@@ -22,7 +23,8 @@ GS.dataCache['2DD313F8594FE146CB282B35D470369960F3'] = {
                     "red": 0,
                     "green": 0,
                     "blue": 0
-                }
+                },
+                "folderPath": "Graphics/Pictures/In-Game UI"
             },
             "thumb": {
                 "name": ""
@@ -34,8 +36,7 @@ GS.dataCache['2DD313F8594FE146CB282B35D470369960F3'] = {
                     "name": "Chapter 1"
                 }
             }
-        },
-        "order": 3
+        }
     },
     "summary": [
         "name",

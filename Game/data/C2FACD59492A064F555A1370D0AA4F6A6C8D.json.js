@@ -15,7 +15,7 @@ GS.dataCache['C2FACD59492A064F555A1370D0AA4F6A6C8D'] = {
             "listed": true,
             "slot": 2,
             "graphic": {
-                "name": "web-start-screen",
+                "name": "web-start-screen.png",
                 "hue": 0,
                 "opacity": 255,
                 "blending": 0,
@@ -23,7 +23,8 @@ GS.dataCache['C2FACD59492A064F555A1370D0AA4F6A6C8D'] = {
                     "red": 0,
                     "green": 0,
                     "blue": 0
-                }
+                },
+                "folderPath": "Graphics/Pictures"
             },
             "thumb": {
                 "name": ""

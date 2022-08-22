@@ -229,7 +229,7 @@ GS.dataCache['96EB6CA99CCFF94DE04917C216F085E8E747'] = {
                         }
                     ],
                     "ground": {
-                        "name": "titlescreen_idle",
+                        "name": "titlescreen_idle.jpg",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -238,10 +238,11 @@ GS.dataCache['96EB6CA99CCFF94DE04917C216F085E8E747'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "hover": {
-                        "name": "titlescreen_hover",
+                        "name": "titlescreen_hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -250,7 +251,8 @@ GS.dataCache['96EB6CA99CCFF94DE04917C216F085E8E747'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "unselected": null,
                     "selected": null,

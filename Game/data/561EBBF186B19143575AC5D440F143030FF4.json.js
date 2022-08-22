@@ -20,11 +20,12 @@ GS.dataCache['561EBBF186B19143575AC5D440F143030FF4'] = {
             "idle": [
                 {
                     "resource": {
-                        "name": "Ygirl05a_Happy",
+                        "name": "Ygirl05a_Happy.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
-                        "tone": null
+                        "tone": null,
+                        "folderPath": "Graphics/Characters/Ygirl05b"
                     }
                 }
             ],
@@ -32,11 +33,12 @@ GS.dataCache['561EBBF186B19143575AC5D440F143030FF4'] = {
             "talking": [
                 {
                     "resource": {
-                        "name": "Ygirl05a_Happycheeks",
+                        "name": "Ygirl05a_Happycheeks.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
-                        "tone": null
+                        "tone": null,
+                        "folderPath": "Graphics/Characters/Ygirl05b"
                     }
                 }
             ],

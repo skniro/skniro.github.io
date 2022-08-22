@@ -1,10 +1,11 @@
 GS.dataCache['63B4221C8209614A6E78B522710A34FC26B7'] = {
     "uid": "63B4221C8209614A6E78B522710A34FC26B7",
-    "isLoaded": false,
-    "lastModificationTime": null,
+    "isLoaded": true,
+    "lastModificationTime": 0,
     "items": {
         "name": "skniro",
         "type": "data_record",
+        "order": 2,
         "category": "characters",
         "isFolder": false,
         "data": {
@@ -29,7 +30,6 @@ GS.dataCache['63B4221C8209614A6E78B522710A34FC26B7'] = {
         },
         "id": "63B4221C8209614A6E78B522710A34FC26B7",
         "localizableStrings": {},
-        "order": 2,
         "parentId": "ROOT"
     },
     "summary": [

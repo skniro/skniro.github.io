@@ -1,10 +1,11 @@
 GS.dataCache['3804EB7A86DDD748C81B5EB7B625B346F0D2'] = {
     "uid": "3804EB7A86DDD748C81B5EB7B625B346F0D2",
-    "isLoaded": false,
-    "lastModificationTime": null,
+    "isLoaded": true,
+    "lastModificationTime": 0,
     "items": {
         "name": "system",
         "type": "data_record",
+        "order": 6,
         "category": "characters",
         "isFolder": false,
         "data": {
@@ -29,7 +30,6 @@ GS.dataCache['3804EB7A86DDD748C81B5EB7B625B346F0D2'] = {
         },
         "id": "3804EB7A86DDD748C81B5EB7B625B346F0D2",
         "localizableStrings": {},
-        "order": 6,
         "parentId": "ROOT"
     },
     "summary": [

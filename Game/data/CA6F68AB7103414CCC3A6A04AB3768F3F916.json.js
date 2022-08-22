@@ -20,11 +20,12 @@ GS.dataCache['CA6F68AB7103414CCC3A6A04AB3768F3F916'] = {
             "idle": [
                 {
                     "resource": {
-                        "name": "Ygirl05a_Angry",
+                        "name": "Ygirl05a_Angry.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
-                        "tone": null
+                        "tone": null,
+                        "folderPath": "Graphics/Characters/Ygirl05b"
                     }
                 }
             ],
@@ -32,11 +33,12 @@ GS.dataCache['CA6F68AB7103414CCC3A6A04AB3768F3F916'] = {
             "talking": [
                 {
                     "resource": {
-                        "name": "Ygirl05a_Angrycheeks",
+                        "name": "Ygirl05a_Angrycheeks.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
-                        "tone": null
+                        "tone": null,
+                        "folderPath": "Graphics/Characters/Ygirl05b"
                     }
                 }
             ],

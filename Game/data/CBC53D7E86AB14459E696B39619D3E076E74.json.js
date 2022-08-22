@@ -1,10 +1,11 @@
 GS.dataCache['CBC53D7E86AB14459E696B39619D3E076E74'] = {
     "uid": "CBC53D7E86AB14459E696B39619D3E076E74",
     "isLoaded": true,
-    "lastModificationTime": null,
+    "lastModificationTime": 0,
     "items": {
         "name": "CG",
         "type": "data_record",
+        "order": 8,
         "category": "cgGallery",
         "id": "CBC53D7E86AB14459E696B39619D3E076E74",
         "isFolder": false,
@@ -26,8 +27,7 @@ GS.dataCache['CBC53D7E86AB14459E696B39619D3E076E74'] = {
                     "name": "Chapter 1"
                 }
             }
-        },
-        "order": 8
+        }
     },
     "summary": [
         "name",

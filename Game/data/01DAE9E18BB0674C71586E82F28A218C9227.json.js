@@ -1,10 +1,11 @@
 GS.dataCache['01DAE9E18BB0674C71586E82F28A218C9227'] = {
     "uid": "01DAE9E18BB0674C71586E82F28A218C9227",
     "isLoaded": true,
-    "lastModificationTime": null,
+    "lastModificationTime": 0,
     "items": {
         "name": "CG",
         "type": "data_record",
+        "order": 6,
         "category": "cgGallery",
         "id": "01DAE9E18BB0674C71586E82F28A218C9227",
         "isFolder": false,
@@ -14,7 +15,7 @@ GS.dataCache['01DAE9E18BB0674C71586E82F28A218C9227'] = {
             "listed": true,
             "slot": 6,
             "graphic": {
-                "name": "cursor2",
+                "name": "cursor2.png",
                 "hue": 0,
                 "opacity": 255,
                 "blending": 0,
@@ -22,7 +23,8 @@ GS.dataCache['01DAE9E18BB0674C71586E82F28A218C9227'] = {
                     "red": 0,
                     "green": 0,
                     "blue": 0
-                }
+                },
+                "folderPath": "Graphics/Pictures/UI/Cursor"
             },
             "thumb": {
                 "name": ""
@@ -34,8 +36,7 @@ GS.dataCache['01DAE9E18BB0674C71586E82F28A218C9227'] = {
                     "name": "Chapter 1"
                 }
             }
-        },
-        "order": 6
+        }
     },
     "summary": [
         "name",

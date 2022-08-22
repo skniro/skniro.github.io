@@ -5,7 +5,7 @@ GS.dataCache['651E26D86B1CF647633BEC272FD6CEB53A8E'] = {
     "items": {
         "name": "Open Load Menu",
         "type": "data_record",
-        "order": 10,
+        "order": 9,
         "category": "commonEvents",
         "id": "651E26D86B1CF647633BEC272FD6CEB53A8E",
         "isFolder": false,

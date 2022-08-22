@@ -252,7 +252,7 @@ GS.dataCache['3FC2C70568A4984D389A6A69669295952B9D'] = {
                         ],
                         "predefinedPositionId": 5,
                         "ground": {
-                            "name": "msgbox_ground",
+                            "name": "msgbox_ground.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -261,10 +261,11 @@ GS.dataCache['3FC2C70568A4984D389A6A69669295952B9D'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "hover": {
-                            "name": "msgbox_hover",
+                            "name": "msgbox_hover.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -273,11 +274,12 @@ GS.dataCache['3FC2C70568A4984D389A6A69669295952B9D'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "unselected": null,
                         "selected": {
-                            "name": "msgbox_selected",
+                            "name": "msgbox_selected.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -286,10 +288,11 @@ GS.dataCache['3FC2C70568A4984D389A6A69669295952B9D'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "selectedHover": {
-                            "name": "msgbox_selected",
+                            "name": "msgbox_selected.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -298,7 +301,8 @@ GS.dataCache['3FC2C70568A4984D389A6A69669295952B9D'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "duration": 30,
                         "origin": 0,

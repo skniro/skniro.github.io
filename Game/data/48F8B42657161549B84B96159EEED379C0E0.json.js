@@ -5,7 +5,7 @@ GS.dataCache['48F8B42657161549B84B96159EEED379C0E0'] = {
     "items": {
         "name": "Update Name Box",
         "type": "data_record",
-        "order": 7,
+        "order": 6,
         "category": "commonEvents",
         "id": "48F8B42657161549B84B96159EEED379C0E0",
         "isFolder": false,

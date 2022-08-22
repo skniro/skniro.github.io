@@ -539,7 +539,7 @@ GS.dataCache['87C691AD6DF5C84BCF1A8CC5E61FDD36119E'] = {
                             "name": "$live_preview_snapshot"
                         },
                         "graphic": {
-                            "name": "choice_idle",
+                            "name": "choice_idle.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -548,7 +548,8 @@ GS.dataCache['87C691AD6DF5C84BCF1A8CC5E61FDD36119E'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "numberDomain": "com.degica.vnm.default"
                     },
@@ -713,7 +714,7 @@ GS.dataCache['87C691AD6DF5C84BCF1A8CC5E61FDD36119E'] = {
                             "name": "$live_preview_snapshot"
                         },
                         "hoverGraphic": {
-                            "name": "choice_active",
+                            "name": "choice_active.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -722,10 +723,11 @@ GS.dataCache['87C691AD6DF5C84BCF1A8CC5E61FDD36119E'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "selectedHoverGraphic": {
-                            "name": "choice_active",
+                            "name": "choice_active.png",
                             "hue": 0,
                             "opacity": 255,
                             "blending": 0,
@@ -734,7 +736,8 @@ GS.dataCache['87C691AD6DF5C84BCF1A8CC5E61FDD36119E'] = {
                                 "green": 0,
                                 "blue": 0,
                                 "grey": 0
-                            }
+                            },
+                            "folderPath": "Graphics/Pictures/In-Game UI"
                         },
                         "numberDomain": "com.degica.vnm.default"
                     },

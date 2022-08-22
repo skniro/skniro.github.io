@@ -56,7 +56,7 @@ GS.dataCache['D8E05EB72661774C22191695989A9A5A66FA'] = {
                         "commonEventId": "2379347586025344D738BEE5A39A37A44990",
                         "parameters": {
                             "values": [
-                                "Prompt_Confirm_SaveLoad",
+                                "Graphics/Pictures/In-Game UI/Prompt_Confirm_SaveLoad.png",
                                 16,
                                 1
                             ]

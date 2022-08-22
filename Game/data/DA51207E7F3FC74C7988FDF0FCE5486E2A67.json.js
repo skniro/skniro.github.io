@@ -5,7 +5,7 @@ GS.dataCache['DA51207E7F3FC74C7988FDF0FCE5486E2A67'] = {
     "items": {
         "name": "Hide Log",
         "type": "data_record",
-        "order": 12,
+        "order": 11,
         "category": "commonEvents",
         "id": "DA51207E7F3FC74C7988FDF0FCE5486E2A67",
         "isFolder": false,

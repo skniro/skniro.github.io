@@ -529,7 +529,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         }
                     ],
                     "ground": {
-                        "name": "settings_idle",
+                        "name": "settings_idle.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -538,10 +538,11 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "hover": {
-                        "name": "Settings_select",
+                        "name": "Settings_select.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -550,11 +551,12 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "unselected": null,
                     "selected": {
-                        "name": "Settings_Hover",
+                        "name": "Settings_Hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -563,10 +565,11 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "selectedHover": {
-                        "name": "settings_hover",
+                        "name": "settings_hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -575,7 +578,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "duration": 0,
                     "origin": 0,
@@ -893,7 +897,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "slider_hover",
+                        "name": "slider_hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -902,7 +906,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1170,7 +1175,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "slider_hover",
+                        "name": "slider_hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1179,7 +1184,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1447,7 +1453,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "slider_hover",
+                        "name": "slider_hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1456,7 +1462,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1724,7 +1731,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "slider_hover",
+                        "name": "slider_hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1733,7 +1740,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -1803,7 +1811,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "slider_hover2",
+                        "name": "slider_hover2.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -1812,7 +1820,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     }
                 },
                 "uid": "77D99BC460AA824DBD4972426AAB98FF8F30",
@@ -2068,7 +2077,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "slider_hover2",
+                        "name": "slider_hover2.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -2077,7 +2086,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     }
                 },
                 "uid": "A39706778E7D564D533A06992D872DE0CD0B",
@@ -2175,7 +2185,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                         "name": "$live_preview_snapshot"
                     },
                     "graphic": {
-                        "name": "slider_hover",
+                        "name": "slider_hover.png",
                         "hue": 0,
                         "opacity": 255,
                         "blending": 0,
@@ -2184,7 +2194,8 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                             "green": 0,
                             "blue": 0,
                             "grey": 0
-                        }
+                        },
+                        "folderPath": "Graphics/Pictures/In-Game UI"
                     },
                     "numberDomain": "com.degica.vnm.default"
                 },
@@ -2939,7 +2950,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     "commonEventId": "2379347586025344D738BEE5A39A37A44990",
                     "parameters": {
                         "values": [
-                            "Prompt_Quit",
+                            "Graphics/Pictures/In-Game UI/Prompt_Quit.png",
                             "FDE10D61363F62471D2990437FBB8C1DBA5B",
                             0
                         ]
@@ -2971,7 +2982,7 @@ GS.dataCache['20047CED82D9664F912885F8DD2F79B3C1E8'] = {
                     "commonEventId": "2379347586025344D738BEE5A39A37A44990",
                     "parameters": {
                         "values": [
-                            "Prompt_Confirm_SaveLoad",
+                            "Graphics/Pictures/In-Game UI/Prompt_Confirm_SaveLoad.png",
                             "7EE85C655388A944A87909421BAD5A565F5D",
                             0
                         ]

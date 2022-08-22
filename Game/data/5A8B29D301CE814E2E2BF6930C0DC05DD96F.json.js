@@ -21,5 +21,6 @@ GS.dataCache['5A8B29D301CE814E2E2BF6930C0DC05DD96F'] = {
         "name",
         "type",
         "order"
-    ]
+    ],
+    "externalItems": []
 }
