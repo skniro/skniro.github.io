@@ -816,18 +816,18 @@ img {
   position: relative;
 }
 
-.modal__pickup__desc:before {
-  content: '';
-  display: block;
-  width: 73px;
-  height: 72px;
-  background: url("../img/common/pickup_btn_more.png") center center no-repeat;
-  background-size: cover;
-  position: absolute;
-  right: 36px;
-  top: 50%;
-  transform: translate(0, -50%);
-}
+    .modal__pickup__desc:before {
+        content: '';
+        display: block;
+        width: 73px;
+        height: 72px;
+        background: url("../project/img/common/pickup_btn_more.png") center center no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: 36px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
 
 .modal__pickup__desc .desc--head {
   color: #1428ff;
@@ -1782,21 +1782,21 @@ img {
     padding: 4vw 17.33333vw 4vw 4vw;
     position: relative;
   }
-  .modal__pickup__desc:before {
-    content: '';
-    display: block;
-    width: 36.5px;
-    width: 9.73333vw;
-    height: 36px;
-    height: 9.6vw;
-    background: url("../img/common/pickup_btn_more.png") center center no-repeat;
-    background-size: cover;
-    position: absolute;
-    right: 18px;
-    right: 4.8vw;
-    top: 50%;
-    transform: translate(0, -50%);
-  }
+    .modal__pickup__desc:before {
+        content: '';
+        display: block;
+        width: 36.5px;
+        width: 9.73333vw;
+        height: 36px;
+        height: 9.6vw;
+        background: url("../project/img/common/pickup_btn_more.png") center center no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: 18px;
+        right: 4.8vw;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
   .modal__pickup__desc .desc--head {
     color: #1428ff;
     font-size: 10px;

@@ -185,18 +185,18 @@
   padding-left: 34px;
 }
 
-.list__desc__button .btn--play span:before {
-  background: url("../img/music/icon_play.png") center center no-repeat;
-  width: 23px;
-  height: 23px;
-  background-size: cover;
-}
+    .list__desc__button .btn--play span:before {
+        background: url("../project/img/music/icon_play.png") center center no-repeat;
+        width: 23px;
+        height: 23px;
+        background-size: cover;
+    }
 
-.list__desc__button .btn--play.is--play span:before {
-  background: url("../img/music/icon_stop.png") center center no-repeat;
-  width: 20px;
-  height: 20px;
-}
+    .list__desc__button .btn--play.is--play span:before {
+        background: url("../project/img/music/icon_stop.png") center center no-repeat;
+        width: 20px;
+        height: 20px;
+    }
 
 .list__desc__button .btn--dist a {
   font-size: 20px;
@@ -207,12 +207,12 @@
   padding-left: 37px;
 }
 
-.list__desc__button .btn--dist span:before {
-  background: url("../img/music/icon_blank.png") center center no-repeat;
-  width: 24px;
-  height: 25px;
-  background-size: cover;
-}
+    .list__desc__button .btn--dist span:before {
+        background: url("../project/img/music/icon_blank.png") center center no-repeat;
+        width: 24px;
+        height: 25px;
+        background-size: cover;
+    }
 
 .list__desc__button .btn--cd a {
   font-size: 22px;
