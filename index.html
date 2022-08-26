@@ -7,6 +7,21 @@
     <script src="assets/jquery-3.6.0.min.js"></script>
     <meta name="theme-color">
     <title>skniro tech team</title>
+    <script data-n-head="true" type="text/javascript" data-body="false">
+        if (navigator.userAgent.match(
+            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+        )) {
+            if (location.pathname.indexOf('/m/') == -1 && location.pathname !== '/m') {
+
+                location.href = location.protocol + '//' + location.host + location.pathname.replace('/', '/m/') + location.search;
+            }
+        } else {
+            if (location.pathname.indexOf('/m/') > -1) {
+                location.href = location.protocol + '//' + location.host + location.pathname.replace('/m/', '/') + location.search;
+            } else if (location.pathname === '/m') {
+                location.href = location.protocol + '//' + location.host + location.pathname.replace('/m', '/') + location.search;
+            }
+        }</script>
     <link href="../project/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="../Content/Fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="../Content/basic.css">
@@ -40,8 +55,8 @@
         <header class="header">
             <div class="header__inner">
                 <h1 class="header__logo">
-                    <a href="/index.html" class="insite" >
-                        <img width="107" height="16" src="../img/logo2.png" alt="STG">
+                    <a href="/index.html" class="insite">
+                        <img width="107" height="16" src="../project/img/logo2.png" alt="STG">
                     </a>
                 </h1>
                 <p id="headerMenuBtn" class="header__menu" style="color:black"><a href="../nav.html"><span class="header__menu__icon" style="background-color: black"><span class="header__menu__icon__bar1"></span><span class="header__menu__icon__bar2"></span><span class="header__menu__icon__bar3 "></span></span><span id="headerMenuText" class="header__menu__text" style="color:black"><span>MENU</span></span></a></p>
@@ -71,109 +86,110 @@
             <img style="width:100%; height:30%;" src="../project/img/web3.png" alt="stg">
         </div>
     </div>
-    <div class="page web-container ms-bgColor-themeLighter" >
-        <div class="top-news">
-            <div class="top-news-wrapper">
-                <div class="swiper-container swiper-container-horizontal" align="center">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-no-swiping swiper-slide swiper-slide-active" data-swiper-slide-index="5" style="width: 320px;">
-                            <a href="https://www.bilibili.com/video/BV1bT4y1T7Bt" class="">
-                                <div class="top-news-item">
-                                    <img src="./img/web-1.jpg" alt="stg" class="top-news-bg"> <div class="title">
-                                        <div class="title-content">
-                                            STG 2020 3rd Anniversary
+    <div class="page web-container ms-bgColor-themeLighter">
+        <div class="row align-items-center">
+            <div class="top-news">
+                <div class="top-news-wrapper">
+                    <div class="swiper-container swiper-container-horizontal" align="center">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-no-swiping swiper-slide swiper-slide-active" data-swiper-slide-index="5" style="width: 320px;">
+                                <a href="https://www.bilibili.com/video/BV1bT4y1T7Bt" class="">
+                                    <div class="top-news-item">
+                                        <img src="./project/img/web-1.jpg" alt="stg" class="top-news-bg"> <div class="title">
+                                            <div class="title-content">
+                                                STG 2020 3rd Anniversary
+                                            </div>
+                                        </div> <div class="alltitle">
+                                            <div class="alltitle-content" style="-webkit-box-orient: vertical;">
+                                                新年快乐
+                                            </div> <img src="../project/img/arrow.png" class="arrow">
                                         </div>
-                                    </div> <div class="alltitle">
-                                        <div class="alltitle-content" style="-webkit-box-orient: vertical;">
-                                            新年快乐
-                                        </div> <img src="/img/arrow.png" class="arrow">
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-no-swiping swiper-slide swiper-slide-next" data-swiper-slide-index="6" style="width: 320px;">
-                            <a href="./projectalice.html" class="">
-                                <div class="top-news-item">
-                                    <img src="./img/web-2.jpg" alt="stg" class="top-news-bg"> <div class="title">
-                                        <div class="title-content" style="-webkit-box-orient: vertical;">
-                                            Project Alice-G
+                                </a>
+                            </div>
+                            <div class="swiper-no-swiping swiper-slide swiper-slide-next" data-swiper-slide-index="6" style="width: 320px;">
+                                <a href="./projectalice.html" class="">
+                                    <div class="top-news-item">
+                                        <img src="./project/img/web-2.jpg" alt="stg" class="top-news-bg"> <div class="title">
+                                            <div class="title-content" style="-webkit-box-orient: vertical;">
+                                                Project Alice-G
+                                            </div>
+                                        </div> <div class="alltitle">
+                                            <div class="alltitle-content" style="-webkit-box-orient: vertical;">
+                                                A-10.0134技术测试版本(Windows develop Ver)
+                                            </div> <img src="../project/img/arrow.png" class="arrow">
                                         </div>
-                                    </div> <div class="alltitle">
-                                               <div class="alltitle-content" style="-webkit-box-orient: vertical;">
-                                                   A-10.0134技术测试版本(Windows develop Ver)
-                                               </div> <img src="/img/arrow.png" class="arrow">
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-no-swiping swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" style="width: 320px;">
-                            <a href="./和风幻想乡.html" class="">
-                                <div class="top-news-item">
-                                    <img src="./img/web-3.jpg" alt="stg" class="top-news-bg"> <div class="title">
-                                        <div class="title-content" style="-webkit-box-orient: vertical;">
-                                            和风幻想乡
+                                </a>
+                            </div>
+                            <div class="swiper-no-swiping swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" style="width: 320px;">
+                                <a href="./和风幻想乡.html" class="">
+                                    <div class="top-news-item">
+                                        <img src="./project/img/web-3.jpg" alt="stg" class="top-news-bg"> <div class="title">
+                                            <div class="title-content" style="-webkit-box-orient: vertical;">
+                                                和风幻想乡
+                                            </div>
+                                        </div> <div class="alltitle">
+                                            <div class="alltitle-content" style="-webkit-box-orient: vertical;">
+                                                中国风，和风，食物类高版本mod整合包---和风幻想乡
+                                            </div> <img src="../project/img/arrow.png" class="arrow">
                                         </div>
-                                    </div> <div class="alltitle">
-                                        <div class="alltitle-content" style="-webkit-box-orient: vertical;">
-                                            中国风，和风，食物类高版本mod整合包---和风幻想乡
-                                        </div> <img src="/img/arrow.png" class="arrow">
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-no-swiping swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" style="width: 320px;">
-                            <a href="https://www.mcbbs.net/thread-1174051-1-1.html" class="">
-                                <div class="top-news-item">
-                                    <img src="./img/web-4.jpg" alt="stg" class="top-news-bg"> <div class="title">
-                                        <div class="title-content" style="-webkit-box-orient: vertical;">
-                                            STT工业多模组1.12.2
+                                </a>
+                            </div>
+                            <div class="swiper-no-swiping swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" style="width: 320px;">
+                                <a href="https://www.mcbbs.net/thread-1174051-1-1.html" class="">
+                                    <div class="top-news-item">
+                                        <img src="./project/img/web-4.jpg" alt="stg" class="top-news-bg"> <div class="title">
+                                            <div class="title-content" style="-webkit-box-orient: vertical;">
+                                                STT工业多模组1.12.2
+                                            </div>
+                                        </div> <div class="alltitle">
+                                            <div class="alltitle-content" style="-webkit-box-orient: vertical;">
+                                                新版本更新
+                                            </div> <img src="../project/img/arrow.png" class="arrow">
                                         </div>
-                                    </div> <div class="alltitle">
-                                        <div class="alltitle-content" style="-webkit-box-orient: vertical;">
-                                            新版本更新
-                                        </div> <img src="/img/arrow.png" class="arrow">
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="intro">
-            <div class="intro-box">
-                <div class="intro-swiper">
-                    <div class="intro-swiper-box"></div>
-                    <div class="intro-text">
-                        <p></p>
 
-                        <p></p>
-
-                        <p></p>
-                    </div>
-                    <div class="intro-banner">
-                    </div>
-                </div>
-            </div>
-        </div>
         <div align="center">
+            <div>
+                <img style="width:58.3%; height:30%;" src="../project/img/web2.png" alt="stg">
+            </div>
             <div class="container">
                 <div class="text" style=" text-align:center;">
                     <p>【小钳子/PV付】中文版《未闻花名》片尾曲翻唱</p>
-                    <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=274329899&aid=543467730&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                    <iframe id="stg2020-1" src="//player.bilibili.com/player.html?cid=274329899&aid=543467730&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100% height=100%></iframe>
                     <p>【STG三周年/4K】STG新版官方网站</p>
-                    <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=274292028&aid=543423732&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                    <iframe id="stg2020-2" src="//player.bilibili.com/player.html?cid=274292028&aid=543423732&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100% height=100%></iframe>
                     <p>【STG三周年/4K】STG新版官方网站</p>
-                    <iframe id="b" class="b video_pc" src="//player.bilibili.com/player.html?cid=274262391&aid=928424590&page=1" frameborder="0" width="640" height="430" allowfullscreen></iframe>
+                    <iframe id="stg2020-3" src="//player.bilibili.com/player.html?cid=274262391&aid=928424590&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100% height=100%></iframe>
                 </div>
             </div>
+
+
+            <script type="text/javascript">
+                document.getElementById("stg2020-1").style.height = document.getElementById("stg2020-1").scrollWidth * 0.76 + "px";
+            </script>
+            <script type="text/javascript">
+                document.getElementById("stg2020-2").style.height = document.getElementById("stg2020-2").scrollWidth * 0.76 + "px";
+            </script>
+            <script type="text/javascript">
+                document.getElementById("stg2020-3").style.height = document.getElementById("stg2020-3").scrollWidth * 0.76 + "px";
+            </script>
         </div>
-    </div>
-    <div id="new-footer">
-        <script>
-            $("#new-footer").load("master2.html");
-        </script>
+        <div id="new-footer">
+            <script>
+                $("#new-footer").load("../master2.html");
+            </script>
+        </div>
     </div>
 </body>
 </html>
