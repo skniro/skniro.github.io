@@ -1161,7 +1161,7 @@ img {
     }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:950px) {
     body {
         background-image: url(https://api.xygeng.cn/Bing/);
         background-repeat: no-repeat;
