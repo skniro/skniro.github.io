@@ -26,9 +26,14 @@
                 © 2024 STG Media Group<br>Project Athena & Project Venus
             </p>
         </div>
-        <audio autoplay="autoplay" loop="loop" preload="auto" muted="muted"
-               src="project/uploads/2024/01/kitai.mp3">
+        <audio id="kitai" autoplay="autoplay" loop preload="auto" playsinline muted
+               src="../project/uploads/2024/01/kitai.mp3">
         </audio>
+        <script>
+            window.onload = () => {
+                document.getElementById('kitai').muted = false;
+            }
+        </script>
     </footer>
 </body>
 </html>
