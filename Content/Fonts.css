@@ -4,17 +4,17 @@
 }
 @font-face {
     font-family: 'SourceHanSansJP';
-    src: url('../assets/SourceHanSansJP-Light.otf')format('opentype'), /* Safari, Android, iOS */
+    src: url('../Content/SourceHanSansJP-Light.otf')format('opentype'), /* Safari, Android, iOS */
 }
 
 *[lang^='zh-CN'] .ms-Fabric,
 .ms-Fabric *[lang^='zh-cn'],
 .ms-Fabric[lang^='zh-cn'] {
-    font-family: 'SourceHanSansCN'， 'Segoe UI', -apple-system, BlinkMacSystemFont, 'SourceHanSansCN', 'Helvetica Neue', sans-serif;
+    font-family: 'SourceHanSansCN'，'SourceHanSansJP', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }
 
 body {
-    font-family: 'SourceHanSansCN'
+    font-family: 'SourceHanSansCN'，'SourceHanSansJP', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }
 
 *,

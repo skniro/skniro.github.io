@@ -1,0 +1,206 @@
+﻿body {
+
+}
+
+#body-content .Header {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    left: 0;
+    right: 0;
+    line-height: 50px;
+    padding: 0 20px;
+    background-color: dodgerblue;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 10;
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#body-content .nav {
+    overflow: hidden;
+}
+
+    #body-content .nav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        white-space: nowrap;
+    }
+
+
+#body-content .Page {
+    margin: 50px auto 50px auto;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#body-content .Page--home {
+    min-height: 0;
+}
+
+#body-content .innerPage {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+#body-content .Page-leftNav {
+    display: none;
+    position: fixed;
+    top: 50px;
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid #eeeeee;
+}
+
+    #body-content .Page.has-leftNav {
+        padding-left: 330px;
+    }
+
+        #body-content .Page.has-leftNav .Page-leftNav {
+            left: 0;
+            display: block;
+        }
+
+    #body-content .Page.has-rightNav {
+        padding-right: 300px;
+    }
+
+        #body-content .Page.has-rightNav .Page-rightNav {
+            right: 0;
+            display: block;
+        }
+
+#body-content .Page-leftNav {
+    display: none;
+    position: fixed;
+    top: 50px;
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid #eeeeee;
+}
+
+
+#body-content a.LeftNav-link {
+    display: block;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 40px;
+    border: none;
+    cursor: pointer;
+    color: #333333;
+    background: #ffffff;
+    outline: transparent;
+}
+
+
+#body-content .LeftNav {
+    display: block;
+}
+
+#body-content .LeftNav-links {
+    margin: 0;
+}
+
+#body-content .LeftNav-item {
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+
+#body-content a.LeftNav-link {
+    display: block;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 40px;
+    border: none;
+    cursor: pointer;
+    color: #333333;
+    background: #ffffff;
+    outline: transparent;
+}
+
+    #body-content a.LeftNav-link:hover {
+        background: #f8f8f8;
+        cursor: pointer;
+    }
+
+    #body-content a.LeftNav-link:focus {
+        color: #201f1e;
+        outline: none !important;
+        outline-style: none;
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    #body-content a.LeftNav-link.is-selected {
+        font-weight: 600;
+        color: #000000;
+        border-left-width: 2px;
+        border-left-style: solid;
+    }
+
+    #body-content a.LeftNav-link.LeftNav-link--active {
+        color: #0078d4;
+        background-color: #f3f2f1;
+        position: relative;
+        color: #333333;
+    }
+
+        #body-content a.LeftNav-link.LeftNav-link--active:after {
+            content: '';
+            position: absolute;
+            border-left: 2px solid black;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #body-content a.LeftNav-link.LeftNav-link--active:visited,
+        #body-content a.LeftNav-link.LeftNav-link--active:active {
+            color: #0078d4;
+        }
+
+#body-content .LeftNav-item {
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+
+#body-content a:hover.LeftNav-link {
+    color: #0078d4;
+}
+
+
+html,
+body,
+input,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}

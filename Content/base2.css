@@ -22,8 +22,14 @@ time, mark, audio, video {
 }
 
 body {
-  line-height: 1;
+    line-height: 1;
 }
+
+    body.navi {
+        background-blend-mode: overlay;
+        background: url(https://api.dujin.org/bing/1920.php),rgba(255,255,255,0.85);
+        opacity: 0.9
+    }
 
 main, article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -1878,4 +1884,28 @@ img {
       background-position-x: -94.66667vw;
     }
   }
+}
+
+.header__nav a:before {
+    background: transparent
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    body.navi {
+        background-blend-mode: overlay;
+        background: url(https://api.dujin.org/bing/1920.php),rgba(0,0,0,0.85);
+        opacity: 0.9
+    }
+    p,span {
+        color:white
+    }
+    .header__nav a:before {
+        background: transparent
+    }
+
+    .footer {
+        background: #000;
+    }
 }
