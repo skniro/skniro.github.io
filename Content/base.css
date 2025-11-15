@@ -1173,7 +1173,7 @@ img {
 }
 
 .bar_section {
-    flex: 1; /* 四等分宽度 */
+    flex: 1; 
     position: relative;
     display: flex;
     justify-content: center;
@@ -1228,11 +1228,11 @@ img {
 .bar_arrow-button::after {
     content: '';
     position: absolute;
-    right: 0.3vw; /* 距离右边的距离，根据设备动态缩放 */
-    top: 50%; /* 垂直居中 */
+    right: 0.3vw; 
+    top: 50%; 
     transform: translateY(-50%);
-    width: 4vw; /* 动态按钮宽度 */
-    height: 4vw; /* 动态按钮高度 */
+    width: 4vw; 
+    height: 4vw; 
     background: url("../project/img/common/icon_arw1.png") no-repeat center center;
     background-size: contain;
     transition: transform 0.5s ease;
