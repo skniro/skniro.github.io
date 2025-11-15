@@ -303,7 +303,6 @@ img {
 }
 
 .header__nav li.is--none a {
-  color: #B3B3B3;
   pointer-events: none;
 }
 
@@ -351,10 +350,10 @@ img {
   transform: translateY(-50%);
 }
 
-.header__nav a:after {
-  background-color: #ffff00;
-  transform: translateY(-50%) scaleX(0);
-}
+    .header__nav a:after {
+        background-color: #811f65;
+        transform: translateY(-50%) scaleX(0);
+    }
 
 .header__nav a:hover:after {
   transform: translateY(-50%) scaleX(1);

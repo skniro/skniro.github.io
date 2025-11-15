@@ -152,14 +152,14 @@ flist_desc@charset "UTF-8";
   margin-right: 0;
 }
 
-.list__desc__button a {
-  display: block;
-  background-color: #1428ff;
-  text-decoration: none;
-  color: #ffffff;
-  text-align: center;
-  line-height: 50px;
-}
+    .list__desc__button a {
+        display: block;
+        background-color: #811f65;
+        text-decoration: none;
+        color: #ffffff;
+        text-align: center;
+        line-height: 50px;
+    }
 
     .list__desc__button span {
         display: inline-block;

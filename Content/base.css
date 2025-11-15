@@ -1165,6 +1165,91 @@ img {
     }
 }
 
+.bar_container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; 
+    width: 100vw;
+}
+
+.bar_section {
+    flex: 1; /* 四等分宽度 */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+    .bar_section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; 
+        pointer-events: none; 
+        background-color: rgba(255,255,255,0.4);
+        mix-blend-mode: luminosity; 
+        transition: background-color 0.5s ease;
+    }
+
+@media (prefers-color-scheme: dark) {
+    .bar_section::before {
+        background-color: rgba(0,0,0,0.4);
+        transition: background-color 0.5s ease;
+    }
+
+    .bar_section:hover::before {
+        background-color: rgba(0,0,0,0);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .bar_section::before {
+        background-color: rgba(255,255,255,0.4);
+        transition: background-color 0.5s ease;
+    }
+
+    .bar_section:hover::before {
+        background-color: rgba(255,255,255,0);
+    }
+
+}
+
+.bar_section img {
+    height: 100vh;
+    width: 25vw;
+    object-fit: cover;
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.bar_arrow-button::after {
+    content: '';
+    position: absolute;
+    right: 0.3vw; /* 距离右边的距离，根据设备动态缩放 */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%);
+    width: 4vw; /* 动态按钮宽度 */
+    height: 4vw; /* 动态按钮高度 */
+    background: url("../project/img/common/icon_arw1.png") no-repeat center center;
+    background-size: contain;
+    transition: transform 0.5s ease;
+}
+
+.bar_section:hover img {
+    transform: scale(1.05);
+}
+
+.bar_section:hover .bar_arrow-button {
+    transform: translateY(-50%) translateX(0.3vw);
+}
+
+.bar_section:hover::before {
+    background-color: rgba(255,255,255,0);
+}
+
 @media screen and (max-width:950px) {
     body {
         background-image: url(https://api.xygeng.cn/Bing/);
