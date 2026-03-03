@@ -7,24 +7,28 @@
     <script src="../Content/jquery-3.6.0.min.js"></script>
     <meta name="theme-color">
     <title>skniro organization</title>
-    <script data-n-head="true" type="text/javascript" data-body="false">
-        if (navigator.userAgent.match(
-            /(phone|pod|iPhone|iPod|ios|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-        )) {
+    <script>
+        var ua = navigator.userAgent;
+        var isPhone = /(iPhone|iPod|Android.*Mobile|Windows Phone|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec)/i.test(ua);
+        var isTablet = /(iPad|Android(?!.*Mobile)|Tablet|PlayBook|Silk)/i.test(ua);
+        if (isPhone && !isTablet) {
             if (location.pathname.indexOf('/m/') == -1 && location.pathname !== '/m') {
-
-                location.href = location.protocol + '//' + location.host + location.pathname.replace('/', '/m/') + location.search;
+                location.href = location.protocol + '//' + location.host +
+                    location.pathname.replace('/', '/m/') + location.search;
             }
         } else {
             if (location.pathname.indexOf('/m/') > -1) {
-                location.href = location.protocol + '//' + location.host + location.pathname.replace('/m/', '/') + location.search;
+                location.href = location.protocol + '//' + location.host +
+                    location.pathname.replace('/m/', '/') + location.search;
             } else if (location.pathname === '/m') {
-                location.href = location.protocol + '//' + location.host + location.pathname.replace('/m', '/') + location.search;
+                location.href = location.protocol + '//' + location.host +
+                    location.pathname.replace('/m', '/') + location.search;
             }
-        }</script>
+        }
+    </script>
     <link href="../project/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="content-type" content="text/html" charset="utf-8">
-    <meta name="keywords" content="skniro, STT, Minecraft resource，texture，Windows theme, CherryVillage, GrowableOres, Usefulfood Reborn">
+    <meta name="keywords" content="skniro, Minecraft resource，texture, CherryVillage, GrowableOres, Usefulfood Reborn">
     <meta name="description" content="Enjoy in your game">
     <style>
         .page .intro .intro-swiper .intro-swiper-box {

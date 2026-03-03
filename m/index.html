@@ -4,21 +4,25 @@
     <meta charset="utf-8" />
     <meta data-n-head="true" charset="utf-8">
     <meta data-n-head="true" name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <script data-n-head="true" type="text/javascript" data-body="false">
-        if (navigator.userAgent.match(
-            /(phone|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-        )) {
+    <script>
+        var ua = navigator.userAgent;
+        var isPhone = /(iPhone|iPod|Android.*Mobile|Windows Phone|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec)/i.test(ua);
+        var isTablet = /(iPad|Android(?!.*Mobile)|Tablet|PlayBook|Silk)/i.test(ua);
+        if (isPhone && !isTablet) {
             if (location.pathname.indexOf('/m/') == -1 && location.pathname !== '/m') {
-
-                location.href = location.protocol + '//' + location.host + location.pathname.replace('/', '/m/') + location.search;
+                location.href = location.protocol + '//' + location.host +
+                    location.pathname.replace('/', '/m/') + location.search;
             }
         } else {
             if (location.pathname.indexOf('/m/') > -1) {
-                location.href = location.protocol + '//' + location.host + location.pathname.replace('/m/', '/') + location.search;
+                location.href = location.protocol + '//' + location.host +
+                    location.pathname.replace('/m/', '/') + location.search;
             } else if (location.pathname === '/m') {
-                location.href = location.protocol + '//' + location.host + location.pathname.replace('/m', '/') + location.search;
+                location.href = location.protocol + '//' + location.host +
+                    location.pathname.replace('/m', '/') + location.search;
             }
-        }</script>
+        }
+    </script>
     <script data-n-head="true" src="../Content/jquery-3.6.0.js"></script>
     <style>
         .m-page .top-news {
@@ -29,7 +33,7 @@
             padding-bottom: .3rem
         }
 
-  
+
 
         .news-item[data-v-f82331c2] {
             display: -webkit-box;
@@ -104,8 +108,8 @@
     <link href="../Content/fabric.css" rel="stylesheet" />
     <script src="../Content/fabric.min.js"></script>
     <meta name="content-type" content="text/html" charset="utf-8">
-    <meta name="keywords" content="STG，skniro tech group，skniro,STT,MC资源，材质，Win10美化，音乐创作">
-    <meta name="description" content=" STG是一个国际化的创作团体，我们目前的创作范围有游戏，视频，音乐等。希望有更多的小伙伴关注我们，加入我们。">
+    <meta name="keywords" content="skniro, Minecraft resource，texture, CherryVillage, GrowableOres, Usefulfood Reborn">
+    <meta name="description" content="Enjoy in your game">
 </head>
 <body data-n-head style="background-color:rgba(83, 40, 40, 1); min-width:100%; overflow:auto;">
     <div id="new-header">
